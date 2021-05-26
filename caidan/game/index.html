@@ -1,0 +1,84 @@
+<style>
+  .card-content {
+    padding: 12px !important;
+  }
+  hr {
+    margin: 8px auto 12px;
+  }
+  .littlegame {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    border-left: 10px solid #f5f5f5;
+    border-right: 10px solid #f5f5f5;
+  }
+  .littlegame div {
+    cursor: pointer;
+    width: 187.5px;
+    height: 112.5px;
+    margin: 10px 10px 10px 0px;
+    display: inline-block;
+    justify-content: space-around;
+    background-size: cover;
+    transition: all 0.25s ease;
+  }
+</style>
+<main class="content">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="note info" style="font-size: 18px">博主收集的小游戏，无聊的时候可以玩玩。使用手机浏览时可配合全屏按钮食用</div>
+        <div class="littlegame">
+          <div style="background-image: url('/medias/game/1.jpg')" title="MikuTap" onclick="game1();"></div>
+          <div style="background-image: url('/medias/game/3.jpg')" title="魔方" onclick="game3();"></div>
+          <div style="background-image: url('/medias/game/4.jpg')" title="井字棋" onclick="game4();"></div>
+          <div style="background-image: url('/medias/game/5.jpg')" title="八音盒" onclick="game5();"></div>
+          <div style="background-image: url('/medias/game/2.png')" title="谷歌小恐龙" onclick="game2();"></div>
+        </div>
+        <iframe style="max-width: 100%" frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="393.59999999999997" src="/caidan/mikutap/index.html" id="gameframe"> </iframe>
+        <div class="note info" style="font-size: 18px">
+          <p id="quote">*点击START开始，按键盘，点击屏幕或者拖动鼠标操作。短时间内不操作会显示菜单。左上角返回，右上角全屏。</p>
+          <cite id="cite">来源：https://aidn.jp/mikutap/</cite>
+        </div>
+
+        <script type="text/javascript">
+          document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+          function game1() {
+            document.getElementById('gameframe').src = '/caidan/mikutap/index.html'
+            document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '*点击START开始，点击屏幕或者拖动鼠标操作。短时间内不操作会显示菜单。左上角返回，右上角全屏。'
+            document.getElementById('cite').innerHTML = '来源：https://aidn.jp/mikutap/'
+          }
+          function game2() {
+            document.getElementById('gameframe').src = 'https://dinoswords.gg/'
+            document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = ' *操作介绍：开始游戏：首先点击屏幕跳跃：注意是“点击屏幕” 。（不支持移动端）'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function game3() {
+            document.getElementById('gameframe').src = '/caidan/cube/index.html'
+            document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '*双击屏幕开始，拖动鼠标操作，拖动空白处整体旋转。左下角设置，右上角全屏。'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function game4() {
+            document.getElementById('gameframe').src = '/caidan/jzq/index.html'
+            document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '*井字棋。点右下小人切换单双人模式。完成后点击屏幕开始下一局。'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function game5() {
+            document.getElementById('gameframe').src = '/caidan/piano/index.html'
+            document.getElementById('gameframe').height = document.getElementById('gameframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '*点击任意圆点开始。从上往下依次为do到si。每个音第一次加载可能有延迟。下方调速。'
+            document.getElementById('cite').innerHTML = ''
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</main>

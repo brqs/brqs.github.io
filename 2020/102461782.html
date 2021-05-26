@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="如何部署hexo博客：从零开始到搭建完整, FanHeart">
+    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>如何部署hexo博客：从零开始到搭建完整 | FanHeart</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?8723c5c2669a112d08b51b84e31ef4c2";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="FanHeart" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+  <meta name="baidu-site-verification" content="code-e4kN1NOKf6" />
+  <body>
+    
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1920" height="412" style="width: 100%; height: 100%"></canvas></div>
+    <div class="stars-con">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+    <header class="navbar-fixed">
+  <nav id="headNav" class="nav-transparent h-color">
+    <div id="navContainer" class="nav-wrapper container">
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light Fan-color">
+          
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO" />
+          
+          <span class="logo-span diyFont">FanHeart</span>
+        </a>
+      </div>
+      
+
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse Fan-color"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light Fan-color">
+
+      
+      <i class="fas fa-atlas" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/statistics">
+          
+          <i class="fa fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章统计</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章日历</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friendcircle" class="waves-effect waves-light Fan-color">
+      
+      <i class="fa fa-puzzle-piece" style="zoom: 0.6;"></i>
+      
+      <span>朋友圈</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light Fan-color">
+
+      
+      <i class="fa fa-align-justify" style="zoom: 0.6;"></i>
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友人帐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/game">
+          
+          <i class="fa fa-gamepad" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>小游戏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/journal">
+          
+          <i class="fa fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>日志册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/census">
+          
+          <i class="fa fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>统计图</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/artitalk">
+          
+          <i class="fa fa-bullhorn" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博主说</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light Fan-color">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+<li class="hide-on-med-and-down nav-show">
+       <a onclick="switchNightModeTop()" class="modal-trigger waves-effect waves-light Fan-color">
+             <i class="fa fa-sun" id="changeMode-top" title="切换主题" style="zoom: 0.7;"></i>
+       </a>
+  </li>
+  
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">FanHeart</div>
+        <div class="logo-desc">
+            
+            本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-atlas"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/statistics " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章统计</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章日历</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friendcircle" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-puzzle-piece"></i>
+			
+			朋友圈
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			导航
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa fa-align-justify"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友人帐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/game " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-gamepad" style="position: absolute;left:50px" ></i>
+			      
+		          <span>小游戏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/journal " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>日志册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/census " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>统计图</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/artitalk " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-bullhorn" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博主说</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    </div>
+
+    
+  </nav>
+  <div class="denglong">
+    <div class="deng-box">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"><div class="deng-t">喜迎</div></div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div>
+    <div class="deng-box1">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"><div class="deng-t">元旦</div></div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-color: #5698c3">
+  <div class="container" style="right: 0px; left: 0px">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="brand">
+          <h1 class="description center-align post-title">如何部署hexo博客：从零开始到搭建完整</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css" />
+<style>
+  #articleContent h1::before,
+  #articleContent h2::before,
+  #articleContent h3::before,
+  #articleContent h4::before,
+  #articleContent h5::before,
+  #articleContent h6::before {
+    display: block;
+    content: ' ';
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+  }
+
+  #articleContent :focus {
+    outline: none;
+  }
+
+  .toc-fixed {
+    position: fixed;
+    top: 64px;
+  }
+
+  .toc-widget {
+    width: 345px;
+    padding-left: 20px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.07), 0 2px 5px -5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .toc-widget .toc-title {
+    margin: 35px 0 15px 0;
+    padding-left: 17px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  .toc-widget ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  #toc-content {
+    height: calc(100vh - 250px);
+    overflow: auto;
+  }
+
+  #toc-content ol {
+    padding-left: 10px;
+  }
+
+  #toc-content ol li {
+    padding-left: 10px;
+  }
+
+  #toc-content .toc-link:hover {
+    color: #42b983;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  #toc-content .toc-link::before {
+    background-color: transparent;
+    max-height: 25px;
+
+    position: absolute;
+    right: 23.5vw;
+    display: block;
+  }
+
+  #toc-content .is-active-link {
+    color: #42b983;
+  }
+</style>
+<div class="row">
+  <div id="main-content" class="col s12 m12 l9"><!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <!-- 主题 挂件 （中） -->
+      <div class="caishendengsd">
+        <div class="guguxiansd wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/christmas-img/2.png" />
+        </div>
+      </div>
+      <div class="caishendeng">
+        <div class="guguxian wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/spring-img/2.png" />
+        </div>
+      </div>
+
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/matery/">
+              <span class="chip bg-color">matery</span>
+            </a>
+            
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+              <span class="chip bg-color">服务器</span>
+            </a>
+            
+            <a href="/tags/seo/">
+              <span class="chip bg-color">seo</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2020-10-24</div>
+         
+        <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-05-26</div>
+         
+        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 10.4k</div>
+         
+        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 47 分</div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+    <div class="card-content article-card-content">
+      <div id="articleContent"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>我也是一时兴起（主要就是闲的），最开始在b站看到一个教程视频然后就想自己去搭建一个虽然过程非常痛苦，但当我完全搭建好了之后，再想想确实又没什么困难的，拥有一个个人网站会有很多好处，便于别人认识了解你，面试简历也都会有所加分，我在搭建过程参考网上教程遇见许多坑，希望不要再掉坑里，（小声说我觉得掉到坑里才学到东西）所以决定自己写一篇教程。一是为了帮助同样有需要的你，二来自己下次搭建的时候也能参考，三是总结一下搭建过程中所学的知识。由于我本身也是小白，所以可能会有一些专业术语的错误见谅。  </p>
+</blockquote>
+<blockquote>
+<p>长文警告：本文将包括本地部署hexo，hexo—matery主题美化，hexo部署到服务器，hexo seo优化，由于感觉文章太长观感不好，所以拆分了文章。  </p>
+</blockquote>
+<h1 id="hexo部署到本地"><a href="#hexo部署到本地" class="headerlink" title="hexo部署到本地"></a>hexo部署到本地</h1><h2 id="本地nodejs，淘宝云镜像，git环境搭建"><a href="#本地nodejs，淘宝云镜像，git环境搭建" class="headerlink" title="本地nodejs，淘宝云镜像，git环境搭建"></a>本地nodejs，淘宝云镜像，git环境搭建</h2><h3 id="1-nodejs搭建教程："><a href="#1-nodejs搭建教程：" class="headerlink" title="1.nodejs搭建教程："></a>1.nodejs搭建教程：</h3><h4 id="1-1下载："><a href="#1-1下载：" class="headerlink" title="1.1下载："></a>1.1下载：</h4><p>  下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>  一般的Windows系统都选择.msi 64位安装。（.msi是自动安装比较方便）  </p>
+<h4 id="1-2安装："><a href="#1-2安装：" class="headerlink" title="1.2安装："></a>1.2安装：</h4><p>  正常安装即可最好不要安装到C盘改个安装路径。  </p>
+<h4 id="1-3查看安装版本："><a href="#1-3查看安装版本：" class="headerlink" title="1.3查看安装版本："></a>1.3查看安装版本：</h4><p>  安装完成后打开终端win+R 输入cmd回车<br>  输入命令<code>node-v</code>查看版本号，出现版本号，说明你的电脑上已经有nodejs，安装成功！  </p>
+<h4 id="1-4配置nodejs环境："><a href="#1-4配置nodejs环境：" class="headerlink" title="1.4配置nodejs环境："></a>1.4配置nodejs环境：</h4><blockquote>
+<p>NodeJS和NPM安装好了以后并不能直接使用，默认情况下，NPM安装的模块并不会安装到NodeJS的程序目录，比如我们安装的时候设置的D盘，“D:\Program Files\nodejs”，而我们使用npm安装一个cluster模块他会出现在C盘默认的路径下面，所以，如果我们不修改npm的模块安装目录，那么它默认情况下都会安装到这里，随着你测试开发各种不同的项目，安装的模块越来越多，这个文件夹的体积就会越来越大，直到占满你的C盘。(网上的说法我觉得只运行hexo不会)所以我们要修改npm的配置。  </p>
+</blockquote>
+<p>  (1).在nodejs文件夹下，创建两个为文件夹： <code>node_global</code>;<code>node_cache</code><br>这是用来放安装过程的缓存文件以及最终的模块配置位置。<br>  (2).使用下面命令将npm的全局模块目录和缓存目录配置到我们刚才创建的那两个目录<br><code>npm config set prefix "node_global文件的路径"</code><br><code>npm config set cache "node_cache的文件路径"</code><br>例如：<code>npm config set prefix “D:\Program Files\nodejs\node_global”</code><br>(还在win+R调出来的黑色命令框里，输入你自己保存的路径可以在文件夹上复制路径)<br>(3).高级系统设置——环境变量（上一步完成后要将node_modules文件夹复制到node_global文件夹下）<br>新增系统变量(右键此电脑图标属性高级系统设置里面环境变量里面)：<br>变量名填：NODE_PATH<br>变量值填：（你自己的文件路径）<br><img src="https://img-blog.csdnimg.cn/20190530161206918.png" alt="系统变量"><br>将用户变量下的Path修改为<code>D:\Develop\nodejs\node_global 你自己的路径</code>   </p>
+<h4 id="1-5修改完成后测试："><a href="#1-5修改完成后测试：" class="headerlink" title="1.5修改完成后测试："></a>1.5修改完成后测试：</h4><p>输入命令：node 回车——再输入 require(“cluster”)能正常使用没出现err这样的内容就算配置成功，网上教程有把“”打成‘’我用了之后显示没有这命令推测是他打错了。我给成”“结果成功了。到这里nodejs就配置好了。     </p>
+<h3 id="2-淘宝云镜像："><a href="#2-淘宝云镜像：" class="headerlink" title="2.淘宝云镜像："></a>2.淘宝云镜像：</h3><blockquote>
+<p>在国内使用npm下载东西可能会比较慢，若配置了淘宝云镜像就可通过国内渠道下载会快很多只需在下载命令前加一个c </p>
+</blockquote>
+<h4 id="2-1验证npm："><a href="#2-1验证npm：" class="headerlink" title="2.1验证npm："></a>2.1验证npm：</h4><p> win+R 先输入node再进行下面的操作<br> <code>npm -v</code><br> 出现版本号代表成功  </p>
+<h4 id="2-2-先初始化项目的配置依赖清单："><a href="#2-2-先初始化项目的配置依赖清单：" class="headerlink" title="2.2 先初始化项目的配置依赖清单："></a>2.2 先初始化项目的配置依赖清单：</h4><p><code>npm init -y</code>    </p>
+<h4 id="2-3-初始化后会有一个package-json文件，在当前的文件夹在我的电脑文件地址栏输入cmd进入命令符窗口，接下来就可以下载了"><a href="#2-3-初始化后会有一个package-json文件，在当前的文件夹在我的电脑文件地址栏输入cmd进入命令符窗口，接下来就可以下载了" class="headerlink" title="2.3 初始化后会有一个package.json文件，在当前的文件夹在我的电脑文件地址栏输入cmd进入命令符窗口，接下来就可以下载了"></a>2.3 初始化后会有一个package.json文件，在当前的文件夹在我的电脑文件地址栏输入cmd进入命令符窗口，接下来就可以下载了</h4><p>比如：下载一个<code>jquery</code><br><code>npm install jquery</code><br>执行完之后会生成一个node_modules文件<br>在里面找到jquery.js引入要用的项目中即可</p>
+<pre><code>这是命令示例不用操作
+npm install xxx 把模块安装在当前项目中(node_modules)
+npm install xxx -g 把模块安装在全局环境中
+npm install xxx@1.0.0 安装制定版本 </code></pre>
+<h4 id="2-4-npm使用国内淘宝镜像的方法："><a href="#2-4-npm使用国内淘宝镜像的方法：" class="headerlink" title="2.4 npm使用国内淘宝镜像的方法："></a>2.4 npm使用国内淘宝镜像的方法：</h4><p> 命令：</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org    
+npm config get registry   
+npm config get registry  </code></pre>
+<p> <code>cnpm v</code>不报错就成功了  </p>
+<p>  使用npm安装：  </p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org  </code></pre>
+<h3 id="3-git的搭建："><a href="#3-git的搭建：" class="headerlink" title="3. git的搭建："></a>3. git的搭建：</h3><blockquote>
+<p>注意了，像Git这种服务器在国外的东西，它的官网下载这个软件会非常慢，建议直接在百度上搜索git下载与安装，各种软件园都能直接快速下载，留意一下版本最好不要太旧就行。   </p>
+</blockquote>
+<pre><code>安装：  
+就按他推荐或者默认的安装即可  
+到这一步注意调整您的PATH环境选择第二个    </code></pre>
+<h3 id="4-推荐一个编辑工具便于后面修改创建文件："><a href="#4-推荐一个编辑工具便于后面修改创建文件：" class="headerlink" title="4. 推荐一个编辑工具便于后面修改创建文件："></a>4. 推荐一个编辑工具便于后面修改创建文件：</h3><pre><code>notepad++ 可以在百度上搜索下在，我用的是这个当然可以用其他的。    </code></pre>
+<h2 id="注册GitHub账号并创建仓库"><a href="#注册GitHub账号并创建仓库" class="headerlink" title="注册GitHub账号并创建仓库"></a>注册GitHub账号并创建仓库</h2><p>注册很简单，仓库你的GitHub用户名加github.io如：brqs.github.io  </p>
+<h2 id="利用脚本快速搭建hexo博客"><a href="#利用脚本快速搭建hexo博客" class="headerlink" title="利用脚本快速搭建hexo博客"></a>利用脚本快速搭建hexo博客</h2><h3 id="1-下载-hexo-script-的安装脚本："><a href="#1-下载-hexo-script-的安装脚本：" class="headerlink" title="1. 下载[hexo-script]的安装脚本："></a>1. 下载[hexo-script]的安装脚本：</h3><p>  你只需要在某个目录下,右键打开git bash然后执行下面这条命令即可下载完成<br><code>curl -O https://cdn.jsdelivr.net/gh/kjhuanhao/hexo-script@master/install.sh</code><br>我们更建议直接在releases下载,选择最新版本,只需下载install.sh即可</p>
+<p>  建议新建一个目录存放此安装脚本,最好是你想存放博客文件的地方.<br>如图:我创建了一个<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-LluijETOwVdISk9cx63%2F-LlujpjLExHk7K73O-Gb%2F1.png?alt=media&amp;token=19632c44-33dd-4025-a8e5-2042e219ff98" alt="myblog">myblog文件夹,然后在此文件夹下右键打开git bash</p>
+<p>  然后运行了下载命令,安装脚本(install.sh)就会下载在你的当前文件夹中<img src="https://gblobscdn.gitbook.com/assets%2F-LlpfTEtpw-XHjloYx-t%2F-Llujyttm0BWO_RMRg-2%2F-LlukgEwkesx8NRKmBdo%2F2.png?alt=media&amp;token=ec7c6fd6-108a-4161-a3d5-1a67438fa83d">  </p>
+<h3 id="2-自动完成全部安装过程并生成博客文件"><a href="#2-自动完成全部安装过程并生成博客文件" class="headerlink" title="2.自动完成全部安装过程并生成博客文件:"></a>2.自动完成全部安装过程并生成博客文件:</h3><p>   hexo_win的使用<br>您需要在存放install.sh脚本的目录中,右键打开git bash运行以下命令:</p>
+<p>  <code>source install.sh hexo_win</code>  </p>
+<blockquote>
+<p>提示:大约两分钟的时间,博客即可自动安装完成。有时候可能克隆不了脚本换时间段或者再试一次  </p>
+</blockquote>
+<p>   当您看到出现Please run hexo s to check it out!的提示,证明您已经安装成功,此时你可以运行hexo s然后查看你的博客  </p>
+<pre><code>cd hexoblog
+hexo s</code></pre>
+<blockquote>
+<p>注意:要先cd到hexoblog目录哦!执行以上命令即可，出现网址即为成功可复制到浏览器访问  </p>
+</blockquote>
+<h3 id="3-一键生成SSH秘钥：部署hexo博客的必要之物"><a href="#3-一键生成SSH秘钥：部署hexo博客的必要之物" class="headerlink" title="3.一键生成SSH秘钥：部署hexo博客的必要之物"></a>3.一键生成SSH秘钥：部署hexo博客的必要之物</h3><blockquote>
+<p>git_ssh的使用您需要在存放install.sh脚本的目录中,右键打开git bash运行以下命令:<code>./install.sh git_ssh</code></p>
+</blockquote>
+<p>可以看到会有四条可执行命令,输入对应数字可以执行对应的命令</p>
+<pre><code>1)Key
+2)SSH
+3)Verify-github
+4)Verify-coding</code></pre>
+<p>1)Key 执行1后可以一键生成秘钥<br>如果你的电脑已经存在秘钥,程序将会自动退出</p>
+<p>2)SSH 执行2后可以查看你电脑中已生成的秘钥]</p>
+<p>3)Verify-github 执行3后可以检查秘钥是否配置github成功</p>
+<p>4)Verify-coding 执行4后可以检查秘钥是否配置coding成功生成秘钥后别忘记将秘钥添加到账号里,否则秘钥不会配置成功。  </p>
+<h3 id="4-使用ssh密匙连接："><a href="#4-使用ssh密匙连接：" class="headerlink" title="4.使用ssh密匙连接："></a>4.使用ssh密匙连接：</h3><h4 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h4><p>在C盘找到上一步生成的密匙文件右键用notepad++打开复制全选  </p>
+<h4 id="4-2"><a href="#4-2" class="headerlink" title="4.2"></a>4.2</h4><p>在GitHub账户中添加你的公钥在account settings中左边菜单点击“ssh keys”再点击add ssh key 粘贴你的密钥即可再点击add key 就行了。  </p>
+<h3 id="5up-sh的使用："><a href="#5up-sh的使用：" class="headerlink" title="5up.sh的使用："></a>5up.sh的使用：</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><p>您需要在存放install.sh脚本的目录（你自己创建的hexoblog文件夹的上一级文件夹）中,右键打开git bash运行以下命令:<br><code>source install.sh deploy</code>   </p>
+<h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><p>需要将up.sh复制到hexoblog文件,也就是复制到你的博客根目录(hexoblog)下  </p>
+<h4 id="5-3"><a href="#5-3" class="headerlink" title="5.3"></a>5.3</h4><p>然后在存放up.sh脚本的目录(hexoblog)中,右键打开git bash运行以下命令:<br><code>source up.sh</code>   </p>
+<h3 id="6-部署博客必要的配置"><a href="#6-部署博客必要的配置" class="headerlink" title="6.部署博客必要的配置:"></a>6.部署博客必要的配置:</h3><h4 id="6-1"><a href="#6-1" class="headerlink" title="6.1"></a>6.1</h4><p>首先你需要用notepad++打开根目录配置文件_config.yml进行必要的修改。  </p>
+<h4 id="6-2"><a href="#6-2" class="headerlink" title="6.2"></a>6.2</h4><p>找到deploy,它一般在最后一行,按照以下的格式修改即可  </p>
+<pre><code>deploy:
+  type: git
+  repo: 这里填你的仓库地址,建议使用SSH地址,它是以git开头的
+  branch: master     </code></pre>
+<blockquote>
+<p>注意在hexo的配置文件中冒号后面一定有空格，在后续美化过程中可能会需自己修改或者添加。当他提示你缺少空格时可能并不准确在这位置前后去寻找哪里缺少空格慢慢找一定有地方不对。  </p>
+</blockquote>
+<h1 id="matery主题的优化："><a href="#matery主题的优化：" class="headerlink" title="matery主题的优化："></a>matery主题的优化：</h1><blockquote>
+<p>这一部分是我花的时间最长，但是为了把网站做的好很值，通过这一步也更好的了解了hexo的运行方式。这部分将只包括我选用的功能，试了好多，有些功能很鸡肋或者不是很好看。被我抛弃了。      </p>
+</blockquote>
+<h2 id="1-matery主题下载："><a href="#1-matery主题下载：" class="headerlink" title="1.matery主题下载："></a>1.matery主题下载：</h2><p> <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">主题下载</a><br> 解压后替换hexoblog下theme文件夹里的那个文件夹整体替换。</p>
+<h2 id="2-主题优化"><a href="#2-主题优化" class="headerlink" title="2. 主题优化"></a>2. 主题优化</h2><h3 id="2-1-切换主题"><a href="#2-1-切换主题" class="headerlink" title="2.1 切换主题"></a>2.1 切换主题</h3><p>修改 Hexo 根目录下的 _config.yml 的 theme 的值：<code>theme: hexo-theme-matery</code>同时修改两个 <code>per_page</code> 的分页条数值为 6 的倍数，如：12、18 等，这样文章列表在各个屏幕（电脑，手机，pad）下都能较好的显示。  </p>
+<h3 id="2-2-新建一些页面"><a href="#2-2-新建一些页面" class="headerlink" title="2.2 新建一些页面"></a>2.2 新建一些页面</h3><p>在根目录hexoblog下git bash here 依次输入下列命令  </p>
+<pre><code>hexo new page "categories"
+hexo new page "tags"  
+hexo new page "about"  
+hexo new page "friends"  
+hexo new page "contact"  </code></pre>
+<blockquote>
+<p>网上教程一般都没有提到最后一个这会导致一个问题就是你的留言板页面打不开404，我当时真的搞了好久通过后我自己新加一个页面个人常用网站才解决  </p>
+</blockquote>
+<p>然后依次在hexoblog/source/tags(/categorite/about/friends/contact)/index.md 补充以下内容  </p>
+<pre><code>type: "tags"  
+layout: "tags"     
+type: "categories"  
+layout: "categories"  
+type: "about"  
+layout: "about"  
+type: "friends"  
+layout: "friends"   
+type: "contact"  
+layout: "contact"  </code></pre>
+<p>如/source/tags/index.md</p>
+<pre><code>---  
+title: tags   
+date: 2018-09-30 18:23:38  
+type: "tags"  
+layout: "tags"  
+--- </code></pre>
+<p>其中启用友情链接还需要在 source 目录下新建 _data 目录，在 _data 目录中新建 friends.json (新建一个文本文件txt连带后缀重命名修改就好，提示确认就好) 文件，文件内容如下所示：</p>
+<pre><code>[{
+    "avatar": "http://hesifan.top/medias/avatar.jpg",
+    "name": "凡尘纪",
+    "introduction": "念念不忘 必有回响",
+    "url": "http://hesifan.top/",
+    "title": "前去参观"
+}, {
+    "avatar": "https://wiki.hyperledger.org/download/attachments/2392069/fabric?version=1&amp;modificationDate=1540928132000&amp;api=v2",
+    "name": "Fabric",
+    "introduction": "A Blockchain Platform for the Enterprise",
+    "url": "https://hyperledger-fabric.readthedocs.io/en/master/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://www.bootcdn.cn/assets/img/maoyun.svg",
+    "name": "BootCDN",
+    "introduction": "稳定、快速、免费的前端开源项目 CDN 加速服务。",
+    "url": "https://www.bootcdn.cn/",
+    "title": "前去加速"
+}]  </code></pre>
+<h3 id="2-3代码高亮"><a href="#2-3代码高亮" class="headerlink" title="2.3代码高亮"></a>2.3代码高亮</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 hexo-prism-plugin 的 Hexo 插件来做代码高亮，安装命令如下：  </p>
+<pre><code>npm i -S hexo-prism-plugin  </code></pre>
+<p>然后，修改 Hexo 根目录下 _config.yml 文件中 highlight.enable 的值为 false，并新增 prism 插件相关的配置，主要配置如下：  </p>
+<pre><code>highlight:
+  enable: false
+
+prism_plugin:
+  mode: 'preprocess' #realtime/preprocess
+  theme: 'tomorrow'
+  line_number: false    # default false
+  custom_css:</code></pre>
+<h3 id="2-4-搜索"><a href="#2-4-搜索" class="headerlink" title="2.4 搜索"></a>2.4 搜索</h3><p>本主题中还使用到了 hexo-generator-search 的 Hexo 插件来做内容搜索，安装命令如下：  </p>
+<pre><code>npm install hexo-generator-search --save</code></pre>
+<p>在 Hexo 根目录下的 _config.yml 文件中，新增以下的配置项：  </p>
+<pre><code>search:
+  path: search.xml
+  field: post   </code></pre>
+<h3 id="2-5-修改页脚"><a href="#2-5-修改页脚" class="headerlink" title="2.5 修改页脚"></a>2.5 修改页脚</h3><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 /layout/_partial/footer.ejs 文件中，包括站点、使用的主题、访问量等。  </p>
+<h3 id="2-6-修改社交链接"><a href="#2-6-修改社交链接" class="headerlink" title="2.6 修改社交链接"></a>2.6 修改社交链接</h3><p>修改社交链接<br>在主题的 _config.yml 文件中，默认支持 QQ、GitHub 和邮箱的配置，可以在主题文件的 /layout/_partial/social-link.ejs 文件中，新增、修改需要的社交链接地址，增加链接如B站可参考如下代码：  </p>
+<pre><code>&lt;a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="访问我的B站" data-position="top" data-delay="50"&gt;  
+    &lt;i class="fa fa-github"&gt;&lt;/i&gt;
+&lt;/a&gt;
+</code></pre>
+<blockquote>
+<p>这是我的B站个人空间你可以换成你自己的  </p>
+</blockquote>
+<h3 id="2-7-修改打赏的二维码图片"><a href="#2-7-修改打赏的二维码图片" class="headerlink" title="2.7 修改打赏的二维码图片"></a>2.7 修改打赏的二维码图片</h3><p>在主题文件的 source/medias/reward 文件中，可以替换成你的的微信和支付宝的打赏二维码图片。</p>
+<blockquote>
+<p>特别注意修改前查看该图片信息确保你替换的图片和该图一样大小尺寸名称，建议使用ps修改，后面所有对图片的改动都是如此，不再赘叙  </p>
+</blockquote>
+<h3 id="2-8文章链接转静态短地址"><a href="#2-8文章链接转静态短地址" class="headerlink" title="2.8文章链接转静态短地址"></a>2.8文章链接转静态短地址</h3><p>如果文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。我们可以用 hexo-permalink-pinyin Hexo 插件生成文章时生成中文拼音的永久链接，或者用hexo-abbrlink 生成静态文章链接。以下结合hexo-abbrlink生成类似 /yyyy/mmdd+随机数.html 的文章链接地址。</p>
+<p>安装命令如下：  </p>
+<pre><code>npm install hexo-abbrlink --save  
+</code></pre>
+<p>在 Hexo 根目录下的 _config.yml 文件中，修改 permalink: ，并在文件末尾新增 abbrlink:配置项：  </p>
+<pre><code>permalink: :year/:month:day:abbrlink.html
+
+abbrlink: 
+  alg: crc16 #算法选项：crc16丨crc32
+  rep: dec #输出进制：dec为十进制，hex为十六进制</code></pre>
+<h3 id="2-9-文章字数统计插件"><a href="#2-9-文章字数统计插件" class="headerlink" title="2.9 文章字数统计插件"></a>2.9 文章字数统计插件</h3><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 hexo-wordcount插件。</p>
+<p>安装命令如下：  </p>
+<pre><code>npm i --save hexo-wordcount  </code></pre>
+<p>然后只需在本主题下的 _config.yml 文件中，激活以下配置项即可：  </p>
+<pre><code>wordCount:
+  enable: false # 将这个值设置为 true 即可.
+  postWordCount: true
+  min2read: true
+  totalCount: true  </code></pre>
+<blockquote>
+<p>注意是主题文件夹里的-ymal文件  </p>
+</blockquote>
+<h3 id="2-10自定制修改"><a href="#2-10自定制修改" class="headerlink" title="2.10自定制修改"></a>2.10自定制修改</h3><p>在本主题的 _config.yml 中可以修改部分自定义信息，有以下几个部分：<br>菜单<br>我的梦想<br>首页的音乐播放器和视频播放器配置<br>是否显示<br>推荐文章名称和按钮配置<br>favicon 和 Logo<br>个人信息<br>TOC 目录<br>文章打赏信息<br>复制文章内容时追加版权信息<br>MathJax<br>文章字数统计、阅读时长<br>点击页面的’爱心’效果<br>我的项目<br>我的技能<br>我的相册<br>Gitalk、Gitment、Valine 和 disqus 评论配置<br>不蒜子统计和谷歌分析（Google Analytics）<br>默认特色图的集合当文章没有设置特色图时，本主题会根据文章标题的 hashcode 值取余，来选择展示对应的特色图  </p>
+<h3 id="2-11-修改-banner-图和文章特色图"><a href="#2-11-修改-banner-图和文章特色图" class="headerlink" title="2.11 修改 banner 图和文章特色图"></a>2.11 修改 banner 图和文章特色图</h3><p>可以直接在 /source/medias/banner 文件夹中更换喜欢的 banner 图片，主题代码中是每天动态切换一张，只需 7 张即可。  </p>
+<h3 id="2-12-增加看板娘官网地址配置：-https-www-npmjs-com-package-hexo-helper-live2d"><a href="#2-12-增加看板娘官网地址配置：-https-www-npmjs-com-package-hexo-helper-live2d" class="headerlink" title="2.12 [增加看板娘官网地址配置：]  https://www.npmjs.com/package/hexo-helper-live2d"></a>2.12 [增加看板娘官网地址配置：]  <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-helper-live2d">https://www.npmjs.com/package/hexo-helper-live2d</a></h3><p>1)首先检查博客主目录下面的 package.json里是否有<br>“hexo-helper-live2d”: “^3.0.3”,依赖，有的话可以先卸载<br>使用命令：  </p>
+<pre><code>npm uninstall hexo-helper-live2d     </code></pre>
+<p>2)之后再安装：  </p>
+<pre><code>npm install --save hexo-helper-live2d  </code></pre>
+<blockquote>
+<p>注意：命令都是在你的博客主目录执行   </p>
+</blockquote>
+<p>3)安装完成之后在package.json会看到安装的model<br>下载各种动画model：<br>[地址]<a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget-models.git">https://github.com/xiazeyu/live2d-widget-models.git</a> </p>
+<p>4)下载好之后将packages里的所有动画模板拷贝到博客的node_modules目录里<br>5)配置博客站点配置文件，_config.yml  </p>
+<pre><code>live2d:
+  enable: true
+  pluginModelPath: assets/
+  model:
+    use: live2d-widget-model-epsilon2_1  #模板目录，在node_modules里
+  display:
+    position: right
+    width: 150 
+    height: 300
+  mobile:
+    show: false  #是否在手机进行显示
+</code></pre>
+<h3 id="2-13-新建文章模板修改"><a href="#2-13-新建文章模板修改" class="headerlink" title="2.13 新建文章模板修改"></a>2.13 新建文章模板修改</h3><p>首先为了新建文章方便，我们可以修改一下文章模板，可以将/scaffolds/post.md修改为如下代码：</p>
+<pre><code>---   
+title: {{ title }}   
+date: {{ date }}  
+author:   
+img:   
+coverImg:  
+top: false   
+cover: false   
+toc: true   
+mathjax: false   
+password:   
+summary:   
+keywords:   
+tags:   
+categories:  
+---
+</code></pre>
+<h3 id="2-14-关闭首页颜色变换"><a href="#2-14-关闭首页颜色变换" class="headerlink" title="2.14 关闭首页颜色变换"></a>2.14 关闭首页颜色变换</h3><p>进入主题文件的 /source/css/matery.css文件中，搜索 rainbow来关闭颜色变换：  </p>
+<pre><code>@-webkit-keyframes rainbow {
+   /* 动态切换背景颜色.即滤镜颜色，不想要可以全部注释，或者换成你喜欢的颜色 */ 
+}
+ @keyframes rainbow {
+    /* 动态切换背景颜色.，不想要可以全部注释，或者换成你喜欢的颜色 */
+}  </code></pre>
+<h3 id="2-15-markdown书写文章用"><a href="#2-15-markdown书写文章用" class="headerlink" title="2.15 markdown书写文章用"></a>2.15 markdown书写文章用</h3><p>1)下载markdown安装包<br>[点我下载]<a target="_blank" rel="noopener" href="http://editor.md.ipandao.com/">http://editor.md.ipandao.com/</a> 下载完成之后是一个压缩包，解压。<br>2)移植文件:  </p>
+<ul>
+<li>将压缩包解压之后放到 主题文件夹的source-&gt;libs目录中。可以将文件夹定改为editorMd   </li>
+<li> 新建一个新的页面。在博客站点目录下新建一个MyMarkdown文件夹，并在文件夹下新建index.md文件。将下面的代码复制到index.md文件夹中。</li>
+</ul>
+<pre><code>---
+title: editor.md
+date: 2020-02-16 11:20:03
+type: "MyMarkdown"
+layout: "MyMarkdown"
+---  </code></pre>
+<p>3)导入editor的css和js<br>打开主题目录下的_config.yml文件，将editor的js文件和CSS写入，如下<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3hpYW9zaGlkaS1odWIvUGljR08vcGljdHVyZS9ta2Q2LnBuZw?x-oss-process=image/format,png#pic_center"><br>4)新建MyMarkdown.ejs文件<br>在主题文件夹下的layout文件夹中新建MyMarkdown.ejs文件。将下列代码复制到MyMarkdown.ejs文件中。  </p>
+<pre><code>&lt;link rel="stylesheet" href="&lt;%- theme.libs.css.editormdCss %&gt;"&gt;
+
+&lt;style type="text/css"&gt;
+    /* don't remove. */
+    .page-cover {
+        /* height: 75vh; */
+        height: 940px;
+    }
+
+    .editormd {
+      top: 76px;
+    }
+
+    pre {
+      padding: 0;
+    }
+
+    .editormd-menu &gt; li.divider {
+      overflow: inherit; 
+      padding: 5px 0px;
+    }
+
+    header .nav-transparent {    /*修改当行兰样式*/
+        background-image: linear-gradient(to right, #bf30a3 0%, #0f9d58 100%);
+    }
+
+    .editormd-form input[type="text"], 
+    .editormd-form input[type="number"] {
+        height: 15px;
+        margin: 0px;
+        font-size: 14px;
+    }
+
+    .editormd-form input[type="text"] {
+        display: inline-block;
+        width: 246px;
+    }
+
+    .editormd-dialog-container label {
+      font-size: 14px;
+      color: #444;
+  }
+
+    .editormd-dialog-container select {
+      display: inline-block;
+      background-color: rgba(255,255,255,0.9);
+      width: 182px;
+      border-radius: 2px;
+      height: 25px;
+  }
+
+&lt;/style&gt;
+
+&lt;div class="pd-header page-cover"&gt;
+  &lt;div class="editormd" id="my-editormd"&gt;
+    &lt;textarea style="display:none;"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script src="&lt;%- theme.libs.js.jquery %&gt;"&gt;&lt;/script&gt;
+&lt;script src="&lt;%- theme.libs.js.editormdJs %&gt;"&gt;&lt;/script&gt;
+&lt;script  type="text/javascript"&gt;
+  var myEditor;
+  $(function() {  
+      myEditor = editormd("my-editormd", {
+        width   : "98%",
+        height  : 840,
+        syncScrolling : "single",
+        path    : "/libs/editorMd/lib/",
+       // theme: "dark",
+      //  previewTheme: "dark",
+      //  editorTheme: "pastel-on-dark",
+        markdown: '',
+        codeFold: true,
+        emoji: true,
+        taskList: true,
+        tocm: true,         // Using [TOCM]
+        tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+        flowChart: true,             // 开启流程图支持，默认关闭
+        sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+        htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启   
+    });
+  });
+&lt;/script&gt;  </code></pre>
+<h3 id="2-16hexo安装插件hexo-admin"><a href="#2-16hexo安装插件hexo-admin" class="headerlink" title="2.16hexo安装插件hexo-admin"></a>2.16hexo安装插件hexo-admin</h3><blockquote>
+<p>hexo使用编辑文章时，若用其原生方式，则不便利，还好官网提供了一款插件hexo-admin界面化了markdown编辑器，只需要访问：<a target="_blank" rel="noopener" href="http://127.0.0.1:4000/admin">http://127.0.0.1:4000/admin</a> 即可方便快捷的进行博文编辑了，  </p>
+</blockquote>
+<p>1)安装hexo-admin插件<code>npm install --save hexo-admin</code><br>2) 启动访问<code>hexo  s</code><br><a target="_blank" rel="noopener" href="http://127.0.0.1:4000/admin">http://127.0.0.1:4000/admin</a>   </p>
+<h3 id="2-17Hexo添加博客导航页"><a href="#2-17Hexo添加博客导航页" class="headerlink" title="2.17Hexo添加博客导航页"></a>2.17Hexo添加博客导航页</h3><p>1)新建页面，执行下面的命令   </p>
+<pre><code>hexo new page navigate  
+</code></pre>
+<p>2)修改 navigate 目录下的 index.md 的格式  </p>
+<pre><code>---
+title: 个人常用网站
+date:  2020-10-09 11:19:14  
+type: "navigate"
+layout: "navigate"   
+---  </code></pre>
+<p>3)在主题配置文件_config.yml中添加个人常用网站  </p>
+<pre><code>  导航:
+    url: /navigate
+    icon: fas fa-location-arrow  </code></pre>
+<p>4)在 matery/layout 下新建 navigate.ejs</p>
+<pre><code> &lt;div class="navi-height bg-cover pd-header "&gt; 
+    &lt;div class=" link-box container"&gt; 
+        &lt;!-- 搜索框 --&gt; 
+        &lt;div class="baidu baidu-2 large-screen"&gt; 
+            &lt;form name="f" action="https://www.baidu.com/" target="_blank"&gt; 
+                 &lt;div id="Select-2"&gt; 
+                     &lt;div class="Select-box-2" id="baidu"&gt; 
+                         &lt;ul style="height: 46px;"&gt; 
+                            &lt;li class="this_s"&gt;百 · 度&lt;/li&gt; 
+                            &lt;li class="bing_s"&gt;必 · 应&lt;/li&gt; 
+                            &lt;li class="google_s"&gt;谷 · 歌&lt;/li&gt; 
+                            &lt;li class="baidu_s"&gt;百 · 度&lt;/li&gt; 
+                         &lt;/ul&gt; 
+                     &lt;/div&gt; &lt;input name="wd" id="kw-2" maxlength="100" autocomplete="off" type="text"&gt; 
+                 &lt;/div&gt; 
+                 &lt;div class="qingkong" id="qingkong" title="清 · 空" style="display: none;"&gt;x&lt;/div&gt; &lt;input value="搜 · 索" 
+                     id="su-2" type="submit"&gt; 
+                 &lt;ul class="keylist"&gt;&lt;/ul&gt; 
+             &lt;/form&gt; 
+         &lt;/div&gt; &lt;!-- 链接 --&gt;
+         &lt;div class="row tags-posts "&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;娱乐 · 影视&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt;  
+                         &lt;li&gt;&lt;a href="https:pixiv.net" class="link-3" target="_blank"&gt;Pixiv&lt;/a&gt;&lt;/li&gt;  
+                         &lt;li&gt;&lt;a href="https://www.bilibili.com/" class="link-3" target="_blank"&gt;哔哩哔哩&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.acfun.cn/" class="link-3" target="_blank"&gt;ACfun&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.spotify.com/" class="link-3" target="_blank"&gt;Spotify&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://awbw.amarriner.com/" class="link-3" target="_blank"&gt;AWBW&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href=" https://music.163.com/" class="link-3" target="_blank"&gt;网易云音乐&lt;/a&gt;&lt;/li&gt;
+                     &lt;/ul&gt; 
+                 &lt;/div&gt; 
+             &lt;/div&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;社区 · Code&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt; 
+                         &lt;li&gt;&lt;a href="https://github.com/" class="link-3" target="_blank"&gt;GitHub&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://coding.net/" class="link-3" target="_blank"&gt;Coding&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://juejin.im/" class="link-3" target="_blank"&gt;掘金&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://gitee.com/" class="link-3" target="_blank"&gt;码云&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.v2ex.com/" class="link-3" target="_blank"&gt;V2EX&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.jianshu.com/" class="link-3" target="_blank"&gt;简书&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.52pojie.cn/" class="link-3" target="_blank"&gt;吾爱破解&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://segmentfault.com/" class="link-3" target="_blank"&gt;思否&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://cloud.tencent.com/developer/" class="link-3" target="_blank"&gt;云+社区&lt;/a&gt;&lt;/li&gt; 
+                     &lt;/ul&gt; 
+                 &lt;/div&gt; 
+             &lt;/div&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; 
+                     &lt;div class="jj-list-tit"&gt;图片处理&lt;/div&gt; 
+                     &lt;ul class="jj-list-con"&gt; 
+                         &lt;li&gt;&lt;a href="https://tinypng.com/" class="link-3" target="_blank"&gt;TingPNG&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.upyun.com/webp" class="link-3" target="_blank"&gt;又拍云Webp&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://www.iconfont.cn/" class="link-3" target="_blank"&gt;IconFont&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://fontawesome.com/" class="link-3" target="_blank"&gt;AweSome&lt;/a&gt;&lt;/li&gt; 
+                         &lt;li&gt;&lt;a href="https://wallhaven.cc/" class="link-3" target="_blank"&gt;超清壁纸&lt;/a&gt;&lt;/li&gt; 
+                     &lt;/ul&gt; 
+                 &lt;/div&gt; 
+             &lt;/div&gt; 
+             &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+                 &lt;div class="card"&gt; &lt;div class="jj-list-tit"&gt;实用 · 工具&lt;/div&gt; 
+                 &lt;ul class="jj-list-con"&gt; 
+                     &lt;li&gt;&lt;a href="https://mdnice.com/" class="link-3" target="_blank"&gt;Nice编辑器&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.processon.com/" class="link-3" target="_blank"&gt;思维导图&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://cli.im/" class="link-3" target="_blank"&gt;二维码&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://my.openwrite.cn/" class="link-3" target="_blank"&gt;OW分发&lt;/a&gt;&lt;/li&gt;  
+                     &lt;li&gt;&lt;a href="https://www.guidgen.com/" class="link-3" target="_blank"&gt;GUID在线生成&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://console.upyun.com/purge/purge_url/" class="link-3" target="_blank"&gt;又拍云刷新网站&lt;/a&gt;&lt;/li&gt; 
+
+
+                 &lt;/ul&gt; 
+             &lt;/div&gt; 
+         &lt;/div&gt; 
+         &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+             &lt;div class="card"&gt; 
+                 &lt;div class="jj-list-tit"&gt;编程 · 学习&lt;/div&gt; 
+                 &lt;ul class="jj-list-con"&gt; 
+                     &lt;li&gt;&lt;a href="https://www.oschina.net/" class="link-3" target="_blank"&gt;开源中国&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://htmldog.com/" class="link-3" target="_blank"&gt;HTML狗&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.icourse163.org/" class="link-3" target="_blank"&gt;中国大学慕课&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.imooc.com/" class="link-3" target="_blank"&gt;慕课网&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="http://www.wxapp-union.com/" class="link-3" target="_blank"&gt;小程序&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://blog.51cto.com/" class="link-3" target="_blank"&gt;51CTO&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://www.shiyanlou.com/library/" class="link-3" target="_blank"&gt;实验楼&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://spring.io/" class="link-3" target="_blank"&gt;Spring&lt;/a&gt;&lt;/li&gt; 
+                     &lt;li&gt;&lt;a href="https://blog.csdn.net/" class="link-3" target="_blank"&gt;csdn&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt; 
+             &lt;/div&gt; 
+         &lt;/div&gt; 
+         &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+             &lt;div class="card"&gt; 
+                  &lt;div class="jj-list-tit"&gt;资讯 · 趋势&lt;/div&gt; 
+                  &lt;ul class="jj-list-con"&gt; 
+                      &lt;li&gt;&lt;a href="https://www.huxiu.com/" class="link-3" target="_blank"&gt;虎嗅&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://insights.stackoverflow.com/" class="link-3" target="_blank"&gt;技术调查&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="http://www.asciiworld.com/" class="link-3" target="_blank"&gt;摸鱼&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://sspai.com/" class="link-3" target="_blank"&gt;少数派&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://zh.wikihow.com/" class="link-3" target="_blank"&gt;WikeHom&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://www.awesomes.cn/rank?sort=hot" class="link-3" target="_blank"&gt;前端趋势&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://github-trending.com/" class="link-3" target="_blank"&gt;GitHub趋势&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="https://www.tiobe.com/" class="link-3" target="_blank"&gt;编程趋势&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://trends.google.com/" class="link-3" target="_blank"&gt;Google趋势&lt;/a&gt;&lt;/li&gt; 
+                  &lt;/ul&gt; 
+              &lt;/div&gt; 
+          &lt;/div&gt; 
+          &lt;div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up"&gt; 
+              &lt;div class="card"&gt; 
+                  &lt;div class="jj-list-tit"&gt;常用· 其他&lt;/div&gt; 
+                  &lt;ul class="jj-list-con"&gt;   
+                      &lt;li&gt;&lt;a href="https://www.qvdv.com/tools/qvdv-guid.html" class="link-3" target="_blank"&gt;在线工具&lt;/a&gt; 
+                      &lt;li&gt;&lt;a href="http://zhongguose.com/" class="link-3" target="_blank"&gt;中国色&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://opensource.builders/" class="link-3" target="_blank"&gt;OpenSource&lt;/a&gt;&lt;/li&gt; 
+                      &lt;li&gt;&lt;a href="https://cloud.tencent.com/" class="link-3" target="_blank"&gt;腾讯云&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="https://www.leancloud.cn/" class="link-3" target="_blank"&gt;leancloud&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="http://127.0.0.1:4000/admin/" class="link-3" target="_blank"&gt;管理&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="https://www.natfrp.com/user/" class="link-3" target="_blank"&gt;Sakura&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt; 
+              &lt;/div&gt; 
+          &lt;/div&gt; 
+      &lt;/div&gt; 
+      &lt;script&gt; /*选择搜索引擎*/ $('.Select-box ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '40px') }); $('.Select-box-2 ul').hover(function () { $(this).css('height', 'auto') }, function () { $(this).css('height', '46px') }); $('.Select-box li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw').attr('name', _name); $('.Select-box ul').css('height', '40px') }); $('.Select-box-2 li').click(function () { var _tihs = $(this).attr('class'); var _html = $(this).html(); if (_tihs == 'baidu_s') { _tihs = 'https://www.baidu.com/s'; _name = 'wd'; } if (_tihs == 'google_s') { _tihs = 'https://www.google.com/search'; _name = 'q'; } if (_tihs == 'bing_s') { _tihs = 'https://www.bing.com/search'; _name = 'q'; } $('.baidu form').attr('action', _tihs); $('.this_s').html(_html); $('#kw-2').attr('name', _name); $('.Select-box-2 ul').css('height', '48px') }); //清空输入框内容 $('.qingkong').click(function () { cls(); $(this).css('display', 'none') }); function cls() { var sum = 0; var t = document.getElementsByTagName("INPUT"); for (var i = 0; i &lt; t.length; i++) { if (t[i].type == 'text') { ++sum; t[i].value = "";//清空 } } } //清空输入框按钮的显示和隐藏 function if_btn() { var btn_obj = document.getElementById("kw") || document.getElementById("kw-2"); var cls_btn = document.getElementById("qingkong"); var btn_obj_val; var times; //当元素获得焦点时 if (btn_obj == '' || btn_obj == null) { return false; //如果没有找到这个元素，则将函数返回，不继续执行 } btn_obj.onfocus = function () { times = setInterval(function () { btn_obj_val = btn_obj.value; if (btn_obj_val != 0) { cls_btn.style.display = "block"; } else { cls_btn.style.display = "none"; } }, 200); } //元素失去焦点时 btn_obj.onblur = function () { clearInterval(times); } } &lt;/script&gt; 
+  &lt;/div&gt; 
+&lt;/div&gt; 
+&lt;style&gt; 
+    * { 
+        margin: 0; 
+        padding: 0; 
+        font-family: "微软雅黑" 
+    } 
+    ul,li,h1,h2,h3,h4,h5,h6,p,form,dl,dt,dd { 
+        margin: 0px; 
+        padding: 0px; 
+        font-size: 14px; 
+        font-weight: normal; 
+    } 
+
+    img { 
+        border-style: none; 
+    }     
+
+    li { 
+        list-style: none; 
+        float: left 
+    }     
+
+    a { 
+        text-decoration: none 
+    } 
+
+    .card { 
+       background-color: rgba(25, 240, 229, 0); 
+       width: 96%; 
+       margin-left: 2% 
+     } 
+
+     .baidu { 
+         float: left; 
+         margin-left: 100px; 
+    } 
+
+    .baidu form { 
+        position: relative 
+    } 
+
+    .Select-box ul { 
+        height: 40px; 
+        position: absolute; 
+        left: -1px; 
+        top: 0px; 
+        z-index: 9999; 
+        background: #FFF; 
+        border: 1px solid #ccc; 
+        border-top: none; 
+        overflow: hidden 
+    } 
+
+    .Select-box li { 
+        width: 60px; 
+        line-height: 40px; 
+        font-size: 14px; 
+        color: #484848; 
+        border: 0; 
+        cursor: 
+        pointer; 
+    } 
+
+    .Select-box li:hover { 
+        background: #3385ff; 
+        color: #FFF; 
+    } 
+
+    .Select-box .this_s { 
+        color: #317ef3; 
+    } 
+
+    .Select-box .this_s:hover { 
+        background: #FFF; 
+        color: #317ef3;    
+    } 
+
+    .qingkong { 
+        position: absolute; 
+        right: 120px; 
+        top: 12px; 
+        width: 18px; 
+        height: 18px;
+        background: rgba(0, 0, 0, 0.1); 
+        border-radius: 18px; 
+        line-height: 16px; 
+        color: #666666; 
+        cursor: pointer; 
+        text-align: center; 
+        font-size: 14px; 
+        display: none; 
+    } 
+
+    .qingkong:hover {
+        background: rgba(0, 0, 0, 0.2); 
+    } 
+
+    .qingkong:active { 
+        background: rgba(0, 0, 0, 0.3);        
+    } 
+
+    .baidu-2 { 
+        width: 100%; 
+        height: 110px; 
+        margin: 0 auto; 
+        background: none; 
+        padding-top: 50px; 
+    } 
+
+    .baidu-2 form { 
+        width: 520px; 
+        margin: 0 auto; 
+    } 
+
+    .baidu-2 input { 
+        padding: 13px 8px; 
+        opacity: 0.9; 
+        font-size: 15px; 
+    } 
+
+    #Select-2 { 
+        float: left; 
+    } 
+
+    .Select-box-2 { 
+        text-align: center; 
+        float: left; 
+        position: relative; 
+    } 
+
+    .Select-box-2 ul { 
+        height: 46px; 
+        position: absolute; 
+        left: 0px; 
+        top: 1px; 
+        z-index: 9999; 
+        background: rgba(255, 255, 255, 0.9); 
+        border: 1px solid #ccc; border-top: none; 
+        overflow: hidden 
+    } 
+
+    .Select-box-2 li { 
+        width: 60px; 
+        line-height: 46px; 
+        font-size: 15px; 
+        color: #484848; 
+        border: 0; 
+        cursor: pointer; 
+    } 
+
+    .Select-box-2 li:hover { 
+        background: #3385ff; 
+        color: #FFF; 
+    } 
+
+    .Select-box-2 .this_s { 
+        color: #317ef3; 
+    } 
+
+    .Select-box-2 .this_s:hover { 
+        background: none; 
+        color: #317ef3; 
+    } 
+
+    #kw-2 { 
+        width: 335px; 
+        outline: 0; 
+        border: 1px solid #ccc; 
+        background: rgba(255, 255, 255, 0.2); 
+        color: #000000; 
+        padding-left: 70px; 
+        font-weight: bold; 
+    } 
+
+    /*修改搜索框样式*/ 
+    #su-2 { 
+        width: 90px; 
+        background: blue; 
+        border: none; 
+        border-top: #3385ff 1px solid; 
+        border-bottom: 1px solid #2d78f4; 
+        color: #FFF; 
+        cursor: pointer;
+        /*去轮廓阴影*/ 
+        outline: none; 
+    } 
+
+    /*光标移动到搜索框颜色*/ 
+    #su-2:hover { 
+        background: blue; 
+        border-bottom: 1px 
+        solid blue; 
+    } 
+
+    #su-2:active { 
+        background: blue; 
+        box-shadow: inset 1px 1px 3px blue; 
+        -webkit-box-shadow: inset 1px 1px 3px blue; 
+    } 
+
+    .jj-list-tit { 
+        font-size: 16px; 
+        line-height: 25px; 
+        color: #ffffff; 
+        width: 100%; 
+        padding-left: 38.5%; 
+    } 
+
+    .jj-list-con { 
+        overflow: hidden; 
+        margin: 0 auto 
+    } 
+
+    /*控制网站列表间距*/ 
+    .jj-list-con li { 
+        width: 31.333%; 
+        margin: 1%; 
+    } 
+
+    .link-3 { 
+        display: block; 
+        background: rgba(0, 0, 0, .35); 
+        color: #FFF; 
+        font-size: 13px; 
+        text-align: center; 
+        line-height: 35px; 
+        padding: 4px 0; 
+        border-radius: 2px; 
+        transition: all 0.2s 
+    } 
+
+
+    .link-3:hover { 
+        background: rgba(0, 0, 0, .45); 
+        font-size: 15px; 
+        font-weight: bold 
+    } 
+
+    /*1栏 小于584*/ 
+    @media only screen and (max-width: 584px) { 
+        .navi-height { 
+            height: 1300px; 
+        } 
+
+        .link-box { 
+            margin-top: 5%; 
+        } 
+
+        .large-screen { 
+            display: none; 
+        } 
+    } 
+
+    /* 2栏 大于584 小于993px */ 
+    @media only screen and (min-width: 584px) and (max-width: 993px) { 
+        .navi-height { 
+            height: 800px; 
+        } 
+
+        .link-box { 
+            margin-top: 5%; 
+        } 
+
+        .large-screen { 
+            display: none; 
+        } 
+    } 
+
+    /*3栏 大于993px*/ 
+    @media only screen and (min-width: 993px) { 
+        .navi-height { 
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+        } 
+    } 
+
+    /* 隐藏footer */ 
+    .page-footer { 
+        display: none; 
+    } 
+&lt;/style&gt; 
+&lt;% if (theme.banner.enable) { %&gt; 
+&lt;script&gt; 
+    // 每天切换 banner 图. Switch banner image every day. 
+    var bannerUrl = "&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for('/medias/banner/') %&gt;" + new Date().getDay() + '.jpg'; $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')'); 
+    &lt;/script&gt; 
+    &lt;% } else { %&gt; 
+    &lt;script&gt; 
+    $('.bg-cover').css('background-image', 'url(&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for('/medias/banner/0.jpg') %&gt;)'); 
+&lt;/script&gt; 
+&lt;% } %&gt;
+</code></pre>
+<h3 id="2-18-Hexo-博客订阅文章通知功能"><a href="#2-18-Hexo-博客订阅文章通知功能" class="headerlink" title="2.18 Hexo 博客订阅文章通知功能"></a>2.18 Hexo 博客订阅文章通知功能</h3><p>进入站点根目录</p>
+<pre><code>npm install hexo-web-push-notification --save </code></pre>
+<p>编辑站点配置文件_config.yml</p>
+<pre><code>webPushNotification:
+  webpushrKey: "your webpushr rest api key"
+  webpushrAuthToken: "your webpushr authorize token"
+  trackingCode: "AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88"</code></pre>
+<p> [注册账号]<a target="_blank" rel="noopener" href="https://app.webpushr.com/signup">https://app.webpushr.com/signup</a></p>
+<p>按照步骤操作<br>将第二步中所指的代码复制粘贴到你的 layout.ejs文件内,执行hexo clean&amp;&amp;hexo g&amp;&amp;hexo d部署即可！</p>
+<p>部署之后可能会遇到无法正常发送通知的情况.</p>
+<p>进入目录 node_modules/hexo-web-push-notification/index.js文件中第22行<code>'summary': util.stripHTML(newPost.excerpt)</code>,这里取值取的是<code>excerpt</code>，改成<code>summary</code>即可。</p>
+<p>修改前</p>
+<pre><code>json
+var JSONFeed = {
+        'title': newPost.title,
+        'id': newPost.path,
+        'date_published': newPost.date.format('L'),
+        'summary': util.stripHTML(newPost.excerpt),
+        'url': newPost.permalink,
+        'tags': newPost.tags.data.map(function (v) { return v.name }),
+        'categories': newPost.categories.data.map(function (v) { return v.name })
+    }</code></pre>
+<p>修改后</p>
+<pre><code>json
+var JSONFeed = {
+        'title': newPost.title,
+        'id': newPost.path,
+        'date_published': newPost.date.format('L'),
+        'summary': util.stripHTML(newPost.summary),
+        'url': newPost.permalink,
+        'tags': newPost.tags.data.map(function (v) { return v.name }),
+        'categories': newPost.categories.data.map(function (v) { return v.name })
+    }</code></pre>
+<h1 id="将hexo部署到服务器"><a href="#将hexo部署到服务器" class="headerlink" title="将hexo部署到服务器"></a>将hexo部署到服务器</h1><h2 id="系统centos-7-6-64bit"><a href="#系统centos-7-6-64bit" class="headerlink" title="系统centos 7.6 64bit"></a>系统centos 7.6 64bit</h2><h2 id="环境-git-nginx"><a href="#环境-git-nginx" class="headerlink" title="环境 git nginx"></a>环境 git nginx</h2><h2 id="git安装与配置"><a href="#git安装与配置" class="headerlink" title="git安装与配置"></a>git安装与配置</h2><h3 id="1-安装依赖库和编译工具"><a href="#1-安装依赖库和编译工具" class="headerlink" title="1. 安装依赖库和编译工具"></a>1. 安装依赖库和编译工具</h3><pre><code>  yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel 
+ Is this ok [y/d/N]:  
+</code></pre>
+<p> 输入y继续安装，后面一样  </p>
+<h3 id="2-安装编译工具："><a href="#2-安装编译工具：" class="headerlink" title="2. 安装编译工具："></a>2. 安装编译工具：</h3><pre><code>  yum install gcc perl-ExtUtils-MakeMaker package 
+</code></pre>
+<h2 id="下载-git并解压编译安装"><a href="#下载-git并解压编译安装" class="headerlink" title="下载 git并解压编译安装"></a>下载 git并解压编译安装</h2><h3 id="1-查看服务器已有的git版本"><a href="#1-查看服务器已有的git版本" class="headerlink" title="1. 查看服务器已有的git版本"></a>1. 查看服务器已有的git版本</h3><pre><code>git --version</code></pre>
+<pre><code>git version 1.8.3.1
+</code></pre>
+<h3 id="2-将陈旧版本的git删除"><a href="#2-将陈旧版本的git删除" class="headerlink" title="2. 将陈旧版本的git删除"></a>2. 将陈旧版本的git删除</h3><pre><code>yum remove git 
+</code></pre>
+<h3 id="3-选择一个目录来存放下载下来的-git-安装包。这里选择了-usr-local-src-目录"><a href="#3-选择一个目录来存放下载下来的-git-安装包。这里选择了-usr-local-src-目录" class="headerlink" title="3.选择一个目录来存放下载下来的 git 安装包。这里选择了/usr/local/src 目录"></a>3.选择一个目录来存放下载下来的 git 安装包。这里选择了/usr/local/src 目录</h3><pre><code>cd /usr/local/src   </code></pre>
+<h3 id="4-下载最新版git到-usr-local-src，可以在官网找到版本，目前最新版本是2-26-0。"><a href="#4-下载最新版git到-usr-local-src，可以在官网找到版本，目前最新版本是2-26-0。" class="headerlink" title="4. 下载最新版git到/usr/local/src，可以在官网找到版本，目前最新版本是2.26.0。"></a>4. 下载最新版git到/usr/local/src，可以在官网找到版本，目前最新版本是2.26.0。</h3><pre><code>wget http://ftp.ntu.edu.tw/software/scm/git/git-2.26.0.tar.gz  
+</code></pre>
+<h3 id="5-解压到当前目录"><a href="#5-解压到当前目录" class="headerlink" title="5. 解压到当前目录"></a>5. 解压到当前目录</h3><pre><code>tar -zvxf git-2.26.0.tar.gz  </code></pre>
+<h3 id="6-进入-git-2-26-0-tar-gz-目录下"><a href="#6-进入-git-2-26-0-tar-gz-目录下" class="headerlink" title="6. 进入 git-2.26.0.tar.gz 目录下"></a>6. 进入 git-2.26.0.tar.gz 目录下</h3><pre><code>cd git-2.26.0
+</code></pre>
+<h3 id="7-执行编译"><a href="#7-执行编译" class="headerlink" title="7. 执行编译"></a>7. 执行编译</h3><pre><code>make prefix=/usr/local/git all  </code></pre>
+<h3 id="8-安装-git-到-usr-local-git-目录下"><a href="#8-安装-git-到-usr-local-git-目录下" class="headerlink" title="8.安装 git 到 /usr/local/git 目录下"></a>8.安装 git 到 /usr/local/git 目录下</h3><pre><code>make prefix=/usr/local/git install  </code></pre>
+<h2 id="配置-git-环境变量"><a href="#配置-git-环境变量" class="headerlink" title="配置 git 环境变量"></a>配置 git 环境变量</h2><h3 id="1-打开环境变量配置文件"><a href="#1-打开环境变量配置文件" class="headerlink" title="1.打开环境变量配置文件"></a>1.打开环境变量配置文件</h3><pre><code>vim /etc/profile  </code></pre>
+<p>  按i进入编辑模式，按向下键到底部，添加下面两行命令：   </p>
+<pre><code>PATH=$PATH:/usr/local/git/bin   # git 的目录
+export PATH  
+</code></pre>
+<p>  按esc退出，按:wq保存编辑。(注意是先:再是wq)  </p>
+<h3 id="2-使-git-环境变量生效"><a href="#2-使-git-环境变量生效" class="headerlink" title="2.使 git 环境变量生效"></a>2.使 git 环境变量生效</h3><pre><code> source /etc/profile</code></pre>
+<h3 id="3-验证安装完成，查看-git-的版本号"><a href="#3-验证安装完成，查看-git-的版本号" class="headerlink" title="3.验证安装完成，查看 git 的版本号"></a>3.验证安装完成，查看 git 的版本号</h3><pre><code>git --version
+</code></pre>
+<p>这时候我们的git版本已经变成了：</p>
+<pre><code>git version 2.26.0
+1</code></pre>
+<h2 id="创建-git-用户"><a href="#创建-git-用户" class="headerlink" title="创建 git 用户"></a>创建 git 用户</h2><h3 id="1-创建git用户"><a href="#1-创建git用户" class="headerlink" title="1.创建git用户"></a>1.创建git用户</h3><pre><code>adduser git</code></pre>
+<h3 id="2-获取权限"><a href="#2-获取权限" class="headerlink" title="2.获取权限"></a>2.获取权限</h3><pre><code>chmod 740 /etc/sudoers
+vim /etc/sudoers
+</code></pre>
+<p>按 i 键进入文件的编辑模式，按向下键找到如下字段</p>
+<pre><code>root    ALL=(ALL)       ALL</code></pre>
+<p>在其后面增加一句：</p>
+<pre><code>git     ALL=(ALL)       ALL</code></pre>
+<p>按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入:，然后输入wq回车）</p>
+<h3 id="3-退回权限"><a href="#3-退回权限" class="headerlink" title="3.退回权限"></a>3.退回权限</h3><pre><code>chmod 400 /etc/sudoers  </code></pre>
+<h2 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h2><h3 id="1-将密钥保存在服务器-之前有密钥的直接复制就可以"><a href="#1-将密钥保存在服务器-之前有密钥的直接复制就可以" class="headerlink" title="1.将密钥保存在服务器(之前有密钥的直接复制就可以)"></a>1.将密钥保存在服务器(之前有密钥的直接复制就可以)</h3><p>将id_rsa.pub里面的密钥复制,在服务器运行下面命令，创建.ssh文件夹</p>
+<pre><code>su git
+mkdir ~/.ssh</code></pre>
+<p>创建.ssh/authorized_keys文件，打开authorized_keys文件并将刚才在本地机器复制的内容拷贝其中并保存</p>
+<pre><code>vim ~/.ssh/authorized_keys</code></pre>
+<p>按i进入编辑模式粘贴完按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入:，然后输入wq回车）</p>
+<h3 id="2-修改权限"><a href="#2-修改权限" class="headerlink" title="2.修改权限"></a>2.修改权限</h3><pre><code>chmod 755 ~
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys</code></pre>
+<h3 id="3-测试本地连接服务器"><a href="#3-测试本地连接服务器" class="headerlink" title="3.测试本地连接服务器"></a>3.测试本地连接服务器</h3><p>在本地电脑git bash here</p>
+<pre><code>//yourIp为远程服务器的ip地址
+ssh -v git@yourIp  
+</code></pre>
+<pre><code>git@vm_0_centos~
+</code></pre>
+<h2 id="创建git仓库"><a href="#创建git仓库" class="headerlink" title="创建git仓库"></a>创建git仓库</h2><h3 id="1-切换到root用户，创建一个目录用于存储网站的根目录"><a href="#1-切换到root用户，创建一个目录用于存储网站的根目录" class="headerlink" title="1.切换到root用户，创建一个目录用于存储网站的根目录"></a>1.切换到root用户，创建一个目录用于存储网站的根目录</h3><pre><code>su root</code></pre>
+<h3 id="2-创建网站的根目录"><a href="#2-创建网站的根目录" class="headerlink" title="2.创建网站的根目录"></a>2.创建网站的根目录</h3><pre><code>mkdir /home/hexo</code></pre>
+<h3 id="3给予权限"><a href="#3给予权限" class="headerlink" title="3给予权限"></a>3给予权限</h3><pre><code>chown git:git -R /home/hexo</code></pre>
+<h2 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h2><h3 id="1-安装配置Nginx"><a href="#1-安装配置Nginx" class="headerlink" title="1.安装配置Nginx"></a>1.安装配置Nginx</h3><p>安装Nginx  </p>
+<pre><code>yum install -y nginx</code></pre>
+<p>配置Nginx</p>
+<pre><code>nginx -t</code></pre>
+<p>使用vim打开nginx.conf文件</p>
+<pre><code>vim /etc/nginx/nginx.conf</code></pre>
+<p>按i进入编辑模式粘贴完按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入:，然后输入wq回车）</p>
+<pre><code>server {
+        listen       80 default_server;
+        listen       [::]:80 default_server;
+        server_name  www.muyiio.com;   //你的博客域名
+        root         /home/hexo;       //git仓库目录
+    # Load configuration files for the default server block.
+    include /etc/nginx/default.d/*.conf;
+
+    location / {
+    }
+j
+    error_page 404 /404.html;
+        location = /40x.html {
+    }
+
+    error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+    }
+}</code></pre>
+<h3 id="2-启动Nginx"><a href="#2-启动Nginx" class="headerlink" title="2.启动Nginx"></a>2.启动Nginx</h3><pre><code>systemctl start nginx.service</code></pre>
+<h3 id="3-重启Nginx"><a href="#3-重启Nginx" class="headerlink" title="3.重启Nginx"></a>3.重启Nginx</h3><pre><code>systemctl restart nginx.service</code></pre>
+<h2 id="自动化部署"><a href="#自动化部署" class="headerlink" title="自动化部署"></a>自动化部署</h2><h3 id="1-获取root权限"><a href="#1-获取root权限" class="headerlink" title="1.获取root权限"></a>1.获取root权限</h3><pre><code>su root</code></pre>
+<h3 id="2-建立git仓库"><a href="#2-建立git仓库" class="headerlink" title="2.建立git仓库"></a>2.建立git仓库</h3><pre><code>cd /home/git
+git init --bare blog.git</code></pre>
+<h3 id="3-修改blog-gi权限"><a href="#3-修改blog-gi权限" class="headerlink" title="3.修改blog.gi权限"></a>3.修改blog.gi权限</h3><pre><code>chown git:git -R blog.git</code></pre>
+<h3 id="4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。"><a href="#4-在-home-hexo-blog-git-下，有一个自动生成的-hooks-文件夹，我们创建一个新的-git-钩子-post-receive，用于自动部署。" class="headerlink" title="4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。"></a>4.在 /home/hexo/blog.git 下，有一个自动生成的 hooks 文件夹，我们创建一个新的 git 钩子 post-receive，用于自动部署。</h3><pre><code>im blog.git/hooks/post-receive</code></pre>
+<p>按 i 键进入文件的编辑模式，在该文件中添加两行代码（将下边的代码粘贴进去)，指定 Git 的工作树（源代码）和 Git 目录</p>
+<pre class=" language-#!/bin/bash"><code class="language-#!/bin/bash">git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f </code></pre>
+<p>按 Esc 键退出编辑模式，输入:wq 保存退出。（先输入：，然后输入wq回车）</p>
+<h3 id="5-修改文件权限，使得其可执行。"><a href="#5-修改文件权限，使得其可执行。" class="headerlink" title="5.修改文件权限，使得其可执行。"></a>5.修改文件权限，使得其可执行。</h3><pre><code>chmod +x /home/git/blog.git/hooks/post-receive  </code></pre>
+<h2 id="配置本地Hexo"><a href="#配置本地Hexo" class="headerlink" title="配置本地Hexo"></a>配置本地Hexo</h2><h3 id="1-博客根目录-config下增加"><a href="#1-博客根目录-config下增加" class="headerlink" title="1.博客根目录_config下增加"></a>1.博客根目录_config下增加</h3><pre><code>deploy:
+    type: git
+    repo: root@***(服务器ip,内网外网都行):/home/git/blog.git    #仓库地址
+    branch: master    #分支</code></pre>
+<h3 id="2-部署"><a href="#2-部署" class="headerlink" title="2.部署"></a>2.部署</h3><pre><code>hexo clean
+hexo g
+hexo d</code></pre>
+<p>输入hexo d的时候，会要求你输入自己的服务器密码</p>
+<pre><code>Branch 'master' set up to track remote branch 'master' from 'https://e.coding.net/godxiaolon/godxiaolon.git'.
+On branch master
+nothing to commit, working tree clean
+root@119.25.56.82's password:
+Enumerating objects: 182, done.
+Counting objects: 100% (182/182), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (61/61), done.
+Writing objects: 100% (95/95), 73.08 KiB | 3.18 MiB/s, done.
+Total 95 (delta 45), reused 0 (delta 0)
+remote: hooks/post-receive: line 1: t: command not found
+To 118.25.27.52:/home/git/hexoBlog.git
+   8df3691..7d63b39  HEAD -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'root@118.25.27.52:/home/git/hexoBlog.git'.
+INFO  Deploy done: git</code></pre>
+<p>输入密码不会有显示，输完回车就可以</p>
+<h3 id="3-如果出现bash-git-receive-pack-command-not-found-则运行："><a href="#3-如果出现bash-git-receive-pack-command-not-found-则运行：" class="headerlink" title="3.如果出现bash: git-receive-pack: command not found,则运行："></a>3.如果出现bash: git-receive-pack: command not found,则运行：</h3><pre><code>sudo ln -s /usr/local/git/bin/git-receive-pack  /usr/bin/git-receive-pack</code></pre>
+<h3 id="4-访问服务器ip，看看有没有成功"><a href="#4-访问服务器ip，看看有没有成功" class="headerlink" title="4.访问服务器ip，看看有没有成功"></a>4.访问服务器ip，看看有没有成功</h3><h1 id="hexo-seo-cdn-其他优化"><a href="#hexo-seo-cdn-其他优化" class="headerlink" title="hexo seo cdn 其他优化"></a>hexo seo cdn 其他优化</h1><h2 id="hexo-seo"><a href="#hexo-seo" class="headerlink" title="hexo seo"></a>hexo seo</h2><h3 id="1-百度收录"><a href="#1-百度收录" class="headerlink" title="1.百度收录"></a>1.百度收录</h3><h4 id="登录百度站长平台：-http-zhanzhang-baidu-com"><a href="#登录百度站长平台：-http-zhanzhang-baidu-com" class="headerlink" title="[登录百度站长平台：]http://zhanzhang.baidu.com"></a>[登录百度站长平台：]<a target="_blank" rel="noopener" href="http://zhanzhang.baidu.com/">http://zhanzhang.baidu.com</a></h4><p>只要有百度旗下的账号就可以登录，登录成功之后在站点管理中点击添加网站然后输入你的站点地址，建议输入的网站为www开头的，不要输入github.io的，因为github是不允许百度的spider爬取github上的内容的，所以如果想让你的站点被百度收录，只能使用自己购买的域名,使用文件验证下载验证保存好，粘贴到 public文件夹中，每次执行过hexo cl后要重新复制粘贴不能存放到source中自动上传因为上传过程中会被编译改变了文件导致验证失败。<br>生成网站地图<br>优解用markdown打开从百度下载的html文件，然后把这三句话放在百度给的识别码之前：</p>
+<pre><code>--- 
+layout: false
+---
+识别码</code></pre>
+<p>我们需要使用npm自动生成网站的sitemap，然后将生成的sitemap提交到百度和其他搜索引擎</p>
+<h4 id="安装sitemap插件"><a href="#安装sitemap插件" class="headerlink" title="安装sitemap插件"></a>安装sitemap插件</h4><pre><code>npm install hexo-generator-sitemap --save     
+npm install hexo-generator-baidu-sitemap --save</code></pre>
+<h4 id="修改博客配置文件"><a href="#修改博客配置文件" class="headerlink" title="修改博客配置文件"></a>修改博客配置文件</h4><p>在根目录配置文件中修改url为你的站点地址</p>
+<pre><code># URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://cherryblog.site
+root: /
+permalink: :title.html
+permalink_defaults:</code></pre>
+<p>执行完之后就会在网站根目录生成sitemap.xml文件和baidusitemap.xml文件，可以通过<a target="_blank" rel="noopener" href="http://www.cherryblog.site/baidusitemap.xml,%E6%9F%A5%E7%9C%8B%E8%AF%A5%E6%96%87%E4%BB%B6%E6%98%AF%E5%90%A6%E7%94%9F%E6%88%90%EF%BC%8C%E5%85%B6%E4%B8%ADsitemap.xml%E6%96%87%E4%BB%B6%E6%98%AF%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E9%80%9A%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8Cbaidusitemap.xml%E6%98%AF%E7%99%BE%E5%BA%A6%E4%B8%93%E7%94%A8%E7%9A%84sitemap%E6%96%87%E4%BB%B6%E3%80%82">http://www.cherryblog.site/baidusitemap.xml,查看该文件是否生成，其中sitemap.xml文件是搜索引擎通用的文件，baidusitemap.xml是百度专用的sitemap文件。</a></p>
+<p>向百度提交链接<br>然后我们就可以将我们生成的sitemap文件提交给百度，还是在百度站长平台，找到链接提交，这里我们可以看到有两种提交方式，自动提交和手动提交，自动提交又分为主动推送、自动推送和sitemap  </p>
+<h4 id="设置主动推送"><a href="#设置主动推送" class="headerlink" title="设置主动推送"></a>设置主动推送</h4><p>安装插件hexo-baidu-url-submit</p>
+<pre><code>npm install hexo-baidu-url-submit --save</code></pre>
+<p>然后再根目录的配置文件中新增字段</p>
+<pre><code>baidu_url_submit:
+  count: 80             # 提交最新的一个链接
+  host: www.sunhwee.com # 在百度站长平台中注册的域名
+  token: xxxxxxxxxxxxxx # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt  # 文本文档的地址， 新链接会保存在此文本文档里</code></pre>
+<h4 id="再加入新的deploy："><a href="#再加入新的deploy：" class="headerlink" title="再加入新的deploy："></a>再加入新的deploy：</h4><pre><code>deploy:
+- type: baidu_url_submitter  </code></pre>
+<h3 id="2-google收录"><a href="#2-google收录" class="headerlink" title="2.google收录"></a>2.google收录</h3><p>与百度同样操作  </p>
+<h3 id="3-其他seo优化"><a href="#3-其他seo优化" class="headerlink" title="3.其他seo优化"></a>3.其他seo优化</h3><p>seo优化应该说是一个收益延迟的行为，可能你做的优化短期内看不到什么效果，但是一定要坚持，seo优化也是有很深的可以研究的东西，从我们最初的网站设计，和最基础的标签的选择都有很大的关系，网站设计就如我们刚刚说的，要让用户点击三次可以到达网站的任何一个页面，要增加高质量的外链，增加相关推荐（比如说我们经常见到右侧本站的最高阅读的排名列表），然后就是给每一个页面加上keyword和描述<br>在代码中，我们应该写出能让浏览器识别的语义化HTML，这样有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；并且对外链设置nofollow标签，避免spider爬着爬着就爬出去了（减少网站的跳出率），并且我们要尽量在一些比较大的网站增加我们站点的曝光率，因为spider会经常访问大站，比如我们在掘金等技术社区发表文章中带有我们的站点，这样spider是很有可能爬到我们中的站点的，so….</p>
+<ul>
+<li>网站外链的推广度、数量和质量</li>
+<li>网站的内链足够强大</li>
+<li>网站的原创质量</li>
+<li>网站的年龄时间</li>
+<li>网站的更新频率（更新次数越多越好）</li>
+<li>网站的服务器</li>
+<li>网站的流量：流量越高网站的权重越高</li>
+<li>网站的关键词排名：关键词排名越靠前，网站的权重越高</li>
+<li>网站的收录数量：网站百度收录数量越多，网站百度权重越高</li>
+<li>网站的浏览量及深度：用户体验越好，网站的百度权重越高  <h1 id="引用资料"><a href="#引用资料" class="headerlink" title="引用资料"></a>引用资料</h1>[引用1]<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45682081/article/details/105278898">https://blog.csdn.net/weixin_45682081/article/details/105278898</a><br>[引用2]<a target="_blank" rel="noopener" href="https://blog.nmslwsnd.com/matery-zhu-ti-she-zhi/">https://blog.nmslwsnd.com/matery-zhu-ti-she-zhi/</a><br>[引用3]<a target="_blank" rel="noopener" href="https://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html">https://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html</a><br>[引用4]<a target="_blank" rel="noopener" href="https://blog.csdn.net/jspnetcn/article/details/104111651">https://blog.csdn.net/jspnetcn/article/details/104111651</a></li>
+</ul>
+</div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">不染轻裳</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hesifan.top/2020/102461782.html">https://hesifan.top/2020/102461782.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">不染轻裳</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/matery/">
+              <span class="chip bg-color">matery</span>
+            </a>
+            
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+              <span class="chip bg-color">服务器</span>
+            </a>
+            
+            <a href="/tags/seo/">
+              <span class="chip bg-color">seo</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0"><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+</div>
+      </div>
+        
+    </div>
+  </div>
+       <style>
+  .valine-card {
+    margin: 1.5rem auto;
+  }
+
+  .valine-card .card-content {
+    padding: 10px 10px 5px 10px;
+  }
+
+  #vcomments textarea {
+    box-sizing: border-box;
+    background: url('/medias/comment_bg.png') 100% 100% no-repeat;
+  }
+
+  #vcomments p {
+    margin: 2px 2px 10px;
+    font-size: 1.05rem;
+    line-height: 1.78rem;
+  }
+
+  #vcomments blockquote p {
+    text-indent: 0.2rem;
+  }
+
+  #vcomments a {
+    padding: 0 2px;
+    color: #4cbf30;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  #vcomments img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  #vcomments ol li {
+    list-style-type: decimal;
+  }
+
+  #vcomments ol,
+  ul {
+    display: block;
+    padding-left: 2em;
+    word-spacing: 0.05rem;
+  }
+
+  #vcomments ul li,
+  ol li {
+    display: list-item;
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
+
+  #vcomments ul li {
+    list-style-type: disc;
+  }
+
+  #vcomments ul ul li {
+    list-style-type: circle;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    border: 0;
+  }
+
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
+
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
+
+  #vcomments table td {
+    min-width: 80px;
+  }
+
+  #vcomments h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+  }
+
+  #vcomments h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+  }
+
+  #vcomments h3 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+  }
+
+  #vcomments h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  #vcomments h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+  }
+
+  #vcomments h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  #vcomments p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #vcomments hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+
+  #vcomments blockquote {
+    margin: 15px 0;
+    border-left: 5px solid #42b983;
+    padding: 1rem 0.8rem 0.3rem 0.8rem;
+    color: #666;
+    background-color: rgba(66, 185, 131, 0.1);
+  }
+
+  #vcomments pre {
+    font-family: monospace, monospace;
+    padding: 1.2em;
+    margin: 0.5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+  }
+
+  #vcomments code {
+    font-family: monospace, monospace;
+    padding: 1px 3px;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+  }
+
+  #vcomments pre code {
+    font-family: monospace, monospace;
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+  }
+
+  #vcomments pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 0.5em 0;
+  }
+
+  #vcomments code[class*='language-'],
+  pre[class*='language-'] {
+    color: #e8eaf6;
+  }
+
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
+
+  #vcomments b,
+  strong {
+    font-weight: bold;
+  }
+
+  #vcomments dfn {
+    font-style: italic;
+  }
+
+  #vcomments small {
+    font-size: 85%;
+  }
+
+  #vcomments cite {
+    font-style: normal;
+  }
+
+  #vcomments mark {
+    background-color: #fcf8e3;
+    padding: 0.2em;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
+
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
+
+  #vcomments table td {
+    min-width: 80px;
+  }
+
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
+
+  .v[data-class='v'] .vwrap .vheader .vinput {
+    width: 32%;
+    border-bottom: 1px dashed #dedede;
+  }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+  <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px">
+    <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+    <span>评论</span>
+  </div>
+  <!-- 主题 挂件 -->
+  <div class="caishendengsd">
+    <div class="caishenxianleftsd">
+      <img class="caishenpic fudao" src="/medias/christmas-img/9.png" />
+    </div>
+  </div>
+  <div class="caishendeng">
+    <div class="caishenxianleft">
+      <img class="caishenpic fudao" src="/medias/spring-img/9.png" />
+    </div>
+  </div>
+  <div id="vcomments" class="card-content" style="display: grid" data-class="v"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
+<script>
+  let metaPlaceholder = { nick: '昵称/qq(必填)', mail: '邮箱(必填)', link: '网址(https://)选填' }
+  //这里要换行
+  new Valine({
+    el: '#vcomments',
+    appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
+    appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
+    notify: 'true' === 'true',
+    verify: 'true' === 'true',
+    visitor: 'true' === 'true',
+    avatar: 'monsterid',
+    pageSize: '10',
+    lang: 'zh-CN',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    meta: ['nick', 'mail', 'link'],
+    recordIP: 'true' === 'true',
+    enableQQ: 'monsterid',
+    requiredFields: ['f5a3318ea1fc0d20'],
+    master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
+    friends: ['efc1730bf09301ac92cf7ba5a8c88df0', '	08FA87BE584D9C16C47A206128029506', '80a023e11167a78a35f72ef4dd0a48f4', '1512958e18378c98b498d5effe3e76ff', '08fa87be584d9c16c47a206128029506'],
+    tagMeta: ['博主', '小伙伴', '访客'],
+    metaPlaceholder: metaPlaceholder,
+  })
+</script>
+   
+
+<article id="prenext-posts" class="prev-next articles">
+  <div class="row article-row">
+    
+    <div class="article col s12 m6" data-aos="fade-up">
+      <div class="article-badge left-badge text-color"><i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+      <div class="card">
+        <a href="/2020/102436325.html">
+          <div class="card-image card-image-V">
+            <div class="box-content">
+              <h3 class="title">阅读全文</h3>
+              <span class="post" style="width: 180px">hexo部署到本地</span>
+            </div>
+            
+            <img src="/medias/post/webp/hexo.webp" class="responsive-img" alt="hexo部署到本地" />
+            
+            <span class="card-title title-V">hexo部署到本地</span>
+          </div>
+        </a>
+        <div class="card-content article-content">
+          <div class="summary block-with-text"> hexo部署到本地本地nodejs，淘宝云镜像，git环境搭建1.nodejs搭建教程：1.1下载：  下载地址：https://nodejs.org/en/download/  一般的Windows系统都选择.msi 64位安装。（.ms </div>
+          <div class="publish-info">
+            <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2020-10-24 </span>
+            <span class="publish-author">
+              
+              <i class="fas fa-bookmark fa-fw icon-category"></i>
+              
+              <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+               
+            </span>
+          </div>
+        </div>
+        
+        <div class="card-action article-tags">
+          
+          <a href="/tags/hexo/">
+            <span class="chip bg-color">hexo</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+     
+    <div class="article col s12 m6" data-aos="fade-up">
+      <div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div>
+      <div class="card">
+        <a href="/2020/102262923.html">
+          <div class="card-image card-image-V">
+            <div class="box-content">
+              <h3 class="title">阅读全文</h3>
+              <span class="post" style="width: 180px">markdown</span>
+            </div>
+            
+            <img src="/medias/post/webp/md.webp" class="responsive-img" alt="markdown" />
+            
+            <span class="card-title title-V">markdown</span>
+          </div>
+        </a>
+        <div class="card-content article-content">
+          <div class="summary block-with-text"> 
+本文目的：熟悉学习markdown语法为后续书写文章做准备
+
+一通用语法1.标题用文字前#的数量来表示几级标题如：
+一级标题二级标题三级标题2.无序列表无序列表的使用，在减号-后加空格使用如下：  
+
+无序列表1  
+无序列表2  
+无序 </div>
+          <div class="publish-info">
+            <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2020-10-22 </span>
+            <span class="publish-author">
+              
+              <i class="fas fa-bookmark fa-fw icon-category"></i>
+              
+              <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category"> 学习 </a>
+               
+            </span>
+          </div>
+        </div>
+        
+        <div class="card-action article-tags">
+          
+          <a href="/tags/%E7%AC%94%E8%AE%B0/">
+            <span class="chip bg-color">笔记</span>
+          </a>
+          
+          <a href="/tags/markdown/">
+            <span class="chip bg-color">markdown</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+</div>
+
+
+<script>
+  $('#articleContent').on('copy', function (e) {
+    // IE8 or earlier browser is 'undefined'
+    if (typeof window.getSelection === 'undefined') return
+
+    var selection = window.getSelection()
+    // if the selection is short let's not annoy our users.
+    if (('' + selection).length < Number.parseInt('120')) {
+      return
+    }
+
+    // create a div outside of the visible area and fill it with the selected text.
+    var bodyElement = document.getElementsByTagName('body')[0]
+    var newdiv = document.createElement('div')
+    newdiv.style.position = 'absolute'
+    newdiv.style.left = '-99999px'
+    bodyElement.appendChild(newdiv)
+    newdiv.appendChild(selection.getRangeAt(0).cloneContents())
+
+    // we need a <pre> tag workaround.
+    // otherwise the text inside "pre" loses all the line breaks!
+    if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+      newdiv.innerHTML = '<pre>' + newdiv.innerHTML + '</pre>'
+    }
+
+    var url = document.location.href
+    newdiv.innerHTML += '<br />' + '来源: FanHeart<br />' + '文章作者: 不染轻裳<br />' + '文章链接: <a href="' + url + '">' + url + '</a><br />' + '本文章著作权归作者所有，任何形式的转载都请注明出处。'
+
+    selection.selectAllChildren(newdiv)
+    window.setTimeout(function () {
+      bodyElement.removeChild(newdiv)
+    }, 200)
+  })
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*='language-'],
+  pre[class*='language-'] {
+    white-space: pre !important;
+  }
+</style>
+
+</div>
+  <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+    <div class="toc-widget">
+      <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+      <div id="toc-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<script>
+  localStorage.setItem('read', '0')
+  function readMode() {
+    var body = document.body
+    if (body.classList.contains('read')) {
+      document.body.classList.remove('read')
+      localStorage.setItem('read', '0')
+    } else {
+      document.body.classList.add('read')
+      localStorage.setItem('read', '1')
+    }
+  }
+
+  if (localStorage.getItem('read') === '1') {
+    document.body.classList.add('read')
+  } else if (matchMedia('(prefers-color-scheme: read)').matches) {
+    document.body.classList.add('read')
+  }
+</script>
+<div id="readmode" onclick="readMode()" class="hide-on-med-and-down" title="阅读模式">
+  <a class="btn-floating btn-large waves-effect waves-light"
+    ><svg t="1612426735340" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15071" width="37" height="37">
+      <path d="M942.7456 293.2736h-35.9424l3.1232 474.5728c0 15.0528-17.8176 22.0672-31.3856 15.4624-147.0464-71.6288-297.472-7.2704-348.2112 15.9744-8.448 3.8912-18.0736-2.2528-18.0736-11.5712v-1.3824c0 9.5232-10.1376 15.7696-18.5856 11.3152-141.4656-75.0592-280.6272-30.2592-341.8112-7.3216-26.1632 9.7792-47.7696-11.4176-47.7696-11.4176l-0.2048 83.1488c0 17.92 44.4928-0.6656 62.3616-2.0992l340.1216-27.3408c1.6384-0.1536 9.5744-0.1536 11.2128 0l422.1952 38.2976c17.8688 1.4336 33.6384-2.0992 33.6384-20.0192V323.9936c0.0512-16.9984-13.7216-30.72-30.6688-30.72z" fill="#BC9BE0" p-id="15072"></path>
+      <path d="M164.3008 252.8768v472.2688c0 13.7216 13.1584 22.9376 25.088 17.6128 52.992-23.9104 181.7088-67.2768 306.2784 2.7648 7.424 4.1472 16.3328-1.6384 16.3328-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.8544-17.5616-41.5744-18.8416-189.8496-72.3968-327.424-10.8032-6.144 2.7648-9.4208 9.8816-9.4208 16.896zM558.3872 252.8768v472.2688c0 13.7216 13.2096 22.9376 25.1392 17.6128 53.0944-23.9104 182.0672-67.2768 306.8928 2.7648 7.424 4.1472 16.384-1.6384 16.384-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.9056-17.5616-41.6256-18.8416-190.208-72.3968-328.0384-10.8032-6.144 2.7648-9.472 9.8816-9.472 16.896z" fill="#FFB47A" p-id="15073"></path>
+      <path
+        d="M942.7456 262.5536h-20.5824V235.52c0-14.3872-8.4992-27.2896-21.6576-32.9216-50.8928-21.76-229.12-86.1696-385.2288 0.1024-1.4848 0.8192-2.9184 1.792-4.2496 2.7648-1.6896-1.0752-3.4304-2.048-5.2736-2.8672-50.8928-21.76-229.12-86.1696-385.2288 0.1024a36.0192 36.0192 0 0 0-18.6368 31.488v28.3648h-14.0288c-25.3952 0-46.08 20.6848-46.08 46.08v526.848c0 12.8 5.4272 25.1904 14.848 33.8944a46.2592 46.2592 0 0 0 34.9184 12.0832l419.2768-33.7408c0.8192-0.0512 1.6384-0.0512 2.4576 0l425.8816 33.792a46.1312 46.1312 0 0 0 34.9184-12.0832 46.19776 46.19776 0 0 0 14.7968-33.8432V308.6336c-0.0512-25.4464-20.736-46.08-46.1312-46.08zM527.36 234.1888c0-1.8944 1.0752-3.6352 2.7648-4.5568 53.8624-29.7472 110.8992-39.936 163.6864-39.936 88.2688 0 164.7616 28.416 194.56 41.216 1.8432 0.768 3.0208 2.6112 3.0208 4.6592v491.52c0 2.4576-1.536 3.7888-2.4064 4.352-0.6656 0.4096-1.8432 0.9728-3.2768 0.768a4.74624 4.74624 0 0 1-1.536-0.4608 361.344 361.344 0 0 0-66.2528-24.576c-124.16-32.8192-239.0528 6.8608-290.56 29.8496V234.1888z m-394.8032 0c0-1.8944 1.0752-3.6352 2.7648-4.5568 143.872-79.5136 310.6304-19.1488 358.2976 1.28 1.8432 0.768 3.0208 2.56 3.0208 4.608v499.7632c-4.1984-2.1504-8.3968-4.1984-12.5952-6.144-1.28-0.6144-2.6112-1.1776-3.8912-1.7408-2.9696-1.3312-5.9392-2.6624-8.9088-3.8912-1.4336-0.6144-2.8672-1.1776-4.3008-1.792-3.0208-1.2288-6.0928-2.4064-9.1136-3.5328-1.2288-0.4608-2.4064-0.9216-3.6352-1.3312-4.1984-1.536-8.3968-2.9696-12.5952-4.3008-0.4096-0.1536-0.8192-0.256-1.2288-0.3584-3.7888-1.1776-7.5776-2.304-11.3664-3.3792-1.3312-0.3584-2.6112-0.7168-3.8912-1.0752-2.9184-0.768-5.888-1.536-8.8064-2.2528-1.3824-0.3584-2.7648-0.6656-4.1472-0.9728-3.1232-0.7168-6.1952-1.3824-9.2672-1.9968-1.0752-0.2048-2.0992-0.4608-3.1744-0.6656-4.1472-0.8192-8.2432-1.536-12.3392-2.1504l-1.9968-0.3072c-3.4304-0.512-6.8608-1.024-10.2912-1.4336l-3.84-0.4608c-2.8672-0.3072-5.7344-0.6144-8.6016-0.8704-1.28-0.1024-2.56-0.256-3.84-0.3584-3.1744-0.256-6.2976-0.4608-9.4208-0.6656l-2.56-0.1536c-3.9936-0.2048-7.936-0.3584-11.8784-0.4608-0.768 0-1.536 0-2.304-0.0512-2.3552-0.0512-4.7104-0.1024-7.0656-0.1024-0.6144 0-1.1776 0.0512-1.792 0.0512-3.4816 0-6.8608 0.1024-10.2912 0.2048-1.2288 0.0512-2.4576 0.0512-3.6864 0.1024-4.5568 0.1536-9.0624 0.4096-13.5168 0.7168l-3.84 0.3072c-3.2256 0.256-6.4 0.512-9.5744 0.8192-1.6896 0.1536-3.328 0.3584-4.9664 0.512-2.7648 0.3072-5.5296 0.6144-8.2432 0.9728-1.6896 0.2048-3.3792 0.4608-5.0176 0.6656-2.7136 0.3584-5.4272 0.768-8.0896 1.1776-1.536 0.256-3.072 0.4608-4.5568 0.7168-3.1744 0.512-6.3488 1.0752-9.4208 1.6896-0.9216 0.1536-1.792 0.3072-2.7136 0.512-3.9424 0.768-7.8336 1.5872-11.6224 2.4064-1.2288 0.256-2.4064 0.5632-3.584 0.8192-2.6112 0.6144-5.2224 1.1776-7.8336 1.8432-1.4336 0.3584-2.7648 0.7168-4.1984 1.024-2.304 0.5632-4.608 1.1776-6.8608 1.792-1.3824 0.3584-2.7136 0.7168-4.0448 1.0752-2.304 0.6144-4.5568 1.28-6.7584 1.9456-1.1776 0.3584-2.3552 0.6656-3.4816 1.024-2.816 0.8704-5.5808 1.6896-8.2944 2.56-0.4608 0.1536-0.9216 0.256-1.3312 0.4096-3.1232 1.024-6.144 1.9968-9.0624 3.0208-0.9728 0.3072-1.8432 0.6656-2.816 0.9728-1.9968 0.6656-3.9424 1.3824-5.8368 2.048-1.024 0.3584-2.048 0.768-3.072 1.1264-1.7408 0.6144-3.4304 1.28-5.0688 1.8944-0.9728 0.3584-1.8944 0.7168-2.816 1.0752-1.6896 0.6656-3.328 1.3312-4.9152 1.9456-0.7168 0.3072-1.4848 0.6144-2.2016 0.8704-2.2528 0.9216-4.4032 1.792-6.4512 2.6624-2.2016 0.9216-3.9424 0.1536-4.8128-0.4096a5.00224 5.00224 0 0 1-2.304-4.3008V234.1888z m825.5488 601.344c0 4.352-1.7408 8.3456-4.9152 11.264-3.1744 2.9696-7.3728 4.352-11.6224 4.0448l-425.8304-33.792a44.36992 44.36992 0 0 0-7.3728 0l-419.2768 33.7408c-4.2496 0.3584-8.448-1.0752-11.6224-4.0448-3.1744-2.9184-4.9664-6.9632-4.9664-11.3152V308.6336c0-8.448 6.912-15.36 15.36-15.36h14.0288v435.9168a35.6864 35.6864 0 0 0 16.0768 29.9008 35.75296 35.75296 0 0 0 33.792 3.072c55.0912-23.4496 197.888-70.0928 334.5408 2.4064 1.024 0.512 2.048 0.9728 3.072 1.3824 0.3072 0.1024 0.6656 0.2048 0.9728 0.3072 0.7168 0.256 1.4336 0.512 2.2016 0.6656 0.4096 0.1024 0.768 0.1536 1.1776 0.256 0.6656 0.1536 1.3312 0.3072 2.048 0.3584 0.4096 0.0512 0.8704 0.1024 1.28 0.1024 0.6656 0.0512 1.28 0.1024 1.9456 0.1024h0.4096c0.256 0 0.512-0.0512 0.8192-0.0512 0.768 0 1.536-0.0512 2.304-0.1536l1.28-0.1536c0.768-0.1024 1.4848-0.256 2.2528-0.4608l1.2288-0.3072c0.8192-0.256 1.5872-0.512 2.3552-0.8192 0.3072-0.1536 0.6656-0.256 0.9728-0.3584 0.0512-0.0512 0.1536-0.0512 0.2048-0.1024 0.512 0.3072 1.0752 0.5632 1.6384 0.8192 0.3584 0.2048 0.7168 0.3584 1.0752 0.5632 1.1264 0.512 2.304 0.9728 3.4816 1.28h0.0512a21.26336 21.26336 0 0 0 4.7104 0.8704c0.8704 0.1024 1.6896 0.1536 2.56 0.2048 0.2048 0 0.3584 0.0512 0.5632 0.0512 0.3584 0 0.7168-0.0512 1.0752-0.0512 0.4608 0 0.9216-0.0512 1.3824-0.0512 0.6144-0.0512 1.2288-0.1536 1.8432-0.256 0.4096-0.0512 0.8704-0.1024 1.28-0.2048 0.6656-0.1536 1.3312-0.3072 1.9968-0.512l1.0752-0.3072c1.024-0.3584 2.048-0.7168 3.0208-1.1776 54.1184-24.7808 195.072-75.0592 334.2848-7.2704 1.3824 0.6656 2.816 1.28 4.2496 1.7408 0.768 0.256 1.5872 0.4608 2.4064 0.6656 0.6656 0.1536 1.28 0.4096 1.9456 0.512 0.8192 0.1536 1.6896 0.256 2.5088 0.3584 0.6144 0.1024 1.28 0.2048 1.8944 0.256 1.3312 0.1024 2.6112 0.1024 3.9424 0.0512h0.512c1.28-0.0512 2.56-0.256 3.84-0.4608 0.2048-0.0512 0.4096-0.0512 0.5632-0.0512 4.4032-0.8192 8.704-2.4576 12.6464-4.9152a35.6864 35.6864 0 0 0 16.8448-30.4128V293.2736h20.5824c8.448 0 15.36 6.912 15.36 15.36v526.8992z"
+        fill="#333333"
+        p-id="15074"
+      ></path></svg
+  ></a>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+  $(function () {
+      tocbot.init({
+          tocSelector: '#toc-content',
+          contentSelector: '#articleContent',
+          headingsOffset: -($(window).height() * 0.4 - 45),
+          collapseDepth: Number('0'),
+          headingSelector: 'h2, h3, h4,h5'
+      });
+
+      // modify the toc link href to support Chinese.
+      let i = 0;
+      let tocHeading = 'toc-heading-';
+      $('#toc-content a').each(function () {
+          $(this).attr('href', '#' + tocHeading + (++i));
+      });
+
+      // modify the heading title id to support Chinese.
+      i = 0;
+      $('#articleContent').children('h2, h3, h4,h5').each(function () {
+          $(this).attr('id', tocHeading + (++i));
+      });
+
+      // Set scroll toc fixed.
+      let tocHeight = parseInt($(window).height() * 0.4 - 64);
+      let $tocWidget = $('.toc-widget');
+      $(window).scroll(function () {
+          let scroll = $(window).scrollTop();
+          /* add post toc fixed. */
+          if (scroll > tocHeight) {
+              $tocWidget.addClass('toc-fixed');
+          } else {
+              $tocWidget.removeClass('toc-fixed');
+          }
+      });
+
+      
+  });
+</script>
+
+    
+
+</main>
+
+
+ <footer class="page-footer h-color">
+  
+  <div class="container row center-align" style="margin-bottom: 15px !important;">
+    <div class="col s12 m8 l8 copy-right Fan-color">
+      Copyright&nbsp;&copy;
+      <span id="year">2020</span>
+      <a href="/about" target="_blank">不染轻裳</a>
+      |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+      <br />
+       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">66.2k</span>&nbsp;字      
+      <span id="busuanzi_container_site_pv"> |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次 </span>
+       
+      <span id="busuanzi_container_site_uv"> |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人 </span>
+      
+      <br />
+      
+      <span id="sitetime">载入运行时间...</span>
+      <script>
+        function siteTime() {
+          var seconds = 1000
+          var minutes = seconds * 60
+          var hours = minutes * 60
+          var days = hours * 24
+          var years = days * 365
+          var today = new Date()
+          var startYear = '2020'
+          var startMonth = '10'
+          var startDate = '18'
+          var startHour = '0'
+          var startMinute = '0'
+          var startSecond = '0'
+          var todayYear = today.getFullYear()
+          var todayMonth = today.getMonth() + 1
+          var todayDate = today.getDate()
+          var todayHour = today.getHours()
+          var todayMinute = today.getMinutes()
+          var todaySecond = today.getSeconds()
+          var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond)
+          var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+          var diff = t2 - t1
+          var diffYears = Math.floor(diff / years)
+          var diffDays = Math.floor(diff / days - diffYears * 365)
+          var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+          var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+          var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+          if (startYear == todayYear) {
+            document.getElementById('year').innerHTML = todayYear
+            document.getElementById('sitetime').innerHTML = '本站已艰难运行 ' + diffDays + ' 天 ' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒'
+          } else {
+            document.getElementById('year').innerHTML = startYear + ' - ' + todayYear
+            document.getElementById('sitetime').innerHTML = '本站已安全运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒'
+          }
+        }
+        setInterval(siteTime, 1000)
+      </script>
+      
+      <br />
+      
+      <span id="icp"
+        ><img src="/medias/icp.png" style="vertical-align: text-bottom" />
+        <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2020018100号</a>
+      </span>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:3447851674@qq.com  1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3447851674" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3447851674" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+ 
+    <a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="在B站上关注我" " data-position="top" data-delay="50"> 
+	    <i class="fas fa-play-circle"></i> 
+	</a> 
+
+
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+ <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <div class="search-header">
+      <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+      <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" />
+    </div>
+    <div id="searchResult"></div>
+  </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  $(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult')
+  })
+</script>
+ <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+  <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+    <img class="theme-button-up" src="/medias/btn/up.png" title="回到顶部" />
+  </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+ <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+ 
+    <script src="/libs/others/clicklove.js" async="async"></script>
+     
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+     
+    <script>
+      function enterfullscreen() {
+        //进入全屏
+
+        var docElm = document.documentElement
+        //W3C
+        if (docElm.requestFullscreen) {
+          docElm.requestFullscreen()
+        }
+        //FireFox
+        else if (docElm.mozRequestFullScreen) {
+          docElm.mozRequestFullScreen()
+        }
+        //Chrome等
+        else if (docElm.webkitRequestFullScreen) {
+          docElm.webkitRequestFullScreen()
+        }
+        //IE11
+        else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen()
+        }
+        $('#fullscreen').removeClass('fa-expand-arrows-alt').addClass('fa-desktop')
+      }
+
+      function exitfullscreen() {
+        //退出全屏
+        // $("#fullscreen").html("切换全屏");
+
+        if (document.exitFullscreen) {
+          document.exitFullscreen()
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen()
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen()
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen()
+        }
+        $('#fullscreen').removeClass('fa-desktop').addClass('fa-expand-arrows-alt')
+      }
+
+      let b = false
+      $('#fullscreen_li ').on('click', function () {
+        b = !b
+        b ? enterfullscreen() : exitfullscreen()
+      })
+    </script>
+    <script>
+      if (localStorage.getItem('themespring') === '1') {
+        document.body.classList.add('themespring')
+      } else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+        document.body.classList.add('themespring')
+      }
+    </script>
+
+    <script>
+      if (localStorage.getItem('themechris') === '1') {
+        document.body.classList.add('themechris')
+      } else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+        document.body.classList.add('themechris')
+      }
+    </script>
+
+    <div class="menu-V">
+      <div class="container-M">
+        <div class="toggle"></div>
+      </div>
+      <svg aria-hidden="true" style="position: absolute; overflow: hidden; width: 0; height: 0">
+        <symbol id="icon-sun" viewBox="0 0 1024 1024">
+          <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path>
+          <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
+          <path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path>
+          <path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 1024 1024">
+          <path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path>
+          <path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path>
+        </symbol>
+      </svg>
+      <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
+        <svg width="35" height="35" viewBox="0 0 1024 1024">
+          <use id="modeicon" xlink:href="#icon-moon"></use>
+        </svg>
+      </a>
+      <a href="#vcomments" class="icon-V hidden" id="toComment" title="前往评论区">
+        <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38">
+          <path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path>
+          <path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path>
+          <path d="M556.202667 770.048h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V362.837333s-59.733333 392.533333-724.309333 314.709334v63.488a29.013333 29.013333 0 0 0 28.842666 29.013333h253.098667v90.453333z" fill="#F2C182" p-id="1882"></path>
+          <path d="M619.008 632.32l101.888-35.157333-131.754667-76.117334 29.866667 111.274667zM891.904 148.992a61.44 61.44 0 0 0-84.138667 22.528l-19.968 34.133333 106.666667 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-22.528-84.138667z" fill="#69BAF9" p-id="1883"></path>
+          <path d="M775.338667 198.775467l131.669333 76.032-186.026667 322.218666-131.6864-76.032z" fill="#F7FBFF" p-id="1884"></path>
+          <path d="M775.168 198.826667l-5.290667 9.216 59.221334 34.133333a34.133333 34.133333 0 0 1 12.458666 46.592l-139.946666 242.346667a34.133333 34.133333 0 0 1-46.762667 12.629333l-59.050667-34.133333-6.656 11.434666 88.746667 51.2L720.896 597.333333l186.026667-322.56z" fill="#D8E3F0" p-id="1885"></path>
+          <path d="M616.448 622.592l2.56 9.728 101.888-35.157333-44.885333-25.941334-59.562667 51.370667zM891.904 148.992c-1.024 0-2.218667-0.853333-3.242667-1.536A61.610667 61.610667 0 0 1 887.466667 204.8l-19.968 34.133333-73.728-42.496-5.12 8.704 106.666666 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-23.381333-83.626667z" fill="#599ED4" p-id="1886"></path>
+          <path d="M265.898667 417.621333H494.933333a17.066667 17.066667 0 1 0 0-34.133333H265.898667a17.066667 17.066667 0 1 0 0 34.133333zM265.898667 533.504H494.933333a17.066667 17.066667 0 0 0 0-34.133333H265.898667a17.066667 17.066667 0 0 0 0 34.133333z" fill="#3D3D63" p-id="1887"></path>
+          <path
+            d="M959.488 354.645333a99.84 99.84 0 0 0-23.722667-127.488 78.677333 78.677333 0 0 0-142.848-64.170666l-11.605333 20.138666a17.066667 17.066667 0 0 0-20.821333 7.168l-32.085334 55.466667H142.677333a46.250667 46.250667 0 0 0-45.909333 46.08v449.194667a46.08 46.08 0 0 0 45.909333 46.08h236.032v73.386666a17.066667 17.066667 0 0 0 8.362667 14.848 17.066667 17.066667 0 0 0 8.704 2.218667 17.066667 17.066667 0 0 0 8.362667-2.218667l156.672-88.234666h248.32a46.08 46.08 0 0 0 46.08-46.08V398.677333L921.6 283.306667a17.066667 17.066667 0 0 0-4.266667-21.504l1.877334-3.413334a65.365333 65.365333 0 0 1 10.410666 79.189334l-53.077333 91.989333a56.832 56.832 0 0 0 20.821333 77.653333 17.066667 17.066667 0 0 0 24.234667-6.314666 17.066667 17.066667 0 0 0-6.997333-23.04 23.04 23.04 0 0 1-8.362667-31.061334z m-138.410667 386.389334a11.946667 11.946667 0 0 1-11.946666 11.946666H556.202667a17.066667 17.066667 0 0 0-8.362667 2.218667l-134.997333 76.117333v-61.269333a17.066667 17.066667 0 0 0-17.066667-17.066667H142.677333a11.946667 11.946667 0 0 1-11.776-11.946666V291.84a11.946667 11.946667 0 0 1 11.776-11.946667h565.930667L574.464 512a17.066667 17.066667 0 0 0-1.706667 12.970667L597.333333 615.253333H265.898667a17.066667 17.066667 0 1 0 0 34.133334h352.938666a17.066667 17.066667 0 0 0 5.802667 0l102.4-35.328a17.066667 17.066667 0 0 0 9.216-7.509334l85.333333-147.968z m-204.8-184.661334l63.829334 36.864-49.322667 17.066667z m206.848-170.666666v1.365333l-108.373333 186.709333-102.4-59.050666L781.482667 221.866667l102.4 59.050666z m76.458667-161.28L887.466667 244.224l-76.970667-44.373333 11.264-19.797334a44.544 44.544 0 1 1 77.141333 44.544z"
+            fill="#3D3D63"
+            p-id="1888"
+          ></path>
+        </svg>
+      </a>
+      <!--圣诞模式按钮-->
+      <a onclick="switchChrisThemes()" id="switchchristmas" class="icon-V hidden" title="圣诞模式">
+        <svg t="1614778589374" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9475" width="36" height="36">
+          <path d="M816.888889 701.234568c0 34.37037-32.098765 63.209877-42.17284 94.222222s-1.777778 74.17284-21.234568 100.938272S691.358025 928.395062 664 948.148148s-44.345679 59.259259-76.54321 69.135803-68.246914-11.160494-102.617284-11.160494S413.234568 1027.160494 382.222222 1017.283951s-49.382716-49.382716-76.444444-69.135803-69.82716-24.395062-89.481482-51.358025-10.864198-69.135802-21.333333-100.938271-42.074074-60.049383-42.074074-94.617284 32-63.209877 42.074074-94.222222 1.876543-73.679012 21.333333-100.740741 62.419753-32.197531 89.876544-51.358025 44.345679-59.259259 76.444444-69.135802 68.345679 11.160494 102.617284 11.160494S556.54321 375.308642 587.45679 385.185185s49.382716 49.876543 76.54321 69.135803 69.82716 24.296296 89.481481 51.358024 10.864198 69.135802 21.234568 100.938272 42.17284 60.444444 42.17284 94.617284z" fill="#9CE8E4" p-id="9476"></path>
+          <path d="M774.716049 607.209877c-9.876543-32.098765-1.777778-74.271605-21.234568-100.938272-12.148148-16.790123-33.185185-24.888889-53.925925-33.382716-84.54321 23.111111 5.135802 59.259259 13.82716 86.617284 9.876543 30.91358 42.074074 59.851852 42.074074 94.123457s-32 63.209877-42.074074 94.222222-2.271605 74.271605-21.333333 100.938271-62.419753 31.802469-89.580247 51.456791-44.345679 59.259259-76.444445 69.135802S457.777778 958.024691 423.506173 958.024691c-31.209877 0-64.790123 17.283951-93.827161 13.037037 15.703704 18.469136 30.814815 38.716049 52.54321 45.827161 31.012346 9.876543 68.345679-11.160494 102.617284-11.160494S556.54321 1027.160494 587.45679 1017.283951s49.382716-49.382716 76.54321-69.135803 69.82716-24.395062 89.481481-51.358025 10.864198-69.135802 21.234568-100.938271 42.17284-60.049383 42.17284-94.617284-32.098765-63.012346-42.17284-94.024691z" fill="#6ADDD6" p-id="9477"></path>
+          <path d="M691.851852 551.308642c0 114.271605-94.123457 180.246914-208.395062 180.246914s-205.530864-65.975309-205.530864-180.246914a207.407407 207.407407 0 0 1 413.925926 0z" fill="#FFFFFF" p-id="9478"></path>
+          <path d="M483.950617 580.938272c-56.691358 0-217.283951 65.580247-217.28395 65.580247a127.012346 127.012346 0 0 0 217.28395 47.407407 127.111111 127.111111 0 0 0 217.283951-47.407407s-160.296296-65.580247-217.283951-65.580247z" fill="#6ADDD6" p-id="9479"></path>
+          <path d="M248.197531 361.975309m16.493827 0l439.111111 0q16.493827 0 16.493827 16.493827l0 85.530864q0 16.493827-16.493827 16.493827l-439.111111 0q-16.493827 0-16.493827-16.493827l0-85.530864q0-16.493827 16.493827-16.493827Z" fill="#C9FBF2" p-id="9480"></path>
+          <path d="M703.802469 361.975309H681.481481v63.604938a16.493827 16.493827 0 0 1-16.493827 16.493827h-416.790123V464.197531a16.493827 16.493827 0 0 0 16.493827 16.493827h439.111111A16.493827 16.493827 0 0 0 720.296296 464.197531v-85.62963a16.592593 16.592593 0 0 0-16.493827-16.592592z" fill="#A9ECEB" p-id="9481"></path>
+          <path d="M432.790123 548.246914h-27.259259a14.91358 14.91358 0 0 0-29.629629 0h-27.358025a42.17284 42.17284 0 0 1 84.246913 0zM619.950617 548.246914H592.592593a14.814815 14.814815 0 0 0-29.62963 0h-27.259259a42.17284 42.17284 0 0 1 84.246913 0z" fill="#00B2A7" p-id="9482"></path>
+          <path d="M612.345679 786.17284a16.296296 16.296296 0 0 1 16.296296 16.296296 50.37037 50.37037 0 0 1-85.925926 35.555555 16.296296 16.296296 0 0 1 23.111111-23.012345 17.777778 17.777778 0 0 0 30.222223-12.54321A16.296296 16.296296 0 0 1 612.345679 786.17284zM361.580247 852.740741A16.296296 16.296296 0 0 0 345.679012 869.135802a50.469136 50.469136 0 0 0 50.370371 50.370371 49.382716 49.382716 0 0 0 35.555555-14.814815 16.296296 16.296296 0 0 0-23.012345-23.012346 17.777778 17.777778 0 0 1-30.617284-12.54321 16.296296 16.296296 0 0 0-16.395062-16.395061zM260.148148 737.283951a16.395062 16.395062 0 0 0-20.444444 10.666666 50.469136 50.469136 0 0 0 33.086419 63.012346 49.382716 49.382716 0 0 0 38.320988-3.45679 16.296296 16.296296 0 1 0-14.814815-28.839506 17.777778 17.777778 0 0 1-25.185185-20.938272 16.197531 16.197531 0 0 0-10.962963-20.444444z" fill="#6ADDD6" p-id="9483"></path>
+          <path d="M584 263.111111a110.814815 110.814815 0 0 1-198.320988 0c-55.604938 30.716049-114.567901 69.82716-118.518518 98.765432h434.567901c-3.654321-29.037037-62.320988-68.049383-117.728395-98.765432z" fill="#FF6B5B" p-id="9484"></path>
+          <path d="M484.839506 324.345679a110.814815 110.814815 0 0 0 98.765432-61.234568c-47.901235-26.469136-93.333333-46.814815-98.765432-49.382716H483.950617c-5.728395 2.567901-50.864198 22.716049-98.765432 49.382716a110.814815 110.814815 0 0 0 99.654321 61.234568z" fill="#DC4E45" p-id="9485"></path>
+          <path d="M484.839506 213.728395H483.950617c-2.469136 1.08642-12.54321 5.62963-26.962963 12.444445C514.567901 253.530864 641.975309 318.617284 647.209877 361.876543h54.617283c-7.012346-54.123457-204.54321-142.716049-216.987654-148.148148z" fill="#DC4E45" p-id="9486"></path>
+          <path d="M569.679012 213.432099A84.839506 84.839506 0 1 1 484.839506 128.395062a84.839506 84.839506 0 0 1 84.839506 85.037037z" fill="#C9FBF2" p-id="9487"></path>
+          <path d="M530.962963 142.320988a84.740741 84.740741 0 0 1-117.234568 117.135802 84.740741 84.740741 0 1 0 117.234568-117.135802z" fill="#A9ECEB" p-id="9488"></path>
+          <path d="M306.17284 551.308642A28.148148 28.148148 0 1 1 277.925926 523.45679 28.246914 28.246914 0 0 1 306.17284 551.308642zM719.901235 551.308642A28.148148 28.148148 0 1 1 691.851852 523.45679a28.148148 28.148148 0 0 1 28.049383 27.851852z" fill="#FFFFFF" p-id="9489"></path>
+        </svg>
+      </a>
+
+      
+      <div onclick="switchSpringThemes()" id="switchspring" class="icon-V hidden">
+        <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式" />
+      </div>
+      
+    </div>
+    <script>
+      function checkNightMode() {
+        '1' === localStorage.getItem('isDark') ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : '0' === localStorage.getItem('isDark') ? $('#modeicon').attr('xlink:href', '#icon-moon') : new Date().getHours() >= 20 || new Date().getHours() < 7 ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : matchMedia('(prefers-color-scheme: dark)').matches ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : $('#modeicon').attr('xlink:href', '#icon-moon')
+      }
+      function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+          setTimeout(function () {
+            $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
+              setTimeout(function () {
+                $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                  $(this).remove()
+                })
+              }, 2e3)
+          })
+      }
+      function switchNightModeTop() {
+        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
+      }
+      checkNightMode(),
+        $('.menu-V .toggle').on('click', function () {
+          $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
+        })
+    </script>
+    <script src="/js/VinoEffect.min.js"></script>
+  </body>
+</html>

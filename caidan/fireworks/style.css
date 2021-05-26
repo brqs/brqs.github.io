@@ -1,0 +1,12 @@
+/* basic styles for black background and crosshair cursor */
+body {
+	background: #000;
+	margin: 0;
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+canvas {
+	cursor: crosshair;
+	display: block;
+}

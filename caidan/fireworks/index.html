@@ -1,0 +1,47 @@
+<!-- saved from url=(0031)https://www.heisan.top/fireworks/ -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>烟花|凡尘纪</title>
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8723c5c2669a112d08b51b84e31ef4c2";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+<body>
+<center>
+<font color="#fff" size="3">
+<font face="微软雅黑">长按鼠标观赏效果更佳哦</font></font></br>
+<font color="#fff" size="2"><font face="微软雅黑">(手机暂不支持)</font></font>
+</center>
+<!-- partial:index.partial.html -->
+<!-- setup our canvas element -->
+<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <div style="position: fixed;top: 20px;right: 30px;z-index: 90;">
+		<button id="button1" onclick="requestFullScreen();" style="border: none;font-size: 20px;color: #AAA;font-weight: bold;background: rgba(255,255,255,0);display: block;">全屏</button>
+	</div>
+  <script type="text/javascript">
+		//进入全屏
+		function requestFullScreen(element) {
+   			var de = document.querySelector(element) || document.documentElement;
+    		if (de.requestFullscreen) {
+        		de.requestFullscreen();
+    		} else if (de.mozRequestFullScreen) {
+        		de.mozRequestFullScreen();
+    		} else if (de.webkitRequestFullScreen) {
+        		de.webkitRequestFullScreen();
+    		}
+    		document.getElementById('button1').style.display = "none";
+		}
+	</script>
+</body>
+</html>

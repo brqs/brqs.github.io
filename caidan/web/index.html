@@ -1,0 +1,85 @@
+<style type="text/css">
+  .littleweb {
+    width: 100%;
+    height: 100px;
+    background: #f5f5f5;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    border-left: 10px solid #f5f5f5;
+    border-right: 10px solid #f5f5f5;
+  }
+  .littleweb div {
+    cursor: pointer;
+    width: 125px;
+    height: 75px;
+    margin: 10px 10px 10px 0px;
+    display: inline-block;
+    justify-content: space-around;
+    background-size: cover;
+    transition: all 0.25s ease;
+  }
+</style>
+<main class="content">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="note info" style="font-size: 18px">博主收集的比较有趣页面，无聊的时候可以看看。</div>
+        <div class="littleweb">
+          <div style="background-image: url('/medias/web/1.png')" title="烟火" onclick="web1();"></div>
+          <div style="background-image: url('/medias/web/3.png')" title="液体" onclick="web3();"></div>
+          <div style="background-image: url('/medias/web/4.png')" title="粒子" onclick="web4();"></div>
+          <div style="background-image: url('/medias/web/5.png')" title="雷达" onclick="web5();"></div>
+          <div style="background-image: url('/medias/web/6.png')" title="音频可视化" onclick="web6();"></div>
+          <div style="background-image: url('/medias/web/2.jpg')" title="帮你百度" onclick="web2();"></div>
+        </div>
+        <iframe style="max-width: 100%" frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="393.59999999999997" src="/caidan/fireworks/index.html" id="webframe"> </iframe>
+        <div class="note info" style="font-size: 18px">
+          <p id="quote">烟花页面长按效果更好（不支持手机）</p>
+          <cite id="cite"></cite>
+        </div>
+
+        <script type="text/javascript">
+          document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+          function web1() {
+            document.getElementById('webframe').src = '/caidan/fireworks/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '烟花页面长按效果更好（不支持手机）'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function web2() {
+            document.getElementById('webframe').src = '/caidan/lmbtfy/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = ' 帮你百度不做伸手党'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function web3() {
+            document.getElementById('webframe').src = '/caidan/fluid/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '体验绚丽的液体混合'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function web4() {
+            document.getElementById('webframe').src = '/caidan/lizi/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '粒子爆炸'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function web5() {
+            document.getElementById('webframe').src = '/caidan/radar/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '雷达图'
+            document.getElementById('cite').innerHTML = ''
+          }
+          function web6() {
+            document.getElementById('webframe').src = '/caidan/video/index.html'
+            document.getElementById('webframe').height = document.getElementById('webframe').offsetWidth * 0.6
+            document.getElementById('quote').innerHTML = '音频可视化'
+            document.getElementById('cite').innerHTML = ''
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://piccdn.freejishu.com/images/2018/03/11/qf3cu.jpg');
+    background-size: cover;
+}
+@font-face{
+    font-family: 'hl';
+    src: url('https://cdn.jsdelivr.net/gh/brqs/brqs.github.io@master/font/h1/hl.ttf');
+}
+
+h1 {
+    font-size: 45px;
+    font-family: 'hl';
+    color: white;
+}
+
+.container {
+    text-align: center;
+    font-family: Dengxian;
+}
+
+.word-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+    margin-top: 25%;
+    margin: 0 auto;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+}

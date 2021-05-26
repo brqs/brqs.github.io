@@ -1,0 +1,93 @@
+<!-- saved from url=(0031)https://www.heisan.top/piano/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>交互式音乐旋律</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div style="position: fixed;top: 20px;right: 90px;z-index: 90;">
+        <button id="button1" onclick="requestFullScreen();" style="border: none;font-size: 20px;color: #AAA;font-weight: bold;background: rgba(255,255,255,0);display: block;">FullScreen</button>
+    </div>
+    <div id="container">
+        <div id="toy">
+            <audio id="chime1" src="img/chime1.mp3"></audio>
+            <audio id="chime2" src="img/chime2.mp3"></audio>
+            <audio id="chime3" src="img/chime3.mp3"></audio>
+            <audio id="chime4" src="img/chime4.mp3"></audio>
+            <audio id="chime5" src="img/chime5.mp3"></audio>
+            <audio id="chime6" src="img/chime6.mp3"></audio>
+            <audio id="chime7" src="img/chime7.mp3"></audio>
+            <audio id="chime8" src="img/chime8.mp3"></audio>
+            <div id="playhead"></div>
+            <div id="steps"></div>
+            <div id="controls">
+                <button id="play">
+                    <span id="pauseTxt">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="#333" d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+                        </svg>
+                    </span>
+                    <span id="playTxt"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="#333" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                        </svg>
+                    </span>
+                </button>
+                <input id="tempo" type="range" min="1" max="9" value="2">
+                <button id="clear">
+                <!-- <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="#333" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                </svg> -->
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src='js/TweenMax.min.js'></script>
+    <script src="js/script.js"></script>
+    <script src="js/createjs.min.js"></script>
+    <script src="js/preloadjs.min.js"></script>
+    <script src="js/soundjs.min.js"></script>
+    <script type="text/javascript">
+        //预加载
+        var mainfest = [
+            // 音频
+            { src: "./img/chime1.mp3" },
+            { src: "./img/chime2.mp3" },
+            { src: "./img/chime3.mp3" },
+            { src: "./img/chime4.mp3" },
+            { src: "./img/chime5.mp3" },
+            { src: "./img/chime6.mp3" },
+            { src: "./img/chime7.mp3" },
+            { src: "./img/chime8.mp3" }
+        ];
+        var preload = {
+            // 预加载函数
+            startPreload: function () {
+                var preload = new createjs.LoadQueue(true);
+                //注意加载音频文件需要调用如下代码行
+                preload.installPlugin(createjs.SOUND);
+                //设置最大并发连接数  最大值为10
+                preload.setMaxConnections(1);
+                preload.loadManifest(mainfest);
+            }
+        }
+        preload.startPreload();
+        //进入全屏
+        function requestFullScreen(element) {
+            var de = document.querySelector(element) || document.documentElement;
+            if (de.requestFullscreen) {
+                de.requestFullscreen();
+            } else if (de.mozRequestFullScreen) {
+                de.mozRequestFullScreen();
+            } else if (de.webkitRequestFullScreen) {
+                de.webkitRequestFullScreen();
+            }
+            document.getElementById('button1').style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="php笔记, FanHeart">
+    <meta name="description" content="本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>php笔记 | FanHeart</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
+    <script src="/libs/jquery/jquery.min.js"></script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?8723c5c2669a112d08b51b84e31ef4c2";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+<meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="FanHeart" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+  <meta name="baidu-site-verification" content="code-e4kN1NOKf6" />
+  <body>
+    
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1920" height="412" style="width: 100%; height: 100%"></canvas></div>
+    <div class="stars-con">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </div>
+    <header class="navbar-fixed">
+  <nav id="headNav" class="nav-transparent h-color">
+    <div id="navContainer" class="nav-wrapper container">
+      <div class="brand-logo">
+        <a href="/" class="waves-effect waves-light Fan-color">
+          
+          <img src="/medias/logo.png" class="logo-img" alt="LOGO" />
+          
+          <span class="logo-span diyFont">FanHeart</span>
+        </a>
+      </div>
+      
+
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse Fan-color"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light Fan-color">
+
+      
+      <i class="fas fa-atlas" style="zoom: 0.6;"></i>
+      
+      <span>文章</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/statistics">
+          
+          <i class="fa fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章统计</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文章日历</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friendcircle" class="waves-effect waves-light Fan-color">
+      
+      <i class="fa fa-puzzle-piece" style="zoom: 0.6;"></i>
+      
+      <span>朋友圈</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigate" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>导航</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light Fan-color">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light Fan-color">
+
+      
+      <i class="fa fa-align-justify" style="zoom: 0.6;"></i>
+      
+      <span>清单</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友人帐</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/game">
+          
+          <i class="fa fa-gamepad" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>小游戏</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/journal">
+          
+          <i class="fa fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>日志册</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/census">
+          
+          <i class="fa fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>统计图</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/artitalk">
+          
+          <i class="fa fa-bullhorn" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博主说</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light Fan-color">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+<li class="hide-on-med-and-down nav-show">
+       <a onclick="switchNightModeTop()" class="modal-trigger waves-effect waves-light Fan-color">
+             <i class="fa fa-sun" id="changeMode-top" title="切换主题" style="zoom: 0.7;"></i>
+       </a>
+  </li>
+  
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">FanHeart</div>
+        <div class="logo-desc">
+            
+            本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-atlas"></i>
+			
+			文章
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/statistics " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章统计</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文章日历</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friendcircle" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-puzzle-piece"></i>
+			
+			朋友圈
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigate" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			导航
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fa fa-align-justify"></i>
+			
+			清单
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友人帐</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/game " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-gamepad" style="position: absolute;left:50px" ></i>
+			      
+		          <span>小游戏</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/journal " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>日志册</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/census " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>统计图</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/artitalk " style="margin-left:75px">
+				  
+				   <i class="fa fa fa-bullhorn" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博主说</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    </div>
+
+    
+  </nav>
+  <div class="denglong">
+    <div class="deng-box">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"><div class="deng-t">喜迎</div></div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div>
+    <div class="deng-box1">
+      <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+          <div class="deng-b"><div class="deng-t">元旦</div></div>
+        </div>
+        <div class="shui shui-a">
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-color: #5698c3">
+  <div class="container" style="right: 0px; left: 0px">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="brand">
+          <h1 class="description center-align post-title">php笔记</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css" />
+<style>
+  #articleContent h1::before,
+  #articleContent h2::before,
+  #articleContent h3::before,
+  #articleContent h4::before,
+  #articleContent h5::before,
+  #articleContent h6::before {
+    display: block;
+    content: ' ';
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+  }
+
+  #articleContent :focus {
+    outline: none;
+  }
+
+  .toc-fixed {
+    position: fixed;
+    top: 64px;
+  }
+
+  .toc-widget {
+    width: 345px;
+    padding-left: 20px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.07), 0 2px 5px -5px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .toc-widget .toc-title {
+    margin: 35px 0 15px 0;
+    padding-left: 17px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  .toc-widget ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  #toc-content {
+    height: calc(100vh - 250px);
+    overflow: auto;
+  }
+
+  #toc-content ol {
+    padding-left: 10px;
+  }
+
+  #toc-content ol li {
+    padding-left: 10px;
+  }
+
+  #toc-content .toc-link:hover {
+    color: #42b983;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  #toc-content .toc-link::before {
+    background-color: transparent;
+    max-height: 25px;
+
+    position: absolute;
+    right: 23.5vw;
+    display: block;
+  }
+
+  #toc-content .is-active-link {
+    color: #42b983;
+  }
+</style>
+<div class="row">
+  <div id="main-content" class="col s12 m12 l9"><!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <!-- 主题 挂件 （中） -->
+      <div class="caishendengsd">
+        <div class="guguxiansd wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/christmas-img/2.png" />
+        </div>
+      </div>
+      <div class="caishendeng">
+        <div class="guguxian wenzhangxian">
+          <img class="caishenpic gugus" src="/medias/spring-img/2.png" />
+        </div>
+      </div>
+
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E6%80%BB%E7%BB%93/">
+              <span class="chip bg-color">总结</span>
+            </a>
+            
+            <a href="/tags/php/">
+              <span class="chip bg-color">php</span>
+            </a>
+            
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+              <span class="chip bg-color">笔记</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category"> 学习 </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2021-02-01</div>
+         
+        <div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2021-05-26</div>
+         
+        <div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 6k</div>
+         
+        <div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 24 分</div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+    <div class="card-content article-card-content">
+      <div id="articleContent"><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="基础知识-1"><a href="#基础知识-1" class="headerlink" title="基础知识"></a>基础知识</h3><h4 id="php是什么？"><a href="#php是什么？" class="headerlink" title="php是什么？"></a>php是什么？</h4><p>PHP(PHP: Hypertext Preprocessor，超文本预处理器的缩写)，是一种被广泛应用的开放源代码的、基于服务器端的用于产生动态网页的、可嵌入HTML中的脚本程序语言，尤其适合 WEB 开发。</p>
+<p>当客户端向服务器的程序提出请求时，web服务器根据请求响应对应的页面，当页面中含有php脚本时，服务器会交给PHP解释器进行解释执行，将生成的html代码再回传给客户端，客户端的浏览器解释html代码，最终形成网页格式的页面。</p>
+<h4 id="执行方式"><a href="#执行方式" class="headerlink" title="执行方式"></a>执行方式</h4><p>PHP 代码被包含在特殊的起始符和结束符中，使得网页的脚本可以进出“PHP 模式”。其它用 C 或 Perl 语言写的脚本，需要用大量的命令来编写程序以输出 HTML ，而用PHP 编写一个 HTML 脚本，只需嵌入了一些代码来完成操作（例如，在本例中输出了一些文本）。 和客户端的 JavaScript 不同的是，PHP 代码是运行在服务端的。如果在服务器上建立了如上例类似的代码，则在运行该脚本后，客户端就能接收到其结果，但他们无法得知其背后的代码是如何运作的。甚至可以将 web 服务器设置成让 PHP 来处理所有的 HTML 文件，这么一来，用户就无法得知服务端到底做了什么。</p>
+<h4 id="我的PHP运行环境"><a href="#我的PHP运行环境" class="headerlink" title="我的PHP运行环境"></a>我的PHP运行环境</h4><p>由于我自己有一台学生机，上面我已经安装过了typecho所以服务器上有lmnp环境，所以我通过vscode写php通过winscp上传到服务器通过我自己的二级域名（life.hesifan.top）访问实验.</p>
+<h4 id="C-S与B-S结构"><a href="#C-S与B-S结构" class="headerlink" title="C/S与B/S结构"></a>C/S与B/S结构</h4><p>C/S结构</p>
+<p>C/S （Client/Server）结构，即大家熟知的客户机和服务器结构。它是软件系统体系结构，通过它可以充分利用两端硬件环境的优势，将任务合理分配到Client端和Server端来实现，降低了系统的通讯开销。目前大多数应用软件系统都是Client/Server形式的两层结构</p>
+<p>B/S结构</p>
+<p>B/S（Browser/Server）结构即浏览器和服务器结构。它是随着Internet技术的兴起，对C/S结构的一种变化或者改进的结构。在这种结构下，用户工作界面是通过WWW浏览器来实现，极少部分事务逻辑在前端（Browser）实现，但是主要事务逻辑在服务器端（Server）实现。这样就大大简化了客户端电脑载荷，减轻了系统维护与升级的成本和工作量，降低了用户的总体成本。</p>
+<h4 id="PHP的标记风格"><a href="#PHP的标记风格" class="headerlink" title="PHP的标记风格"></a>PHP的标记风格</h4><pre><code>&lt;?php 
+… … 
+?&gt;</code></pre>
+<p>这是PHP推荐使用的标记风格。服务器管理员不能禁用这种风格的标记。</p>
+<h4 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h4><p>PHP用分号来分隔简单的语句。复合语句用大括号来标记代码块，如条件测试或循环，在大括号后面不要用分号。和其他语言不一样的是，在PHP中右括号(?&gt;)前的分号不是必选的。</p>
+<h4 id="空白和换行符"><a href="#空白和换行符" class="headerlink" title="空白和换行符()"></a>空白和换行符()</h4><p>一般来说，空白符在PHP中无关紧要。可以将一个语句展开成任意行，或者将语句紧缩在一行。 可以利用这个灵活的格式来使代码更具有可读性（通过排列分配、缩进等）。一些懒惰的程序员利用这种自由的格式创建根本无法阅读的代码，这是不提倡的。</p>
+<h4 id="程序的注释"><a href="#程序的注释" class="headerlink" title="程序的注释"></a>程序的注释</h4><p>PHP支持C、C＋＋和Shell脚本风格的注释，如下：</p>
+<pre><code>// 单行注释
+/* ...*/  多行注释         （注意：不能嵌套）
+# 脚本注释</code></pre>
+<h4 id="查看数据"><a href="#查看数据" class="headerlink" title="查看数据"></a>查看数据</h4><p><code>echo</code><br>输出一个或多个变量，他不是函数，不需要使用括号，如果输出多个请用逗号分隔</p>
+<pre><code>echo 1,2,3,4;</code></pre>
+<p><code>var_dump</code><br>打印变量的相关信息</p>
+<pre><code>var_dump(1234);</code></pre>
+<blockquote>
+<p>区别：echo 是直接输出，var_dump输出和带有变量类型</p>
+</blockquote>
+<h3 id="变量知识"><a href="#变量知识" class="headerlink" title="变量知识"></a>变量知识</h3><h4 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h4><p>PHP是弱类型语言，不像其他语言需要对变量进行类型声明。PHP中以 $(美元) 作为前缀来定义变量，以a~z（大小写）或 _ 下划线定义变量名。</p>
+<p>下面是合法的变量名</p>
+<pre><code>$HF =  'hesifan.top';
+$_name = 'FanHeart';</code></pre>
+<p>下面是非法的变量声明</p>
+<pre><code>$0530 = 'baidu.com' 
+$&amp;* = 'blog.csdn.net'</code></pre>
+<h4 id="弱类型"><a href="#弱类型" class="headerlink" title="弱类型"></a>弱类型</h4><p>PHP是一种非常弱的类型语言。在大多数编程语言中，变量只能保持一种类型的数据，而且这个类型必须在使用变量前声明，例如C语言中。</p>
+<p>而在PHP中，变量的类型通常不是由程序员设定的，确切地说，是根据该变量使用的上下文在运行时（即变量的值）决定的。</p>
+<p>简单来说，<code>var = 1</code>;就是数字，<code>var2 = '1'</code>就是字符串，变量类型是由值决定的。</p>
+<h4 id="传值与引用"><a href="#传值与引用" class="headerlink" title="传值与引用"></a>传值与引用</h4><p>传值赋值<br>直接使用 = 将变量的值赋值给另一个变量。</p>
+<pre><code>&lt;?php
+
+//传值赋值
+$a = 1;
+$b = $a;
+$b = 3;
+echo $a;
+echo $b;
+// 输出13
+?&gt;</code></pre>
+<p>将一个变量的内存地址赋值给另一个变量的行为即传址赋值。需要在 = 等号前加上 <code>&amp;</code> 引用符号，这样两个变量指向内存中的一个地址，任何一个变量的改变都影响到另一个变量，有点类似于快捷方式的概念。</p>
+<pre><code>&lt;?php
+//引用赋值(传址赋值)
+$a = 1;
+$b = &amp;$a;
+$b = 3;
+echo $a;
+echo $b;
+// 输出33
+echo  '&lt;hr/&gt;';
+$a = 9;
+echo $a;
+echo $b;
+// 输出99
+
+?&gt;</code></pre>
+<h4 id="可变变量"><a href="#可变变量" class="headerlink" title="可变变量"></a>可变变量</h4><p>可以变量即使用一个变量的值，作为另一个变量名。</p>
+<pre><code>&lt;?php
+$a = 'hello'; //普通变量
+$$a = 'world'; //可变变量 等价于 $hello = 'world' 
+echo $a;
+echo $$a;
+echo $hello;
+echo "$a ${$a}"; //输出hello world
+echo "$a $hello"; //输出hello world
+?&gt;</code></pre>
+<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><p>变量作用域指变量在代码中可以访问的位置。</p>
+<p>超全局变量<br>可以代码的任何位置都可以访问的变量</p>
+<pre><code>&lt;?php
+var_dump($_GET);
+function show()
+{
+    print_r($_GET);
+}
+
+show();
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">变量</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$_GET</td>
+<td align="left">地址栏GET提交</td>
+</tr>
+<tr>
+<td align="left">$_POST</td>
+<td align="left">表单POST提交</td>
+</tr>
+<tr>
+<td align="left">$_FILES</td>
+<td align="left">文件上传变量</td>
+</tr>
+<tr>
+<td align="left">$_SESSION</td>
+<td align="left">会话变量</td>
+</tr>
+<tr>
+<td align="left">$_COOKIE</td>
+<td align="left">cookie值变量</td>
+</tr>
+<tr>
+<td align="left">$_GLOBALS</td>
+<td align="left">全局变量</td>
+</tr>
+<tr>
+<td align="left">$_REQUEST</td>
+<td align="left">包含<code>$_GET</code>、<code>$_POST</code>、<code>$_COOKIE</code></td>
+</tr>
+<tr>
+<td align="left">$_SERVER</td>
+<td align="left">服务器环境变量</td>
+</tr>
+</tbody></table>
+<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>全局声明（函数外声明）的变量会保存在<code>$_GLOBALS</code>中，函数内默认不能访问到全局变量，在函数中访问需要使用 global 关键字。</p>
+<pre><code>&lt;?php
+$name = 'FanHeart';
+function show()
+{
+    //echo $name ; 这时该普通变量就不在变量作用域无法访问
+    global $name;
+    echo $name;
+    //利用global引入全局变量，但不推荐使用这种方法，会造成变量污染
+    echo $GLOBALS['name'];
+    //使用全局数组$GLOBALS调⽤用全局变量。推荐使用这个方法 
+
+
+}
+show();
+?&gt;</code></pre>
+<p>也可以使用全局数组<code>$GLOBALS</code>调⽤用全局变量量。 如：</p>
+<pre><code> $GLOBALS['name'];</code></pre>
+<h4 id="检测变量"><a href="#检测变量" class="headerlink" title="检测变量"></a>检测变量</h4><p>通过isset 函数可以检测变量是否定义。</p>
+<pre><code>&lt;?php
+$name = 'FanHeart';
+var_dump(isset($name));
+//检测变量若无则输出false若有则为true
+
+?&gt;</code></pre>
+<h4 id="变量销毁"><a href="#变量销毁" class="headerlink" title="变量销毁"></a>变量销毁</h4><p>php在全部代码执行结束后会删除所有变量，也使用 unset 函数可以在程序运行中删除变量。</p>
+<pre><code>&lt;?php
+$name = 'FanHeart';
+unset($name);
+var_dump(isset($name));
+//输出false说明变量已经被删除了
+?&gt;</code></pre>
+<p>全局变量不能在函数中删除</p>
+<pre><code>&lt;?php
+$name = 'FanHeart';
+function show()
+{
+    global $name;
+    unset($name);
+    echo $name;
+}
+show();
+echo $name;
+//依然可以输出一个FanHeart,但是对于该函数内此变量被删除了。
+?&gt;</code></pre>
+<h4 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h4><p>PHP支持声明函数变量为静态的(static)。一个静态变量在所有对该函数的调用之间共享，并且仅在脚本的执行期间函数第一次被调⽤时被初始化。 要声明函数变量为静态的⽤关键字static。通常静态变量的第一次使⽤用时赋予⼀个初始值。</p>
+<pre><code>
+&lt;?php
+function calculation()
+{
+    $num = 1;
+    $num = $num + $num;
+    return $num;
+}
+echo calculation();
+echo calculation();
+echo calculation();
+//三次输出都是2
+?&gt;
+
+&lt;?php
+function calculation()
+{
+    static $num = 1;
+    $num = $num + $num;
+    return $num;
+}
+
+echo calculation();
+echo calculation();
+echo calculation();
+//三次输出分别为248，这样就实现了变量的循环调用
+?&gt;
+</code></pre>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>使用不同数据类型储存不同数据，就像我们家里面放衣服和放洗手液会使用用不同的容器一样。下面是常用PHP数据类型表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">integer</td>
+<td align="left">整型</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">浮点型</td>
+</tr>
+<tr>
+<td align="left">string</td>
+<td align="left">字符串</td>
+</tr>
+<tr>
+<td align="left">boolean</td>
+<td align="left">布尔型</td>
+</tr>
+<tr>
+<td align="left">array</td>
+<td align="left">数组</td>
+</tr>
+<tr>
+<td align="left">object</td>
+<td align="left">对象</td>
+</tr>
+</tbody></table>
+<h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><p>整型可以是十进制、八进制、十六进制。<br>php函数可以轻松实现进位制的转化<br>如十六进制转化十进制函数hexdc（）</p>
+<pre><code>&lt;?php 
+    var_dump(hexdec(FFF);
+    //输出int(4095)
+?&gt;</code></pre>
+<p>其他进位制之间的转化函数如下</p>
+<pre><code>bindec() //二进制转换为十进制
+
+decbin() //十进制转换为二进制
+
+dechex() //十进制转换为十六进制
+
+decoct() //十进制转换为八进制
+
+hexdec() //十六进制转换为十进制
+
+octdec() //八进制转换为十进制
+base_convert(number,frombase,tobase)//任意进位制之间的转化</code></pre>
+<p>任意进位制转化实例及其参数说明如下</p>
+<pre><code>&lt;?php
+$oct = "0530";
+$dec = base_convert($oct,8,10);
+echo "八进制的 $oct 等于十进制的 $dec。";
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">number</td>
+<td align="left">必需，原始值</td>
+</tr>
+<tr>
+<td align="left">frombase</td>
+<td align="left">必需，原进制</td>
+</tr>
+<tr>
+<td align="left">tobase</td>
+<td align="left">必需，目标进制</td>
+</tr>
+</tbody></table>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>浮点数表示实数，可理解为有限或无限小数。</p>
+<h4 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h4><p>当转换为 boolean 时，以下值被认为是FALSE</p>
+<table>
+<thead>
+<tr>
+<th align="left">布尔值</th>
+<th align="left">FALSE</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">整型值</td>
+<td align="left">0（零）</td>
+</tr>
+<tr>
+<td align="left">浮点型值</td>
+<td align="left">0.0（零）</td>
+</tr>
+<tr>
+<td align="left">字符串</td>
+<td align="left">空白字符串</td>
+</tr>
+<tr>
+<td align="left">字符串</td>
+<td align="left">“0”</td>
+</tr>
+<tr>
+<td align="left">数组</td>
+<td align="left">没有成员变量的数组</td>
+</tr>
+<tr>
+<td align="left">特殊类型</td>
+<td align="left">NULL（包括尚未设定的变量）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>所有其它值都被认为是 TRUE</p>
+</blockquote>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><h5 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h5><p>字符串可以用双引号<code>"" </code>或 <code>''</code> 号包含，区别是双引号中可以解析变量。</p>
+<pre><code>&lt;?php 
+$string = "hesifan.top";
+echo "FanHeart的网站{$string}!"
+//双引号可以解析变量输出为FanHeart的网站hesifan.top！单引号则为FanHeart的网站$string!用花括号可以避免变量错误，因为若变量后面有符合变量规范的字符会和被当作变量名
+?&gt;</code></pre>
+<blockquote>
+<p>用花括号可以避免变量错误，因为若变量后面有符合变量规范的字符会和被当作变量名<br>header响应头设置解决中文乱码问题</p>
+</blockquote>
+<pre><code>header('Content-type:text/html;charset=utf-8');</code></pre>
+<h5 id="转义符"><a href="#转义符" class="headerlink" title="转义符\"></a>转义符<code>\</code></h5><p>转义是将有多种含义的字符进行转换，比如 $即是变量前缀也是美元符号，就需要转义在不同场景进行改变。</p>
+<pre><code>
+&lt;?php 
+$string = "FanHeart \"hesifan.top\"";
+echo $string;
+echo '输出\\';
+echo '&lt;hr/&gt;';
+echo "定义变量方法\t\$string = 'hesifan.top'";//输出定义变量方法$string = 'hesifan.top'
+
+?&gt;</code></pre>
+<h5 id="定界符-lt-lt-lt"><a href="#定界符-lt-lt-lt" class="headerlink" title="定界符<<<"></a>定界符<code>&lt;&lt;&lt;</code></h5><p>文本表现的就和双引号字符串一样，在定界符文本中不需要转义引号，适合输入大量文本。</p>
+<pre><code>&lt;?php  
+$str=&lt;&lt;&lt;html
+&lt;h1 style="color:pink"&gt;hesifan.top&lt;/h1&gt; 
+&lt;script&gt;
+    document.write('FanHeart');
+&lt;/script&gt;
+html;
+echo $str;
+?&gt;</code></pre>
+<blockquote>
+<p>结束符必须从第一列开始，并且后面除了分号以外不能包含任何其他字符，空格也不可以。</p>
+</blockquote>
+<h5 id="连接符"><a href="#连接符" class="headerlink" title="连接符."></a>连接符<code>.</code></h5><p>多个字符串使用 . 符号连接</p>
+<pre><code>
+&lt;?php 
+$string1 = 'FanHeart';
+$string2 = 'hesifan.top';
+echo $string1.'=&gt;'.$string2;
+?&gt;</code></pre>
+<h5 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h5><p><code>strlen()</code> — 取得字符串长度传度的函数</p>
+<pre><code>&lt;?php  
+$string = 'blog.hesifan.top';
+echo strlen($string);
+echo '&lt;hr/&gt;';
+$string = '凡尘纪';
+echo mb_strlen($string,utf8);
+// 中文是宽字节一个汉字等于3个字节
+?&gt;</code></pre>
+<blockquote>
+<p>需要使用函数时优先查找使用php文档里的提供的函数效率最高<br><code>trim</code> 截去字符串首尾的内容</p>
+</blockquote>
+<pre><code>&lt;?php
+$string = ' hesifan.top  ';
+echo strlen(trim($string,' pot'));
+# 从前后删除 pot和空格字符
+?&gt;</code></pre>
+<p><code>rtrim</code>从右侧删除、<code>ltrim</code>从左侧删除</p>
+<pre><code>&lt;?php
+$string = ' hesifan.top ';
+echo strlen(rtrim($string,' pot'));
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">strtolower</td>
+<td align="left">字母转为小写</td>
+</tr>
+<tr>
+<td align="left">strtoupper</td>
+<td align="left">字母转大写</td>
+</tr>
+<tr>
+<td align="left">ucfirst</td>
+<td align="left">将字符串的首字母转换为大写</td>
+</tr>
+<tr>
+<td align="left">ucwords</td>
+<td align="left">将字符串中每个单词的首字母转换为大写</td>
+</tr>
+</tbody></table>
+<pre><code>&lt;?php 
+$string = ' hesifan.top ';
+echo strlen($string);//输出13
+echo trim($string,' pot.');//输出hesifan
+echo strtolower('Hello World');//输出hello world
+echo strtoupper('hello world');//输出HELLO　ＷＯＲＬＤ
+echo ucfirst('hello world');//输出Hello world
+echo ucwords('hello world');//输出Hello World
+?&gt;</code></pre>
+<p><code>md5</code>计算字符串的 MD5 散列值，以 32 字符十六进制数字形式返回散列值.<br>原来用于账户密码加密<br>现在可以用于存储用户信息<br>不要单纯理解为加密，他的特点时不可逆的生成一个32位hexo字符串</p>
+<pre><code>&lt;?php 
+$file = 'user-1-info';
+echo md5($file).'.php';
+$view = 'admin/master.php';
+echo md5($view).'.php';
+?&gt;</code></pre>
+<p><code>explode</code>  使用一个字符串分割另一个字符串</p>
+<pre><code>&lt;?php 
+$arr = (explode('.','hesifan.top'));
+echo  $arr[0];
+echo '&lt;hr/&gt;';
+echo  $arr[1];
+?&gt;</code></pre>
+<blockquote>
+<p>php 中有顺序时从0开始</p>
+</blockquote>
+<p>处理图像文件类型（后面会有更好的方式，仅用于举例）</p>
+<pre><code>&lt;?php 
+$file = 'card.jpg';
+$arr =explode('.',$file);
+print_r($arr).'&lt;hr/&gt;';//输出Array ( [0] =&gt; card [1] =&gt; jpg )
+echo $arr[1];//这样就输出了文件格式jpg啦
+?&gt;</code></pre>
+<p><code>implode</code>将一个一维数组的值转化为字符串</p>
+<pre><code>
+&lt;?php 
+ $arr =['email','3447851674@qq.com'];
+ echo implode(':',$arr);//输出email：3447851674@qq.com完成合并
+?&gt;</code></pre>
+<p><code>substr</code>返回字符串的子串,截取函数</p>
+<pre><code>&lt;?php 
+$file = 'user.webp';
+echo substr($file,0,-5);//输出user从第一个截到倒数五个
+$ad = '欢迎大家访问我的网站';
+echo mb_substr($ad,4,-4,'utf-8');//输出访问
+?&gt;</code></pre>
+<p><code>strstr</code> 查找字符串的首次出现</p>
+<pre><code>&lt;?php
+$email  = 'name@example.com';
+$domain = strstr($email, '@');
+echo $domain; // 输出 @example.com
+?&gt;</code></pre>
+<p><code>strrchr</code> 查找指定字符在字符串中的最后一次出现</p>
+<pre><code>&lt;?php
+$file = 'user.jpg';
+echo strrchr($file, '.'); // 输出.jpg
+?&gt;</code></pre>
+<p><code>strpos</code> 查找字符串首次出现的位置，如果没找到，将返回 FALSE</p>
+<pre><code>&lt;?php
+$name ='FanHeart';
+echo strpos($name, 'a'); // 输出1
+?&gt;</code></pre>
+<p><code>strrpos</code> 计算指定字符串在目标字符串中最后一次出现的位置</p>
+<pre><code>&lt;?php
+$name ='FanHeart';
+echo strrpos($name, 'a'); // 输出5
+?&gt;</code></pre>
+<p><code>str_replace</code>  子字符串替换</p>
+<pre><code>&lt;?php
+echo str_replace('hesifan', 'blog.hesifan', 'hesifan.top'); //输出blog.hesifan.top
+
+
+echo str_replace(['小猫','小狗'], '*', '我家有一只可爱的小猫和小狗');//输出我家有一只可爱的*和*
+
+echo str_replace(['小猫','小狗'], ['喵喵','汪汪'], '我家有一只可爱的小猫和小狗'); //输出我家有一只可爱的喵喵和汪汪
+?&gt;</code></pre>
+<h4 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a>NULL</h4><p>NULL数据类型只有一个值NULL。<br>1.变量未被赋予任何值<br>2.变量被赋值为NULL<br>3.被unset()函数处理后的变量</p>
+<pre><code>$a;        //变量 $a未被赋予任何变量，值为NULL
+$b = NULL;    //变量 $b被赋值为NULL
+$c = 10;        
+
+unset($c);    
+//使用unset()函数处理后，$c为NULL </code></pre>
+<h4 id="相关函数"><a href="#相关函数" class="headerlink" title="相关函数"></a>相关函数</h4><p>getType()</p>
+<pre><code>
+&lt;?php
+$num = 1234; 
+ $type = gettype( $num); 
+var_dump( $type);
+
+$var = true;
+$bool = is_bool( $var);
+var_dump( $bool);
+//检测是否为布尔型
+
+$int = 1234; 
+$bool = is_int($int); 
+var_dump($bool);
+//检测是否为整型
+
+$num = 1.1234; 
+$bool = is_float($num); 
+var_dump($bool);
+//检测是否为浮点数
+
+$string = 'FanHeart'; 
+$bool = is_string($string); 
+var_dump($bool);
+//检测是否为字符串
+
+$var = null;
+$bool = is_null($var);
+var_dump($bool);
+
+//检测是否为NULL
+?&gt;</code></pre>
+<h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><p>自动转换</p>
+<p>PHP类型根据值，自动转换</p>
+<pre><code>&lt;?php
+$num1 = '1'; 
+$num2 = '2'; 
+echo $num1 + $num2; # 字符串转为数字相加
+?&gt;</code></pre>
+<h3 id="常量使用"><a href="#常量使用" class="headerlink" title="常量使用"></a>常量使用</h3><p>常量是一个简单值的标识符（名字）。常量默认为大小写敏感。按照惯例常量标识符总是大写的。</p>
+<p><strong>常量特性</strong></p>
+<ul>
+<li>常量前面没有美元符号（$）</li>
+<li>常量只能用define() 函数定义，而不能通过赋值语句</li>
+<li>常量一旦定义就不能被重新定义或者取消定义</li>
+<li>常量的值用来定义 整型，浮点，字符串，布尔值，数组（PHP7新增）</li>
+<li>常量可以不用理会变量范围的可以在任何位置访问</li>
+</ul>
+<p><strong>声明常量</strong></p>
+<p>常量可以使用 const 和 define 定义。</p>
+<pre><code>&lt;?php 
+define('NAME','FanHeart',true);
+//define('NAME','HSF');//常量规范常量大写
+echo NAME;
+const URL  = 'hesifan.top';
+echo '&lt;hr/&gt;';
+echo URL;
+function show(){
+    echo URL;
+    echo NAme;
+}
+show();
+echo '&lt;hr/&gt;';
+echo PHP_VERSION;
+echo '&lt;hr/&gt;';
+echo PHP_OS;
+class demo{
+    public function show(){
+        echo __METHOD__;
+
+    }
+}
+(new demo())-&gt;show();
+print_r(get_defined_constants(categorize:true));
+?&gt;</code></pre>
+<blockquote>
+<p><code>const</code>是语言结构，在编译时要比<code>define</code>快,<code>define</code> 可以设置第三个参数为true，来定义不区分大小写的常量,类文件中定义常量也使用<code>const</code>，所以用<code>const</code>统一易读。</p>
+</blockquote>
+<pre><code>define('常量名',值); 
+define('WEBNAME','houdunwang');
+echo WEBNAME;</code></pre>
+<p><strong>常量检测</strong></p>
+<pre><code>$bool = defined('WEBNAME');
+var_dump($bool); // 结果是false</code></pre>
+<p><strong>系统常量</strong></p>
+<pre><code>__DIR__            文件所在目录
+__FILE__        文件路径
+__LINE__        程序代码行号
+PHP_VERSION     显示PHP版本
+PHP_OS           显示服务器的操作系统版本
+TRUE            boolean值真(true)支持小写常量
+FALSE             boolean值假(false)支持小写常量
+__FUNCTION__    函数名称
+__METHOD__        方法名称
+__CLASS__        类名称</code></pre>
+<blockquote>
+<p>使用函数 get_defined_constants(true) 可以获取当前可使用的所有常量。</p>
+</blockquote>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><pre><code>&lt;?php 
+$a = 3;
+$b = 4;
+echo $a%$b;//输出3 
+echo $a++;//输出3，后加后减时先赋值后加减，所以输出时还是原值，但还是进行了加减在输出$a则为4
+echo --$a;//输出2
+?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a+$b</td>
+<td align="left">加法 $a和$b的和</td>
+</tr>
+<tr>
+<td align="left">$a-$b</td>
+<td align="left">减法 $a和$b的差</td>
+</tr>
+<tr>
+<td align="left">$a*$b</td>
+<td align="left">乘法 $a和$b的积</td>
+</tr>
+<tr>
+<td align="left">$a/$b</td>
+<td align="left">除法 $a除以$b的商</td>
+</tr>
+<tr>
+<td align="left">$a<code>%</code> $b</td>
+<td align="left">取模 $a除以$b后的余</td>
+</tr>
+<tr>
+<td align="left">++$a    前加 $a 的值先加一，然后进行操作</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$a++</td>
+<td align="left">后加 $a 的值先进行操作，后加一</td>
+</tr>
+<tr>
+<td align="left">–$a</td>
+<td align="left">前减 $a 的值先减一，然后进行操作</td>
+</tr>
+<tr>
+<td align="left">$a–</td>
+<td align="left">后减 $a 的值先进行操作，后减一</td>
+</tr>
+</tbody></table>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><pre><code>
+$a *= $b;
+等价于
+$a = $a*&amp;b ;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="left">右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">左边值加上右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">左边值减掉右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">左边值乘以右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">左边值除以右边值赋值给左边变量</td>
+</tr>
+<tr>
+<td align="left">.=</td>
+<td align="left">左边字符串连接到右边变量后面</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="left">左边值对右边值取余数后赋值给左边变量</td>
+</tr>
+</tbody></table>
+<h4 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h4><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.</td>
+<td align="left">它返回其左右参数连接后的字符串</td>
+</tr>
+<tr>
+<td align="left">.=</td>
+<td align="left">左边字符串连接到右边变量后面</td>
+</tr>
+</tbody></table>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><pre><code>&lt;?php  
+ $a = 0;
+ $b = false;
+ var_dump($a == $b);//输出真，两个等号会进行转换，三个为假
+ ?&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a==$b</td>
+<td align="left">等于 TRUE，如果$a等于$b</td>
+</tr>
+<tr>
+<td align="left">$a===$b</td>
+<td align="left">全等于 TRUE，如果$a等于$b，并且类型也相同</td>
+</tr>
+<tr>
+<td align="left">$a!=$b</td>
+<td align="left">不等 TRUE，如果$a不等于$b</td>
+</tr>
+<tr>
+<td align="left">$a&lt;&gt;$b</td>
+<td align="left">不等 TRUE，如果$a不等于$b</td>
+</tr>
+<tr>
+<td align="left">$a!==$b</td>
+<td align="left">非全等 TRUE，如果$a不等于$b，或者类型不同</td>
+</tr>
+<tr>
+<td align="left">$a&lt;$b</td>
+<td align="left">小于 TRUE，如果$a严格小于$b</td>
+</tr>
+<tr>
+<td align="left">$a&gt;$b</td>
+<td align="left">大于 TRUE，如果$a严格$b</td>
+</tr>
+<tr>
+<td align="left">$a&lt;=$b</td>
+<td align="left">小于等于 TRUE，如果 $a 小于或者等于$b</td>
+</tr>
+<tr>
+<td align="left">$a&gt;=$b</td>
+<td align="left">大于等于 TRUE，如果 $a 大于或者等于$b</td>
+</tr>
+</tbody></table>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$a and $b</td>
+<td align="left">逻辑与 TRUE，如果 $a 与 $b 都为 TRUE</td>
+</tr>
+<tr>
+<td align="left">$a or $b</td>
+<td align="left">逻辑或 TRUE，如果 $a 或 $b 任一为TRUE</td>
+</tr>
+<tr>
+<td align="left">!$a</td>
+<td align="left">逻辑非 TRUE，如果 $a 不为 TRUE</td>
+</tr>
+<tr>
+<td align="left">$a &amp;&amp; $b</td>
+<td align="left">逻辑与 TRUE，如果 $a 与 $b 都为TRUE</td>
+</tr>
+<tr>
+<td align="left">$a 或 $b</td>
+<td align="left">逻辑或 TRUE，如果 $a 或 $b 任一为TRUE</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>and</code>与<code>&amp;&amp;</code> 、<code>or</code>与<code>||</code>是同一逻辑运算符的两种写法，但优先级不同。这四个符号的优先允许从高到低是：<code>&amp;&amp;</code>、<code>||</code>、<code>AND</code>、<code>OR</code>。</p>
+</blockquote>
+<h4 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h4><p>变量=(表达式)？值1:值2; 当表达式的返回值为true时，$变量被赋予值1，否则被赋予值2</p>
+<pre><code>&lt;?php
+$var = 1;
+$true = '真';
+$false = '假';
+echo $var?$true:$false;
+//通过第一个值的真假来控制输出第二个值还是第三个为真则二为假则三
+?&gt;</code></pre>
+<blockquote>
+<p>PHP 7 新增加的 NULL 合并运算符（??）是用于执行isset()检测的三元运算的快捷方式。 ?: 只判断 true 或 false ，而 ?? 判断变量存在并且值不为null</p>
+</blockquote>
+<pre><code>
+&lt;?php  
+$var = null;
+echo $var??'no';//输出no
+$var = '1';
+echo $var??'no';//输出1
+/*若第一个值不存在或为null则输出第二个值反之存在则输出第一个值
+*同时具有输出，和检测是否为空的功能
+*/
+//若用？：则要用isset函数检测如 
+//echo $var?'yes':'no';若$var不存在会报错
+echo isset($var)?'yes':'no';//这样就可以实现检测
+?&gt;</code></pre>
+<h4 id="屏蔽错误"><a href="#屏蔽错误" class="headerlink" title="屏蔽错误"></a>屏蔽错误</h4><p>@ 运算符用于屏蔽表达式警告错误</p>
+<pre><code>@(20/0); </code></pre>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><h4 id="if-else-elseif"><a href="#if-else-elseif" class="headerlink" title="if/else/elseif"></a>if/else/elseif</h4><p>当条件表达式的值为真（true）时，PHP将执行语句组，相反条件表达式的值为假（false）时，PHP将不执行语句组，忽略语句组执行下面的语句。</p>
+<p><strong>花括号形式</strong></p>
+<pre><code>&lt;?php
+$status = false;
+ if($status){
+     echo 'FanHeart';
+ }
+ else{
+     echo 'hesifan.top';
+ }
+?&gt;</code></pre>
+<p><strong>简化形式适合夹套书写html</strong></p>
+<pre><code>&lt;?php 
+$status = false;
+if($status):  
+
+?&gt;
+    &lt;h1&gt;真&lt;/h1&gt;
+&lt;?php 
+else: 
+?&gt; f
+   &lt;h1&gt;假&lt;/h1&gt;
+&lt;?php
+endif;
+?&gt;</code></pre>
+<p><strong>多条件的</strong></p>
+<pre><code>&lt;?php 
+$age = 10;
+if($age&lt;15){
+    echo '儿童';
+}
+elseif($age&lt;30){
+    echo '青年';
+}
+elseif($age&lt;50){
+    echo '中年';
+}
+else{
+    echo '老年';
+}
+?&gt;
+&lt;?php 
+$age = 10;
+if($age&lt;15):
+    echo '儿童';
+
+elseif($age&lt;30):
+    echo '青年';
+
+elseif($age&lt;50):
+    echo '中年';
+
+else:
+    echo '老年';
+endif;
+?&gt;</code></pre>
+<h4 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h4><p>switch设置多个执行代码块，break指令终止向下执行，default为上面条件都不满足时执行的默认代码块。</p>
+<pre><code>&lt;?php
+switch ($status) {
+case 'success':
+    echo '成功';
+    break;
+case 'error':
+    echo '错误';
+    break;
+case 'warning':
+    echo '警告';
+    break;
+}
+?&gt;</code></pre>
+<p>也可以使用以下写法</p>
+<pre><code>&lt;?php
+switch ($status) :
+    case 'success':
+        echo '成功';
+        break;
+    case 'error':
+        echo '错误';
+        break;
+    case 'warning':
+        echo '警告';
+        break;
+endswitch;</code></pre>
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><p>当while循环语句中表达式（循环控制语句）的结果为真时，程序将反复执行同一段程序：循环体（ while中的语句或语句序列），直到满足一定的条件（表达式的结果为假时）后才停止执行该段程序。</p>
+<pre><code>&lt;?php
+$num = 10;
+while ($num&gt;0) {
+    echo($num--).'&lt;br/&gt;';
+}
+
+//也可以使用以下写法
+$num = 10;
+while ($num&gt;0):
+    echo($num--).'&lt;br/&gt;';
+endwhile;
+?&gt;</code></pre>
+<h4 id="do…while"><a href="#do…while" class="headerlink" title="do…while"></a>do…while</h4><p>与while的差别是条件后判断。</p>
+<pre><code>&lt;?php
+$num = 10;
+do {
+    echo($num--).'&lt;hr/&gt;';
+} while ($num&gt;0);
+?&gt;</code></pre>
+<h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><pre><code>for(表达式1;表达式2;表达式3){
+    语句或语句序列;
+}
+// 表达式1为循环初始条件；
+// 表达式2为循环控制条件；
+// 表达式3为控制变量递增；</code></pre>
+<pre><code>&lt;?php
+for ($num=10;$num&gt;0;$num--) {
+    echo $num.'&lt;hr/&gt;';
+}
+// 也可以使用以下写法
+for ($num=10;$num&gt;0;$num--) :
+    echo $num.'&lt;hr/&gt;';
+endfor;
+
+?&gt;</code></pre>
+<h4 id="break-与-continue"><a href="#break-与-continue" class="headerlink" title="break 与 continue"></a>break 与 continue</h4><p><strong>break</strong></p>
+<p>我们之前在 switch 条件判断中已经使用过 break 关键字，它会使得程序流程离开 switch 本体中的语句，如果 break 使用在 for、while 或 do-while 循环结构中时，将会使得程序离开该层循环。</p>
+<pre><code>&lt;?php
+do {
+    if (!isset($num)) {
+        $num=10;
+    }
+    if ($num==0) {
+        break;
+    }
+    echo($num--).'&lt;hr/&gt;';
+} while (true);
+?&gt;</code></pre>
+<blockquote>
+<p>break 在多层循环嵌套使用时，可以指定跳转出层数。</p>
+</blockquote>
+<pre><code>&lt;?php
+$num=0;
+while (true):
+    $num++;
+    switch ($num) {
+        case $num%2==0:
+            echo $num."&lt;hr/&gt;";
+            break;
+        case $num%15==0:
+            echo $num."&lt;hr/&gt;";
+            break 2;
+    }
+endwhile;
+?&gt;</code></pre>
+<h4 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h4><p>continue 的作用与 break 有点类似，continue 若使用在 for、while 或 do-while循环结构中，当程序执行至 continue 时，之后的语句将直接被略过，而直接执行下一次的循环动作。</p>
+<pre><code>&lt;?php
+for ($num=10;$num&gt;0;$num--) {
+    if(!($num%2))continue;
+    echo $num.'&lt;hr/&gt;';
+}
+?&gt;</code></pre>
+<h3 id="文件引入"><a href="#文件引入" class="headerlink" title="文件引入"></a>文件引入</h3><p><strong>include &amp; require</strong></p>
+<p>使用include和require 将文件导入，就像把该文件粘贴到使用函数的地方。</p>
+<blockquote>
+<p>include( )与require ( )区别在于错误处理方式，当引入产生错误时include( )产生一个警告而require( )则导致一个致命错误。</p>
+</blockquote>
+<pre><code>&lt;?php
+include './test.php'; 
+echo 'test'; //如果test.php文件不存在会报一个warning错误，但是可以输出test
+?&gt;</code></pre>
+<blockquote>
+<p>可以使用 @ 屏蔽incluce加载警告错误</p>
+</blockquote>
+<pre><code>&lt;?php
+if (!@include 'a.php') {
+    echo '文件不存在';
+}
+?&gt;</code></pre>
+<p>require 加载失败时将终止程序执行</p>
+<pre><code>require './test.php'; 
+echo 'test'; //如果test.php文件不存在会报一个fatal错误，不可以输出test</code></pre>
+</div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">不染轻裳</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://hesifan.top/2021/02011.html">https://hesifan.top/2021/02011.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">不染轻裳</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E6%80%BB%E7%BB%93/">
+              <span class="chip bg-color">总结</span>
+            </a>
+            
+            <a href="/tags/php/">
+              <span class="chip bg-color">php</span>
+            </a>
+            
+            <a href="/tags/%E7%AC%94%E8%AE%B0/">
+              <span class="chip bg-color">笔记</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0"><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+</div>
+      </div>
+        
+    </div>
+  </div>
+       <style>
+  .valine-card {
+    margin: 1.5rem auto;
+  }
+
+  .valine-card .card-content {
+    padding: 10px 10px 5px 10px;
+  }
+
+  #vcomments textarea {
+    box-sizing: border-box;
+    background: url('/medias/comment_bg.png') 100% 100% no-repeat;
+  }
+
+  #vcomments p {
+    margin: 2px 2px 10px;
+    font-size: 1.05rem;
+    line-height: 1.78rem;
+  }
+
+  #vcomments blockquote p {
+    text-indent: 0.2rem;
+  }
+
+  #vcomments a {
+    padding: 0 2px;
+    color: #4cbf30;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  #vcomments img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  #vcomments ol li {
+    list-style-type: decimal;
+  }
+
+  #vcomments ol,
+  ul {
+    display: block;
+    padding-left: 2em;
+    word-spacing: 0.05rem;
+  }
+
+  #vcomments ul li,
+  ol li {
+    display: list-item;
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
+
+  #vcomments ul li {
+    list-style-type: disc;
+  }
+
+  #vcomments ul ul li {
+    list-style-type: circle;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    border: 0;
+  }
+
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
+
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
+
+  #vcomments table td {
+    min-width: 80px;
+  }
+
+  #vcomments h1 {
+    font-size: 1.85rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+  }
+
+  #vcomments h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+  }
+
+  #vcomments h3 {
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.7rem;
+  }
+
+  #vcomments h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  #vcomments h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+  }
+
+  #vcomments h6 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  #vcomments p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #vcomments hr {
+    margin: 12px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+
+  #vcomments blockquote {
+    margin: 15px 0;
+    border-left: 5px solid #42b983;
+    padding: 1rem 0.8rem 0.3rem 0.8rem;
+    color: #666;
+    background-color: rgba(66, 185, 131, 0.1);
+  }
+
+  #vcomments pre {
+    font-family: monospace, monospace;
+    padding: 1.2em;
+    margin: 0.5em 0;
+    background: #272822;
+    overflow: auto;
+    border-radius: 0.3em;
+    tab-size: 4;
+  }
+
+  #vcomments code {
+    font-family: monospace, monospace;
+    padding: 1px 3px;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+    border-radius: 2px;
+  }
+
+  #vcomments pre code {
+    font-family: monospace, monospace;
+    padding: 0;
+    color: #e8eaf6;
+    background-color: #272822;
+  }
+
+  #vcomments pre[class*='language-'] {
+    padding: 1.2em;
+    margin: 0.5em 0;
+  }
+
+  #vcomments code[class*='language-'],
+  pre[class*='language-'] {
+    color: #e8eaf6;
+  }
+
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
+
+  #vcomments b,
+  strong {
+    font-weight: bold;
+  }
+
+  #vcomments dfn {
+    font-style: italic;
+  }
+
+  #vcomments small {
+    font-size: 85%;
+  }
+
+  #vcomments cite {
+    font-style: normal;
+  }
+
+  #vcomments mark {
+    background-color: #fcf8e3;
+    padding: 0.2em;
+  }
+
+  #vcomments table,
+  th,
+  td {
+    padding: 12px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  table tr:nth-child(2n),
+  thead {
+    background-color: #fafafa;
+  }
+
+  #vcomments table th {
+    background-color: #f2f2f2;
+    min-width: 80px;
+  }
+
+  #vcomments table td {
+    min-width: 80px;
+  }
+
+  #vcomments [type='checkbox']:not(:checked),
+  [type='checkbox']:checked {
+    position: inherit;
+    margin-left: -1.3rem;
+    margin-right: 0.4rem;
+    margin-top: -1px;
+    vertical-align: middle;
+    left: unset;
+    visibility: visible;
+  }
+
+  .v[data-class='v'] .vwrap .vheader .vinput {
+    width: 32%;
+    border-bottom: 1px dashed #dedede;
+  }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+  <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px">
+    <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+    <span>评论</span>
+  </div>
+  <!-- 主题 挂件 -->
+  <div class="caishendengsd">
+    <div class="caishenxianleftsd">
+      <img class="caishenpic fudao" src="/medias/christmas-img/9.png" />
+    </div>
+  </div>
+  <div class="caishendeng">
+    <div class="caishenxianleft">
+      <img class="caishenpic fudao" src="/medias/spring-img/9.png" />
+    </div>
+  </div>
+  <div id="vcomments" class="card-content" style="display: grid" data-class="v"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/brqs/brqs.github.io/libs/valine/Valine.min.js"></script>
+<script>
+  let metaPlaceholder = { nick: '昵称/qq(必填)', mail: '邮箱(必填)', link: '网址(https://)选填' }
+  //这里要换行
+  new Valine({
+    el: '#vcomments',
+    appId: 'MTf2zMKqfswMOoRa90rOoCWC-gzGzoHsz',
+    appKey: 'lJMlfgSfSTKrTvrIzNhpGyhG',
+    notify: 'true' === 'true',
+    verify: 'true' === 'true',
+    visitor: 'true' === 'true',
+    avatar: 'monsterid',
+    pageSize: '10',
+    lang: 'zh-CN',
+    placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+    meta: ['nick', 'mail', 'link'],
+    recordIP: 'true' === 'true',
+    enableQQ: 'monsterid',
+    requiredFields: ['f5a3318ea1fc0d20'],
+    master: 'ddf016c0f5a3318ea1fc0d20c8ac4429',
+    friends: ['efc1730bf09301ac92cf7ba5a8c88df0', '	08FA87BE584D9C16C47A206128029506', '80a023e11167a78a35f72ef4dd0a48f4', '1512958e18378c98b498d5effe3e76ff', '08fa87be584d9c16c47a206128029506'],
+    tagMeta: ['博主', '小伙伴', '访客'],
+    metaPlaceholder: metaPlaceholder,
+  })
+</script>
+   
+
+<article id="prenext-posts" class="prev-next articles">
+  <div class="row article-row">
+    
+    <div class="article col s12 m6" data-aos="fade-up">
+      <div class="article-badge left-badge text-color"><i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+      <div class="card">
+        <a href="/2021/020425073.html">
+          <div class="card-image card-image-V">
+            <div class="box-content">
+              <h3 class="title">阅读全文</h3>
+              <span class="post" style="width: 180px">我的centos使用手册</span>
+            </div>
+            
+            <img src="/medias/post/webp/centos.webp" class="responsive-img" alt="我的centos使用手册" />
+            
+            <span class="card-title title-V">我的centos使用手册</span>
+          </div>
+        </a>
+        <div class="card-content article-content">
+          <div class="summary block-with-text"> 
+本文记录我的centos使用之路，逐渐驯服centos的过程，最开始用其实很迷，后来越来越了解。本文仅为我可以快速查阅相关命令用，对于其他读者价值较小
+
+开机启动 开机启动保障网页和mc服务器的正常运行 网站
+systemctl star </div>
+          <div class="publish-info">
+            <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-02-04 </span>
+            <span class="publish-author">
+              
+              <i class="fas fa-bookmark fa-fw icon-category"></i>
+              
+              <a href="/categories/%E5%85%B6%E4%BB%96/" class="post-category"> 其他 </a>
+               
+            </span>
+          </div>
+        </div>
+        
+        <div class="card-action article-tags">
+          
+          <a href="/tags/centos/">
+            <span class="chip bg-color">centos</span>
+          </a>
+          
+          <a href="/tags/%E6%89%8B%E5%86%8C/">
+            <span class="chip bg-color">手册</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+     
+    <div class="article col s12 m6" data-aos="fade-up">
+      <div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div>
+      <div class="card">
+        <a href="/2021/012225762.html">
+          <div class="card-image card-image-V">
+            <div class="box-content">
+              <h3 class="title">阅读全文</h3>
+              <span class="post" style="width: 180px">centos7.6全指令安装typecho及其php环境</span>
+            </div>
+            
+            <img src="/medias/post/webp/typecho.webp" class="responsive-img" alt="centos7.6全指令安装typecho及其php环境" />
+            
+            <span class="card-title title-V">centos7.6全指令安装typecho及其php环境</span>
+          </div>
+        </a>
+        <div class="card-content article-content">
+          <div class="summary block-with-text"> 
+最初安装typecho只是为了搞生活小站，体验了其后台功能之后果断选择使用typecho。后台真的香。一路上安装及其配置过程中也遇到不少坑，在此记录一下，以便日后查阅。  
+
+安装lnmp环境运行typecho的环境：nginx  mys </div>
+          <div class="publish-info">
+            <span class="publish-date"> <i class="far fa-clock fa-fw icon-date"></i>2021-01-22 </span>
+            <span class="publish-author">
+              
+              <i class="fas fa-bookmark fa-fw icon-category"></i>
+              
+              <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+               
+            </span>
+          </div>
+        </div>
+        
+        <div class="card-action article-tags">
+          
+          <a href="/tags/php/">
+            <span class="chip bg-color">php</span>
+          </a>
+          
+          <a href="/tags/mysql/">
+            <span class="chip bg-color">mysql</span>
+          </a>
+          
+          <a href="/tags/nginx/">
+            <span class="chip bg-color">nginx</span>
+          </a>
+          
+          <a href="/tags/typecho/">
+            <span class="chip bg-color">typecho</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+</div>
+
+
+<script>
+  $('#articleContent').on('copy', function (e) {
+    // IE8 or earlier browser is 'undefined'
+    if (typeof window.getSelection === 'undefined') return
+
+    var selection = window.getSelection()
+    // if the selection is short let's not annoy our users.
+    if (('' + selection).length < Number.parseInt('120')) {
+      return
+    }
+
+    // create a div outside of the visible area and fill it with the selected text.
+    var bodyElement = document.getElementsByTagName('body')[0]
+    var newdiv = document.createElement('div')
+    newdiv.style.position = 'absolute'
+    newdiv.style.left = '-99999px'
+    bodyElement.appendChild(newdiv)
+    newdiv.appendChild(selection.getRangeAt(0).cloneContents())
+
+    // we need a <pre> tag workaround.
+    // otherwise the text inside "pre" loses all the line breaks!
+    if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+      newdiv.innerHTML = '<pre>' + newdiv.innerHTML + '</pre>'
+    }
+
+    var url = document.location.href
+    newdiv.innerHTML += '<br />' + '来源: FanHeart<br />' + '文章作者: 不染轻裳<br />' + '文章链接: <a href="' + url + '">' + url + '</a><br />' + '本文章著作权归作者所有，任何形式的转载都请注明出处。'
+
+    selection.selectAllChildren(newdiv)
+    window.setTimeout(function () {
+      bodyElement.removeChild(newdiv)
+    }, 200)
+  })
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+  code[class*='language-'],
+  pre[class*='language-'] {
+    white-space: pre !important;
+  }
+</style>
+
+</div>
+  <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+    <div class="toc-widget">
+      <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+      <div id="toc-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<script>
+  localStorage.setItem('read', '0')
+  function readMode() {
+    var body = document.body
+    if (body.classList.contains('read')) {
+      document.body.classList.remove('read')
+      localStorage.setItem('read', '0')
+    } else {
+      document.body.classList.add('read')
+      localStorage.setItem('read', '1')
+    }
+  }
+
+  if (localStorage.getItem('read') === '1') {
+    document.body.classList.add('read')
+  } else if (matchMedia('(prefers-color-scheme: read)').matches) {
+    document.body.classList.add('read')
+  }
+</script>
+<div id="readmode" onclick="readMode()" class="hide-on-med-and-down" title="阅读模式">
+  <a class="btn-floating btn-large waves-effect waves-light"
+    ><svg t="1612426735340" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15071" width="37" height="37">
+      <path d="M942.7456 293.2736h-35.9424l3.1232 474.5728c0 15.0528-17.8176 22.0672-31.3856 15.4624-147.0464-71.6288-297.472-7.2704-348.2112 15.9744-8.448 3.8912-18.0736-2.2528-18.0736-11.5712v-1.3824c0 9.5232-10.1376 15.7696-18.5856 11.3152-141.4656-75.0592-280.6272-30.2592-341.8112-7.3216-26.1632 9.7792-47.7696-11.4176-47.7696-11.4176l-0.2048 83.1488c0 17.92 44.4928-0.6656 62.3616-2.0992l340.1216-27.3408c1.6384-0.1536 9.5744-0.1536 11.2128 0l422.1952 38.2976c17.8688 1.4336 33.6384-2.0992 33.6384-20.0192V323.9936c0.0512-16.9984-13.7216-30.72-30.6688-30.72z" fill="#BC9BE0" p-id="15072"></path>
+      <path d="M164.3008 252.8768v472.2688c0 13.7216 13.1584 22.9376 25.088 17.6128 52.992-23.9104 181.7088-67.2768 306.2784 2.7648 7.424 4.1472 16.3328-1.6384 16.3328-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.8544-17.5616-41.5744-18.8416-189.8496-72.3968-327.424-10.8032-6.144 2.7648-9.4208 9.8816-9.4208 16.896zM558.3872 252.8768v472.2688c0 13.7216 13.2096 22.9376 25.1392 17.6128 53.0944-23.9104 182.0672-67.2768 306.8928 2.7648 7.424 4.1472 16.384-1.6384 16.384-10.5472V264.3456c0-7.6288-4.2496-14.5408-10.9056-17.5616-41.6256-18.8416-190.208-72.3968-328.0384-10.8032-6.144 2.7648-9.472 9.8816-9.472 16.896z" fill="#FFB47A" p-id="15073"></path>
+      <path
+        d="M942.7456 262.5536h-20.5824V235.52c0-14.3872-8.4992-27.2896-21.6576-32.9216-50.8928-21.76-229.12-86.1696-385.2288 0.1024-1.4848 0.8192-2.9184 1.792-4.2496 2.7648-1.6896-1.0752-3.4304-2.048-5.2736-2.8672-50.8928-21.76-229.12-86.1696-385.2288 0.1024a36.0192 36.0192 0 0 0-18.6368 31.488v28.3648h-14.0288c-25.3952 0-46.08 20.6848-46.08 46.08v526.848c0 12.8 5.4272 25.1904 14.848 33.8944a46.2592 46.2592 0 0 0 34.9184 12.0832l419.2768-33.7408c0.8192-0.0512 1.6384-0.0512 2.4576 0l425.8816 33.792a46.1312 46.1312 0 0 0 34.9184-12.0832 46.19776 46.19776 0 0 0 14.7968-33.8432V308.6336c-0.0512-25.4464-20.736-46.08-46.1312-46.08zM527.36 234.1888c0-1.8944 1.0752-3.6352 2.7648-4.5568 53.8624-29.7472 110.8992-39.936 163.6864-39.936 88.2688 0 164.7616 28.416 194.56 41.216 1.8432 0.768 3.0208 2.6112 3.0208 4.6592v491.52c0 2.4576-1.536 3.7888-2.4064 4.352-0.6656 0.4096-1.8432 0.9728-3.2768 0.768a4.74624 4.74624 0 0 1-1.536-0.4608 361.344 361.344 0 0 0-66.2528-24.576c-124.16-32.8192-239.0528 6.8608-290.56 29.8496V234.1888z m-394.8032 0c0-1.8944 1.0752-3.6352 2.7648-4.5568 143.872-79.5136 310.6304-19.1488 358.2976 1.28 1.8432 0.768 3.0208 2.56 3.0208 4.608v499.7632c-4.1984-2.1504-8.3968-4.1984-12.5952-6.144-1.28-0.6144-2.6112-1.1776-3.8912-1.7408-2.9696-1.3312-5.9392-2.6624-8.9088-3.8912-1.4336-0.6144-2.8672-1.1776-4.3008-1.792-3.0208-1.2288-6.0928-2.4064-9.1136-3.5328-1.2288-0.4608-2.4064-0.9216-3.6352-1.3312-4.1984-1.536-8.3968-2.9696-12.5952-4.3008-0.4096-0.1536-0.8192-0.256-1.2288-0.3584-3.7888-1.1776-7.5776-2.304-11.3664-3.3792-1.3312-0.3584-2.6112-0.7168-3.8912-1.0752-2.9184-0.768-5.888-1.536-8.8064-2.2528-1.3824-0.3584-2.7648-0.6656-4.1472-0.9728-3.1232-0.7168-6.1952-1.3824-9.2672-1.9968-1.0752-0.2048-2.0992-0.4608-3.1744-0.6656-4.1472-0.8192-8.2432-1.536-12.3392-2.1504l-1.9968-0.3072c-3.4304-0.512-6.8608-1.024-10.2912-1.4336l-3.84-0.4608c-2.8672-0.3072-5.7344-0.6144-8.6016-0.8704-1.28-0.1024-2.56-0.256-3.84-0.3584-3.1744-0.256-6.2976-0.4608-9.4208-0.6656l-2.56-0.1536c-3.9936-0.2048-7.936-0.3584-11.8784-0.4608-0.768 0-1.536 0-2.304-0.0512-2.3552-0.0512-4.7104-0.1024-7.0656-0.1024-0.6144 0-1.1776 0.0512-1.792 0.0512-3.4816 0-6.8608 0.1024-10.2912 0.2048-1.2288 0.0512-2.4576 0.0512-3.6864 0.1024-4.5568 0.1536-9.0624 0.4096-13.5168 0.7168l-3.84 0.3072c-3.2256 0.256-6.4 0.512-9.5744 0.8192-1.6896 0.1536-3.328 0.3584-4.9664 0.512-2.7648 0.3072-5.5296 0.6144-8.2432 0.9728-1.6896 0.2048-3.3792 0.4608-5.0176 0.6656-2.7136 0.3584-5.4272 0.768-8.0896 1.1776-1.536 0.256-3.072 0.4608-4.5568 0.7168-3.1744 0.512-6.3488 1.0752-9.4208 1.6896-0.9216 0.1536-1.792 0.3072-2.7136 0.512-3.9424 0.768-7.8336 1.5872-11.6224 2.4064-1.2288 0.256-2.4064 0.5632-3.584 0.8192-2.6112 0.6144-5.2224 1.1776-7.8336 1.8432-1.4336 0.3584-2.7648 0.7168-4.1984 1.024-2.304 0.5632-4.608 1.1776-6.8608 1.792-1.3824 0.3584-2.7136 0.7168-4.0448 1.0752-2.304 0.6144-4.5568 1.28-6.7584 1.9456-1.1776 0.3584-2.3552 0.6656-3.4816 1.024-2.816 0.8704-5.5808 1.6896-8.2944 2.56-0.4608 0.1536-0.9216 0.256-1.3312 0.4096-3.1232 1.024-6.144 1.9968-9.0624 3.0208-0.9728 0.3072-1.8432 0.6656-2.816 0.9728-1.9968 0.6656-3.9424 1.3824-5.8368 2.048-1.024 0.3584-2.048 0.768-3.072 1.1264-1.7408 0.6144-3.4304 1.28-5.0688 1.8944-0.9728 0.3584-1.8944 0.7168-2.816 1.0752-1.6896 0.6656-3.328 1.3312-4.9152 1.9456-0.7168 0.3072-1.4848 0.6144-2.2016 0.8704-2.2528 0.9216-4.4032 1.792-6.4512 2.6624-2.2016 0.9216-3.9424 0.1536-4.8128-0.4096a5.00224 5.00224 0 0 1-2.304-4.3008V234.1888z m825.5488 601.344c0 4.352-1.7408 8.3456-4.9152 11.264-3.1744 2.9696-7.3728 4.352-11.6224 4.0448l-425.8304-33.792a44.36992 44.36992 0 0 0-7.3728 0l-419.2768 33.7408c-4.2496 0.3584-8.448-1.0752-11.6224-4.0448-3.1744-2.9184-4.9664-6.9632-4.9664-11.3152V308.6336c0-8.448 6.912-15.36 15.36-15.36h14.0288v435.9168a35.6864 35.6864 0 0 0 16.0768 29.9008 35.75296 35.75296 0 0 0 33.792 3.072c55.0912-23.4496 197.888-70.0928 334.5408 2.4064 1.024 0.512 2.048 0.9728 3.072 1.3824 0.3072 0.1024 0.6656 0.2048 0.9728 0.3072 0.7168 0.256 1.4336 0.512 2.2016 0.6656 0.4096 0.1024 0.768 0.1536 1.1776 0.256 0.6656 0.1536 1.3312 0.3072 2.048 0.3584 0.4096 0.0512 0.8704 0.1024 1.28 0.1024 0.6656 0.0512 1.28 0.1024 1.9456 0.1024h0.4096c0.256 0 0.512-0.0512 0.8192-0.0512 0.768 0 1.536-0.0512 2.304-0.1536l1.28-0.1536c0.768-0.1024 1.4848-0.256 2.2528-0.4608l1.2288-0.3072c0.8192-0.256 1.5872-0.512 2.3552-0.8192 0.3072-0.1536 0.6656-0.256 0.9728-0.3584 0.0512-0.0512 0.1536-0.0512 0.2048-0.1024 0.512 0.3072 1.0752 0.5632 1.6384 0.8192 0.3584 0.2048 0.7168 0.3584 1.0752 0.5632 1.1264 0.512 2.304 0.9728 3.4816 1.28h0.0512a21.26336 21.26336 0 0 0 4.7104 0.8704c0.8704 0.1024 1.6896 0.1536 2.56 0.2048 0.2048 0 0.3584 0.0512 0.5632 0.0512 0.3584 0 0.7168-0.0512 1.0752-0.0512 0.4608 0 0.9216-0.0512 1.3824-0.0512 0.6144-0.0512 1.2288-0.1536 1.8432-0.256 0.4096-0.0512 0.8704-0.1024 1.28-0.2048 0.6656-0.1536 1.3312-0.3072 1.9968-0.512l1.0752-0.3072c1.024-0.3584 2.048-0.7168 3.0208-1.1776 54.1184-24.7808 195.072-75.0592 334.2848-7.2704 1.3824 0.6656 2.816 1.28 4.2496 1.7408 0.768 0.256 1.5872 0.4608 2.4064 0.6656 0.6656 0.1536 1.28 0.4096 1.9456 0.512 0.8192 0.1536 1.6896 0.256 2.5088 0.3584 0.6144 0.1024 1.28 0.2048 1.8944 0.256 1.3312 0.1024 2.6112 0.1024 3.9424 0.0512h0.512c1.28-0.0512 2.56-0.256 3.84-0.4608 0.2048-0.0512 0.4096-0.0512 0.5632-0.0512 4.4032-0.8192 8.704-2.4576 12.6464-4.9152a35.6864 35.6864 0 0 0 16.8448-30.4128V293.2736h20.5824c8.448 0 15.36 6.912 15.36 15.36v526.8992z"
+        fill="#333333"
+        p-id="15074"
+      ></path></svg
+  ></a>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+  $(function () {
+      tocbot.init({
+          tocSelector: '#toc-content',
+          contentSelector: '#articleContent',
+          headingsOffset: -($(window).height() * 0.4 - 45),
+          collapseDepth: Number('0'),
+          headingSelector: 'h2, h3, h4,h5'
+      });
+
+      // modify the toc link href to support Chinese.
+      let i = 0;
+      let tocHeading = 'toc-heading-';
+      $('#toc-content a').each(function () {
+          $(this).attr('href', '#' + tocHeading + (++i));
+      });
+
+      // modify the heading title id to support Chinese.
+      i = 0;
+      $('#articleContent').children('h2, h3, h4,h5').each(function () {
+          $(this).attr('id', tocHeading + (++i));
+      });
+
+      // Set scroll toc fixed.
+      let tocHeight = parseInt($(window).height() * 0.4 - 64);
+      let $tocWidget = $('.toc-widget');
+      $(window).scroll(function () {
+          let scroll = $(window).scrollTop();
+          /* add post toc fixed. */
+          if (scroll > tocHeight) {
+              $tocWidget.addClass('toc-fixed');
+          } else {
+              $tocWidget.removeClass('toc-fixed');
+          }
+      });
+
+      
+  });
+</script>
+
+    
+
+</main>
+
+
+ <footer class="page-footer h-color">
+  
+  <div class="container row center-align" style="margin-bottom: 15px !important;">
+    <div class="col s12 m8 l8 copy-right Fan-color">
+      Copyright&nbsp;&copy;
+      <span id="year">2020</span>
+      <a href="/about" target="_blank">不染轻裳</a>
+      |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+      <br />
+       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">66.2k</span>&nbsp;字      
+      <span id="busuanzi_container_site_pv"> |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次 </span>
+       
+      <span id="busuanzi_container_site_uv"> |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人 </span>
+      
+      <br />
+      
+      <span id="sitetime">载入运行时间...</span>
+      <script>
+        function siteTime() {
+          var seconds = 1000
+          var minutes = seconds * 60
+          var hours = minutes * 60
+          var days = hours * 24
+          var years = days * 365
+          var today = new Date()
+          var startYear = '2020'
+          var startMonth = '10'
+          var startDate = '18'
+          var startHour = '0'
+          var startMinute = '0'
+          var startSecond = '0'
+          var todayYear = today.getFullYear()
+          var todayMonth = today.getMonth() + 1
+          var todayDate = today.getDate()
+          var todayHour = today.getHours()
+          var todayMinute = today.getMinutes()
+          var todaySecond = today.getSeconds()
+          var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond)
+          var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+          var diff = t2 - t1
+          var diffYears = Math.floor(diff / years)
+          var diffDays = Math.floor(diff / days - diffYears * 365)
+          var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+          var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+          var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+          if (startYear == todayYear) {
+            document.getElementById('year').innerHTML = todayYear
+            document.getElementById('sitetime').innerHTML = '本站已艰难运行 ' + diffDays + ' 天 ' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒'
+          } else {
+            document.getElementById('year').innerHTML = startYear + ' - ' + todayYear
+            document.getElementById('sitetime').innerHTML = '本站已安全运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + ' 小时 ' + diffMinutes + ' 分钟 ' + diffSeconds + ' 秒'
+          }
+        }
+        setInterval(siteTime, 1000)
+      </script>
+      
+      <br />
+      
+      <span id="icp"
+        ><img src="/medias/icp.png" style="vertical-align: text-bottom" />
+        <a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2020018100号</a>
+      </span>
+      
+    </div>
+    <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:3447851674@qq.com  1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3447851674" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3447851674" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+ 
+    <a href="https://space.bilibili.com/602389627" class="tooltipped" target="_blank" data-tooltip="在B站上关注我" " data-position="top" data-delay="50"> 
+	    <i class="fas fa-play-circle"></i> 
+	</a> 
+
+
+</div>
+  </div>
+</footer>
+
+<div class="progress-bar"></div>
+ <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <div class="search-header">
+      <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+      <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" />
+    </div>
+    <div id="searchResult"></div>
+  </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  $(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult')
+  })
+</script>
+ <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+  <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+    <img class="theme-button-up" src="/medias/btn/up.png" title="回到顶部" />
+  </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+ <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+ 
+    <script src="/libs/others/clicklove.js" async="async"></script>
+     
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+     
+    <script>
+      function enterfullscreen() {
+        //进入全屏
+
+        var docElm = document.documentElement
+        //W3C
+        if (docElm.requestFullscreen) {
+          docElm.requestFullscreen()
+        }
+        //FireFox
+        else if (docElm.mozRequestFullScreen) {
+          docElm.mozRequestFullScreen()
+        }
+        //Chrome等
+        else if (docElm.webkitRequestFullScreen) {
+          docElm.webkitRequestFullScreen()
+        }
+        //IE11
+        else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen()
+        }
+        $('#fullscreen').removeClass('fa-expand-arrows-alt').addClass('fa-desktop')
+      }
+
+      function exitfullscreen() {
+        //退出全屏
+        // $("#fullscreen").html("切换全屏");
+
+        if (document.exitFullscreen) {
+          document.exitFullscreen()
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen()
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen()
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen()
+        }
+        $('#fullscreen').removeClass('fa-desktop').addClass('fa-expand-arrows-alt')
+      }
+
+      let b = false
+      $('#fullscreen_li ').on('click', function () {
+        b = !b
+        b ? enterfullscreen() : exitfullscreen()
+      })
+    </script>
+    <script>
+      if (localStorage.getItem('themespring') === '1') {
+        document.body.classList.add('themespring')
+      } else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+        document.body.classList.add('themespring')
+      }
+    </script>
+
+    <script>
+      if (localStorage.getItem('themechris') === '1') {
+        document.body.classList.add('themechris')
+      } else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+        document.body.classList.add('themechris')
+      }
+    </script>
+
+    <div class="menu-V">
+      <div class="container-M">
+        <div class="toggle"></div>
+      </div>
+      <svg aria-hidden="true" style="position: absolute; overflow: hidden; width: 0; height: 0">
+        <symbol id="icon-sun" viewBox="0 0 1024 1024">
+          <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path>
+          <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
+          <path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path>
+          <path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 1024 1024">
+          <path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path>
+          <path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path>
+        </symbol>
+      </svg>
+      <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
+        <svg width="35" height="35" viewBox="0 0 1024 1024">
+          <use id="modeicon" xlink:href="#icon-moon"></use>
+        </svg>
+      </a>
+      <a href="#vcomments" class="icon-V hidden" id="toComment" title="前往评论区">
+        <svg t="1612414443145" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1879" width="38" height="38">
+          <path d="M113.834667 291.84v449.194667a29.013333 29.013333 0 0 0 28.842666 29.013333h252.928v90.453333l160.597334-90.453333h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333h-665.6a29.013333 29.013333 0 0 0-29.696 29.013333z" fill="#FFDEAD" p-id="1880"></path>
+          <path d="M809.130667 262.826667h-665.6a29.013333 29.013333 0 0 0-28.842667 29.013333v40.106667a29.013333 29.013333 0 0 1 28.842667-29.013334h665.6a29.013333 29.013333 0 0 1 29.013333 29.013334V291.84a29.013333 29.013333 0 0 0-29.013333-29.013333z" fill="#FFF3DB" p-id="1881"></path>
+          <path d="M556.202667 770.048h252.928a29.013333 29.013333 0 0 0 29.013333-29.013333V362.837333s-59.733333 392.533333-724.309333 314.709334v63.488a29.013333 29.013333 0 0 0 28.842666 29.013333h253.098667v90.453333z" fill="#F2C182" p-id="1882"></path>
+          <path d="M619.008 632.32l101.888-35.157333-131.754667-76.117334 29.866667 111.274667zM891.904 148.992a61.44 61.44 0 0 0-84.138667 22.528l-19.968 34.133333 106.666667 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-22.528-84.138667z" fill="#69BAF9" p-id="1883"></path>
+          <path d="M775.338667 198.775467l131.669333 76.032-186.026667 322.218666-131.6864-76.032z" fill="#F7FBFF" p-id="1884"></path>
+          <path d="M775.168 198.826667l-5.290667 9.216 59.221334 34.133333a34.133333 34.133333 0 0 1 12.458666 46.592l-139.946666 242.346667a34.133333 34.133333 0 0 1-46.762667 12.629333l-59.050667-34.133333-6.656 11.434666 88.746667 51.2L720.896 597.333333l186.026667-322.56z" fill="#D8E3F0" p-id="1885"></path>
+          <path d="M616.448 622.592l2.56 9.728 101.888-35.157333-44.885333-25.941334-59.562667 51.370667zM891.904 148.992c-1.024 0-2.218667-0.853333-3.242667-1.536A61.610667 61.610667 0 0 1 887.466667 204.8l-19.968 34.133333-73.728-42.496-5.12 8.704 106.666666 61.610667 19.968-34.133333a61.781333 61.781333 0 0 0-23.381333-83.626667z" fill="#599ED4" p-id="1886"></path>
+          <path d="M265.898667 417.621333H494.933333a17.066667 17.066667 0 1 0 0-34.133333H265.898667a17.066667 17.066667 0 1 0 0 34.133333zM265.898667 533.504H494.933333a17.066667 17.066667 0 0 0 0-34.133333H265.898667a17.066667 17.066667 0 0 0 0 34.133333z" fill="#3D3D63" p-id="1887"></path>
+          <path
+            d="M959.488 354.645333a99.84 99.84 0 0 0-23.722667-127.488 78.677333 78.677333 0 0 0-142.848-64.170666l-11.605333 20.138666a17.066667 17.066667 0 0 0-20.821333 7.168l-32.085334 55.466667H142.677333a46.250667 46.250667 0 0 0-45.909333 46.08v449.194667a46.08 46.08 0 0 0 45.909333 46.08h236.032v73.386666a17.066667 17.066667 0 0 0 8.362667 14.848 17.066667 17.066667 0 0 0 8.704 2.218667 17.066667 17.066667 0 0 0 8.362667-2.218667l156.672-88.234666h248.32a46.08 46.08 0 0 0 46.08-46.08V398.677333L921.6 283.306667a17.066667 17.066667 0 0 0-4.266667-21.504l1.877334-3.413334a65.365333 65.365333 0 0 1 10.410666 79.189334l-53.077333 91.989333a56.832 56.832 0 0 0 20.821333 77.653333 17.066667 17.066667 0 0 0 24.234667-6.314666 17.066667 17.066667 0 0 0-6.997333-23.04 23.04 23.04 0 0 1-8.362667-31.061334z m-138.410667 386.389334a11.946667 11.946667 0 0 1-11.946666 11.946666H556.202667a17.066667 17.066667 0 0 0-8.362667 2.218667l-134.997333 76.117333v-61.269333a17.066667 17.066667 0 0 0-17.066667-17.066667H142.677333a11.946667 11.946667 0 0 1-11.776-11.946666V291.84a11.946667 11.946667 0 0 1 11.776-11.946667h565.930667L574.464 512a17.066667 17.066667 0 0 0-1.706667 12.970667L597.333333 615.253333H265.898667a17.066667 17.066667 0 1 0 0 34.133334h352.938666a17.066667 17.066667 0 0 0 5.802667 0l102.4-35.328a17.066667 17.066667 0 0 0 9.216-7.509334l85.333333-147.968z m-204.8-184.661334l63.829334 36.864-49.322667 17.066667z m206.848-170.666666v1.365333l-108.373333 186.709333-102.4-59.050666L781.482667 221.866667l102.4 59.050666z m76.458667-161.28L887.466667 244.224l-76.970667-44.373333 11.264-19.797334a44.544 44.544 0 1 1 77.141333 44.544z"
+            fill="#3D3D63"
+            p-id="1888"
+          ></path>
+        </svg>
+      </a>
+      <!--圣诞模式按钮-->
+      <a onclick="switchChrisThemes()" id="switchchristmas" class="icon-V hidden" title="圣诞模式">
+        <svg t="1614778589374" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9475" width="36" height="36">
+          <path d="M816.888889 701.234568c0 34.37037-32.098765 63.209877-42.17284 94.222222s-1.777778 74.17284-21.234568 100.938272S691.358025 928.395062 664 948.148148s-44.345679 59.259259-76.54321 69.135803-68.246914-11.160494-102.617284-11.160494S413.234568 1027.160494 382.222222 1017.283951s-49.382716-49.382716-76.444444-69.135803-69.82716-24.395062-89.481482-51.358025-10.864198-69.135802-21.333333-100.938271-42.074074-60.049383-42.074074-94.617284 32-63.209877 42.074074-94.222222 1.876543-73.679012 21.333333-100.740741 62.419753-32.197531 89.876544-51.358025 44.345679-59.259259 76.444444-69.135802 68.345679 11.160494 102.617284 11.160494S556.54321 375.308642 587.45679 385.185185s49.382716 49.876543 76.54321 69.135803 69.82716 24.296296 89.481481 51.358024 10.864198 69.135802 21.234568 100.938272 42.17284 60.444444 42.17284 94.617284z" fill="#9CE8E4" p-id="9476"></path>
+          <path d="M774.716049 607.209877c-9.876543-32.098765-1.777778-74.271605-21.234568-100.938272-12.148148-16.790123-33.185185-24.888889-53.925925-33.382716-84.54321 23.111111 5.135802 59.259259 13.82716 86.617284 9.876543 30.91358 42.074074 59.851852 42.074074 94.123457s-32 63.209877-42.074074 94.222222-2.271605 74.271605-21.333333 100.938271-62.419753 31.802469-89.580247 51.456791-44.345679 59.259259-76.444445 69.135802S457.777778 958.024691 423.506173 958.024691c-31.209877 0-64.790123 17.283951-93.827161 13.037037 15.703704 18.469136 30.814815 38.716049 52.54321 45.827161 31.012346 9.876543 68.345679-11.160494 102.617284-11.160494S556.54321 1027.160494 587.45679 1017.283951s49.382716-49.382716 76.54321-69.135803 69.82716-24.395062 89.481481-51.358025 10.864198-69.135802 21.234568-100.938271 42.17284-60.049383 42.17284-94.617284-32.098765-63.012346-42.17284-94.024691z" fill="#6ADDD6" p-id="9477"></path>
+          <path d="M691.851852 551.308642c0 114.271605-94.123457 180.246914-208.395062 180.246914s-205.530864-65.975309-205.530864-180.246914a207.407407 207.407407 0 0 1 413.925926 0z" fill="#FFFFFF" p-id="9478"></path>
+          <path d="M483.950617 580.938272c-56.691358 0-217.283951 65.580247-217.28395 65.580247a127.012346 127.012346 0 0 0 217.28395 47.407407 127.111111 127.111111 0 0 0 217.283951-47.407407s-160.296296-65.580247-217.283951-65.580247z" fill="#6ADDD6" p-id="9479"></path>
+          <path d="M248.197531 361.975309m16.493827 0l439.111111 0q16.493827 0 16.493827 16.493827l0 85.530864q0 16.493827-16.493827 16.493827l-439.111111 0q-16.493827 0-16.493827-16.493827l0-85.530864q0-16.493827 16.493827-16.493827Z" fill="#C9FBF2" p-id="9480"></path>
+          <path d="M703.802469 361.975309H681.481481v63.604938a16.493827 16.493827 0 0 1-16.493827 16.493827h-416.790123V464.197531a16.493827 16.493827 0 0 0 16.493827 16.493827h439.111111A16.493827 16.493827 0 0 0 720.296296 464.197531v-85.62963a16.592593 16.592593 0 0 0-16.493827-16.592592z" fill="#A9ECEB" p-id="9481"></path>
+          <path d="M432.790123 548.246914h-27.259259a14.91358 14.91358 0 0 0-29.629629 0h-27.358025a42.17284 42.17284 0 0 1 84.246913 0zM619.950617 548.246914H592.592593a14.814815 14.814815 0 0 0-29.62963 0h-27.259259a42.17284 42.17284 0 0 1 84.246913 0z" fill="#00B2A7" p-id="9482"></path>
+          <path d="M612.345679 786.17284a16.296296 16.296296 0 0 1 16.296296 16.296296 50.37037 50.37037 0 0 1-85.925926 35.555555 16.296296 16.296296 0 0 1 23.111111-23.012345 17.777778 17.777778 0 0 0 30.222223-12.54321A16.296296 16.296296 0 0 1 612.345679 786.17284zM361.580247 852.740741A16.296296 16.296296 0 0 0 345.679012 869.135802a50.469136 50.469136 0 0 0 50.370371 50.370371 49.382716 49.382716 0 0 0 35.555555-14.814815 16.296296 16.296296 0 0 0-23.012345-23.012346 17.777778 17.777778 0 0 1-30.617284-12.54321 16.296296 16.296296 0 0 0-16.395062-16.395061zM260.148148 737.283951a16.395062 16.395062 0 0 0-20.444444 10.666666 50.469136 50.469136 0 0 0 33.086419 63.012346 49.382716 49.382716 0 0 0 38.320988-3.45679 16.296296 16.296296 0 1 0-14.814815-28.839506 17.777778 17.777778 0 0 1-25.185185-20.938272 16.197531 16.197531 0 0 0-10.962963-20.444444z" fill="#6ADDD6" p-id="9483"></path>
+          <path d="M584 263.111111a110.814815 110.814815 0 0 1-198.320988 0c-55.604938 30.716049-114.567901 69.82716-118.518518 98.765432h434.567901c-3.654321-29.037037-62.320988-68.049383-117.728395-98.765432z" fill="#FF6B5B" p-id="9484"></path>
+          <path d="M484.839506 324.345679a110.814815 110.814815 0 0 0 98.765432-61.234568c-47.901235-26.469136-93.333333-46.814815-98.765432-49.382716H483.950617c-5.728395 2.567901-50.864198 22.716049-98.765432 49.382716a110.814815 110.814815 0 0 0 99.654321 61.234568z" fill="#DC4E45" p-id="9485"></path>
+          <path d="M484.839506 213.728395H483.950617c-2.469136 1.08642-12.54321 5.62963-26.962963 12.444445C514.567901 253.530864 641.975309 318.617284 647.209877 361.876543h54.617283c-7.012346-54.123457-204.54321-142.716049-216.987654-148.148148z" fill="#DC4E45" p-id="9486"></path>
+          <path d="M569.679012 213.432099A84.839506 84.839506 0 1 1 484.839506 128.395062a84.839506 84.839506 0 0 1 84.839506 85.037037z" fill="#C9FBF2" p-id="9487"></path>
+          <path d="M530.962963 142.320988a84.740741 84.740741 0 0 1-117.234568 117.135802 84.740741 84.740741 0 1 0 117.234568-117.135802z" fill="#A9ECEB" p-id="9488"></path>
+          <path d="M306.17284 551.308642A28.148148 28.148148 0 1 1 277.925926 523.45679 28.246914 28.246914 0 0 1 306.17284 551.308642zM719.901235 551.308642A28.148148 28.148148 0 1 1 691.851852 523.45679a28.148148 28.148148 0 0 1 28.049383 27.851852z" fill="#FFFFFF" p-id="9489"></path>
+        </svg>
+      </a>
+
+      
+      <div onclick="switchSpringThemes()" id="switchspring" class="icon-V hidden">
+        <img class="theme-button" src="/medias/spring-img/denglong.png" title="春节模式" />
+      </div>
+      
+    </div>
+    <script>
+      function checkNightMode() {
+        '1' === localStorage.getItem('isDark') ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : '0' === localStorage.getItem('isDark') ? $('#modeicon').attr('xlink:href', '#icon-moon') : new Date().getHours() >= 20 || new Date().getHours() < 7 ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : matchMedia('(prefers-color-scheme: dark)').matches ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : $('#modeicon').attr('xlink:href', '#icon-moon')
+      }
+      function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+          setTimeout(function () {
+            $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
+              setTimeout(function () {
+                $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                  $(this).remove()
+                })
+              }, 2e3)
+          })
+      }
+      function switchNightModeTop() {
+        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
+      }
+      checkNightMode(),
+        $('.menu-V .toggle').on('click', function () {
+          $('.menu-V').toggleClass('expanded'), $('.menu-V a').toggleClass('hidden'), $('.menu-V .container-M , .toggle').toggleClass('close')
+        })
+    </script>
+    <script src="/js/VinoEffect.min.js"></script>
+  </body>
+</html>

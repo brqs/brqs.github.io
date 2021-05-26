@@ -1,0 +1,97 @@
+<!-- saved from url=(0031)https://www.heisan.top/cube/ -->
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>魔方</title>
+	<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div style="position: fixed;top: 20px;right: 30px;z-index: 90;">
+		<button id="button1" onclick="requestFullScreen();" style="border: none;font-size: 20px;color: #AAA;font-weight: bold;background: rgba(255,255,255,0);display: block;">全屏</button>
+	</div>
+	<div class="ui">
+		<div class="ui__background"></div>
+		<div class="ui__game"></div>
+		<div class="ui__texts">
+			<h1 class="text text--title">
+				<span>THE</span>
+				<span>CUBE</span>
+			</h1>
+			<div class="text text--note">
+				双击开始
+			</div>
+			<div class="text text--timer">
+				0:00
+			</div>
+			<div class="text text--complete">
+				<span>恭喜完成!</span>
+			</div>
+			<div class="text text--best-time">
+				<icon trophy></icon>
+				<span>最佳时间!</span>
+			</div>
+		</div>
+		<div class="ui__prefs">
+			<range name="flip" title="转动效果" list="正常,光滑,跳动"></range>
+			<range name="scramble" title="打乱步数" list="20步,25步,30步"></range>
+			<range name="fov" title="视角" list="正视,透视"></range>
+			<range name="theme" title="主题配色" list="正常,海洋,沙漠,迷彩,雨林"></range>
+		</div>
+		<div class="ui__stats">
+			<div class="stats" name="total-solves">
+				<i>总次数:</i><b>-</b>
+			</div>
+			<div class="stats" name="best-time">
+				<i>最佳:</i><b>-</b>
+			</div>
+			<div class="stats" name="worst-time">
+				<i>最差:</i><b>-</b>
+			</div>
+			<div class="stats" name="average-5">
+				<i>5次平均:</i><b>-</b>
+			</div>
+			<div class="stats" name="average-12">
+				<i>12次平均:</i><b>-</b>
+			</div>
+			<div class="stats" name="average-25">
+				<i>25次平均:</i><b>-</b>
+			</div>
+		</div>
+		<div class="ui__buttons">
+			<button class="btn btn--bl btn--stats">
+				<icon trophy></icon>
+			</button>
+			<button class="btn btn--bl btn--prefs">
+				<icon settings></icon>
+			</button>
+			<button class="btn btn--bl btn--back">
+				<icon back></icon>
+			</button>
+			<button class="btn btn--br btn--pwa">
+			</button>
+		</div>
+	</div>
+	<script src='js/three.min.js'></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		//进入全屏
+		function requestFullScreen(element) {
+   			var de = document.querySelector(element) || document.documentElement;
+    		if (de.requestFullscreen) {
+        		de.requestFullscreen();
+    		} else if (de.mozRequestFullScreen) {
+        		de.mozRequestFullScreen();
+    		} else if (de.webkitRequestFullScreen) {
+        		de.webkitRequestFullScreen();
+    		}
+    		document.getElementById('button1').style.display = "none";
+		}
+	</script>
+</body>
+
+</html>

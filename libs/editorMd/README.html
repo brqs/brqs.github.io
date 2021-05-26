@@ -1,0 +1,209 @@
+<h1 id="Editor-md"><a href="#Editor-md" class="headerlink" title="Editor.md"></a>Editor.md</h1><p><img src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png"></p>
+<p><img src="https://img.shields.io/github/stars/pandao/editor.md.svg"><br><img src="https://img.shields.io/github/forks/pandao/editor.md.svg"><br><img src="https://img.shields.io/github/tag/pandao/editor.md.svg"><br><img src="https://img.shields.io/github/release/pandao/editor.md.svg"><br><img src="https://img.shields.io/github/issues/pandao/editor.md.svg"><br><img src="https://img.shields.io/bower/v/editor.md.svg"></p>
+<p><strong>Editor.md</strong> : The open source embeddable online markdown editor (component), based on CodeMirror &amp; jQuery &amp; Marked.</p>
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li>Support Standard Markdown / CommonMark and GFM (GitHub Flavored Markdown);</li>
+<li>Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting…;</li>
+<li>Markdown Extras : Support <a href="https://pandao.github.io/editor.md/examples/toc.html">ToC (Table of Contents)</a>, <a href="https://pandao.github.io/editor.md/examples/emoji.html">Emoji</a>, <a href="https://pandao.github.io/editor.md/examples/task-lists.html">Task lists</a>, <a href="https://pandao.github.io/editor.md/examples/@links.html">@Links</a>…;</li>
+<li>Compatible with all major browsers (IE8+), compatible Zepto.js and iPad;</li>
+<li>Support <a href="https://pandao.github.io/editor.md/examples/html-tags-decode.html">decode &amp; fliter of the HTML tags &amp; attributes</a>;</li>
+<li>Support <a href="https://pandao.github.io/editor.md/examples/katex.html">TeX (LaTeX expressions, Based on KaTeX)</a>, <a href="https://pandao.github.io/editor.md/examples/flowchart.html">Flowchart</a> and <a href="https://pandao.github.io/editor.md/examples/sequence-diagram.html">Sequence Diagram</a> of Markdown extended syntax;</li>
+<li>Support AMD/CMD (Require.js &amp; Sea.js) Module Loader, and Custom/define editor plugins;</li>
+</ul>
+<p><a href="https://pandao.github.io/editor.md/en.html">README &amp; Examples (English)</a></p>
+<hr>
+<p><strong>Editor.md</strong> 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。</p>
+<p><img src="https://pandao.github.io/editor.md/examples/images/editormd-screenshot.png" alt="editormd-screenshot" title="editormd-screenshot"></p>
+<h4 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性"></a>主要特性</h4><ul>
+<li>支持通用 Markdown / CommonMark 和 GFM (GitHub Flavored Markdown) 风格的语法，也可<a href="https://pandao.github.io/editor.md/examples/change-mode.html">变身为代码编辑器</a>；</li>
+<li>支持实时预览、图片（跨域）上传、预格式文本/代码/表格插入、代码折叠、跳转到行、搜索替换、只读模式、自定义样式主题和多语言语法高亮等功能；</li>
+<li>支持 <a href="https://pandao.github.io/editor.md/examples/toc.html">ToC（Table of Contents）</a>、<a href="https://pandao.github.io/editor.md/examples/emoji.html">Emoji表情</a>、<a href="https://pandao.github.io/editor.md/examples/task-lists.html">Task lists</a>、<a href="https://pandao.github.io/editor.md/examples/@links.html">@链接</a>等 Markdown 扩展语法；</li>
+<li>支持 TeX 科学公式（基于 <a href="https://pandao.github.io/editor.md/examples/katex.html">KaTeX</a>）、流程图 <a href="https://pandao.github.io/editor.md/examples/flowchart.html">Flowchart</a> 和 <a href="https://pandao.github.io/editor.md/examples/sequence-diagram.html">时序图 Sequence Diagram</a>;</li>
+<li>支持<a href="https://pandao.github.io/editor.md/examples/html-tags-decode.html">识别和解析 HTML 标签，并且支持自定义过滤标签及属性解析</a>，具有可靠的安全性和几乎无限的扩展性；</li>
+<li>支持 AMD / CMD 模块化加载（支持 <a href="https://pandao.github.io/editor.md/examples/use-requirejs.html">Require.js</a> &amp; <a href="https://pandao.github.io/editor.md/examples/use-seajs.html">Sea.js</a>），并且支持<a href="https://pandao.github.io/editor.md/examples/define-plugin.html">自定义扩展插件</a>；</li>
+<li>兼容主流的浏览器（IE8+）和 <a href="https://pandao.github.io/editor.md/examples/use-zepto.html">Zepto.js</a>，且支持 iPad 等平板设备；</li>
+</ul>
+<h4 id="Download-amp-install"><a href="#Download-amp-install" class="headerlink" title="Download &amp; install"></a>Download &amp; install</h4><p>Download:</p>
+<p><a href="https://github.com/pandao/editor.md/archive/master.zip">Github download</a></p>
+<p>NPM install :</p>
+<pre><code class="bash">npm install editor.md</code></pre>
+<p>Bower install :</p>
+<pre><code class="bash">bower install editor.md</code></pre>
+<h4 id="Usages"><a href="#Usages" class="headerlink" title="Usages"></a>Usages</h4><h5 id="Create-a-Markdown-editor"><a href="#Create-a-Markdown-editor" class="headerlink" title="Create a Markdown editor"></a>Create a Markdown editor</h5><pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;editor.md/css/editormd.min.css&quot; /&gt;
+&lt;div id=&quot;editor&quot;&gt;
+    &lt;!-- Tips: Editor.md can auto append a `&lt;textarea&gt;` tag --&gt;
+    &lt;textarea style=&quot;display:none;&quot;&gt;### Hello Editor.md !&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;editor.md/editormd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(function() {
+        var editor = editormd(&quot;editor&quot;, {
+            // width: &quot;100%&quot;,
+            // height: &quot;100%&quot;,
+            // markdown: &quot;xxxx&quot;,     // dynamic set Markdown text
+            path : &quot;editor.md/lib/&quot;  // Autoload modules mode, codemirror, marked... dependents libs path
+        });
+    });
+&lt;/script&gt;</code></pre>
+<p>If you using modular script loader:</p>
+<ul>
+<li><a href="https://github.com/pandao/editor.md/tree/master/examples/use-requirejs.html">Using Require.js</a></li>
+<li><a href="https://github.com/pandao/editor.md/tree/master/examples/use-seajs.html">Using Sea.js</a></li>
+</ul>
+<h5 id="Markdown-to-HTML"><a href="#Markdown-to-HTML" class="headerlink" title="Markdown to HTML"></a>Markdown to HTML</h5><pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;editormd/css/editormd.preview.css&quot; /&gt;
+&lt;div id=&quot;test-markdown-view&quot;&gt;
+    &lt;!-- Server-side output Markdown text --&gt;
+    &lt;textarea style=&quot;display:none;&quot;&gt;### Hello world!&lt;/textarea&gt;             
+&lt;/div&gt;
+&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;editormd/editormd.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;editormd/lib/marked.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;editormd/lib/prettify.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(function() {
+        var testView = editormd.markdownToHTML(&quot;test-markdown-view&quot;, {
+            // markdown : &quot;[TOC]\n### Hello world!\n## Heading 2&quot;, // Also, you can dynamic set Markdown text
+            // htmlDecode : true,  // Enable / disable HTML tag encode.
+            // htmlDecode : &quot;style,script,iframe&quot;,  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+        });
+    });
+&lt;/script&gt;    </code></pre>
+<blockquote>
+<p>See the full example: <a href="http://editor.md.ipandao.com/examples/html-preview-markdown-to-html.html">http://editor.md.ipandao.com/examples/html-preview-markdown-to-html.html</a></p>
+</blockquote>
+<h5 id="HTML-to-Markdown"><a href="#HTML-to-Markdown" class="headerlink" title="HTML to Markdown?"></a>HTML to Markdown?</h5><p>Sorry, Editor.md not support HTML to Markdown parsing, Maybe In the future.</p>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><p><a href="https://pandao.github.io/editor.md/examples/index.html">https://pandao.github.io/editor.md/examples/index.html</a></p>
+<h4 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h4><p>Editor.md options and default values:</p>
+<pre><code class="javascript">{
+    mode                 : &quot;gfm&quot;,          // gfm or markdown
+    name                 : &quot;&quot;,             // Form element name for post
+    value                : &quot;&quot;,             // value for CodeMirror, if mode not gfm/markdown
+    theme                : &quot;&quot;,             // Editor.md self themes, before v1.5.0 is CodeMirror theme, default empty
+    editorTheme          : &quot;default&quot;,      // Editor area, this is CodeMirror theme at v1.5.0
+    previewTheme         : &quot;&quot;,             // Preview area theme, default empty
+    markdown             : &quot;&quot;,             // Markdown source code
+    appendMarkdown       : &quot;&quot;,             // if in init textarea value not empty, append markdown to textarea
+    width                : &quot;100%&quot;,
+    height               : &quot;100%&quot;,
+    path                 : &quot;./lib/&quot;,       // Dependents module file directory
+    pluginPath           : &quot;&quot;,             // If this empty, default use settings.path + &quot;../plugins/&quot;
+    delay                : 300,            // Delay parse markdown to html, Uint : ms
+    autoLoadModules      : true,           // Automatic load dependent module files
+    watch                : true,
+    placeholder          : &quot;Enjoy Markdown! coding now...&quot;,
+    gotoLine             : true,           // Enable / disable goto a line
+    codeFold             : false,
+    autoHeight           : false,
+    autoFocus            : true,           // Enable / disable auto focus editor left input area
+    autoCloseTags        : true,
+    searchReplace        : true,           // Enable / disable (CodeMirror) search and replace function
+    syncScrolling        : true,           // options: true | false | &quot;single&quot;, default true
+    readOnly             : false,          // Enable / disable readonly mode
+    tabSize              : 4,
+    indentUnit           : 4,
+    lineNumbers          : true,           // Display editor line numbers
+    lineWrapping         : true,
+    autoCloseBrackets    : true,
+    showTrailingSpace    : true,
+    matchBrackets        : true,
+    indentWithTabs       : true,
+    styleSelectedText    : true,
+    matchWordHighlight   : true,           // options: true, false, &quot;onselected&quot;
+    styleActiveLine      : true,           // Highlight the current line
+    dialogLockScreen     : true,
+    dialogShowMask       : true,
+    dialogDraggable      : true,
+    dialogMaskBgColor    : &quot;#fff&quot;,
+    dialogMaskOpacity    : 0.1,
+    fontSize             : &quot;13px&quot;,
+    saveHTMLToTextarea   : false,          // If enable, Editor will create a &lt;textarea name=&quot;{editor-id}-html-code&quot;&gt; tag save HTML code for form post to server-side.
+    disabledKeyMaps      : [],
+
+    onload               : function() {},
+    onresize             : function() {},
+    onchange             : function() {},
+    onwatch              : null,
+    onunwatch            : null,
+    onpreviewing         : function() {},
+    onpreviewed          : function() {},
+    onfullscreen         : function() {},
+    onfullscreenExit     : function() {},
+    onscroll             : function() {},
+    onpreviewscroll      : function() {},
+
+    imageUpload          : false,          // Enable/disable upload
+    imageFormats         : [&quot;jpg&quot;, &quot;jpeg&quot;, &quot;gif&quot;, &quot;png&quot;, &quot;bmp&quot;, &quot;webp&quot;],
+    imageUploadURL       : &quot;&quot;,             // Upload url
+    crossDomainUpload    : false,          // Enable/disable Cross-domain upload
+    uploadCallbackURL    : &quot;&quot;,             // Cross-domain upload callback url
+
+    toc                  : true,           // Table of contents
+    tocm                 : false,          // Using [TOCM], auto create ToC dropdown menu
+    tocTitle             : &quot;&quot;,             // for ToC dropdown menu button
+    tocDropdown          : false,          // Enable/disable Table Of Contents dropdown menu
+    tocContainer         : &quot;&quot;,             // Custom Table Of Contents Container Selector
+    tocStartLevel        : 1,              // Said from H1 to create ToC
+    htmlDecode           : false,          // Open the HTML tag identification 
+    pageBreak            : true,           // Enable parse page break [========]
+    atLink               : true,           // for @link
+    emailLink            : true,           // for email address auto link
+    taskList             : false,          // Enable Github Flavored Markdown task lists
+    emoji                : false,          // :emoji: , Support Github emoji, Twitter Emoji (Twemoji);
+                                           // Support FontAwesome icon emoji :fa-xxx: &gt; Using fontAwesome icon web fonts;
+                                           // Support Editor.md logo icon emoji :editormd-logo: :editormd-logo-1x: &gt; 1~8x;
+    tex                  : false,          // TeX(LaTeX), based on KaTeX
+    flowChart            : false,          // flowChart.js only support IE9+
+    sequenceDiagram      : false,          // sequenceDiagram.js only support IE9+
+    previewCodeHighlight : true,           // Enable / disable code highlight of editor preview area
+
+    toolbar              : true,           // show or hide toolbar
+    toolbarAutoFixed     : true,           // on window scroll auto fixed position
+    toolbarIcons         : &quot;full&quot;,         // Toolbar icons mode, options: full, simple, mini, See `editormd.toolbarModes` property.
+    toolbarTitles        : {},
+    toolbarHandlers      : {
+        ucwords : function() {
+            return editormd.toolbarHandlers.ucwords;
+        },
+        lowercase : function() {
+            return editormd.toolbarHandlers.lowercase;
+        }
+    },
+    toolbarCustomIcons   : {               // using html tag create toolbar icon, unused default &lt;a&gt; tag.
+        lowercase        : &quot;&lt;a href=\&quot;javascript:;\&quot; title=\&quot;Lowercase\&quot; unselectable=\&quot;on\&quot;&gt;&lt;i class=\&quot;fa\&quot; name=\&quot;lowercase\&quot; style=\&quot;font-size:24px;margin-top: -10px;\&quot;&gt;a&lt;/i&gt;&lt;/a&gt;&quot;,
+        &quot;ucwords&quot;        : &quot;&lt;a href=\&quot;javascript:;\&quot; title=\&quot;ucwords\&quot; unselectable=\&quot;on\&quot;&gt;&lt;i class=\&quot;fa\&quot; name=\&quot;ucwords\&quot; style=\&quot;font-size:20px;margin-top: -3px;\&quot;&gt;Aa&lt;/i&gt;&lt;/a&gt;&quot;
+    },
+    toolbarIconTexts     : {},
+
+    lang : {  // Language data, you can custom your language.
+        name        : &quot;zh-cn&quot;,
+        description : &quot;开源在线Markdown编辑器&lt;br/&gt;Open source online Markdown editor.&quot;,
+        tocTitle    : &quot;目录&quot;,
+        toolbar     : {
+            //...
+        },
+        button: {
+            //...
+        },
+        dialog : {
+            //...
+        }
+        //...
+    }
+}</code></pre>
+<h4 id="Dependents"><a href="#Dependents" class="headerlink" title="Dependents"></a>Dependents</h4><ul>
+<li><a href="http://codemirror.net/" title="CodeMirror">CodeMirror</a></li>
+<li><a href="https://github.com/markedjs/marked" title="marked">marked</a></li>
+<li><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+<li><a href="http://fontawesome.io/" title="FontAwesome">FontAwesome</a></li>
+<li><a href="https://github.com/sindresorhus/github-markdown-css" title="github-markdown.css">github-markdown.css</a></li>
+<li><a href="http://khan.github.io/KaTeX/" title="KaTeX">KaTeX</a></li>
+<li><a href="http://code.google.com/p/google-code-prettify/" title="prettify.js">prettify.js</a></li>
+<li><a href="http://raphaeljs.com/" title="Rephael.js">Rephael.js</a></li>
+<li><a href="http://adrai.github.io/flowchart.js/" title="flowchart.js">flowchart.js</a></li>
+<li><a href="http://bramp.github.io/js-sequence-diagrams/" title="sequence-diagram.js">sequence-diagram.js</a></li>
+<li><a href="https://github.com/pandao/prefixes.scss" title="Prefixes.scss">Prefixes.scss</a></li>
+</ul>
+<h4 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h4><p><a href="https://github.com/pandao/editor.md/blob/master/CHANGE.md">Change logs</a></p>
+<h4 id="License"><a href="#License" class="headerlink" title="License"></a>License</h4><p>The MIT License.</p>
+<p>Copyright (c) 2015-2019 Pandao</p>

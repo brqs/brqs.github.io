@@ -1,0 +1,110 @@
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<!--引入jQuery框架-->
+		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+		<!--引入jVectorMap库-->
+		<script type="text/javascript" src="jquery-jvectormap-2.0.5.min.js"></script>
+		<!--引入样式表-->
+		<link href="jquery-jvectormap-2.0.5.css" rel="stylesheet" media="screen">
+
+		<!--引入中国地图数据库-->
+		<script type="text/javascript" src="jquery-jvectormap-cn-merc-en.js"></script>
+		<!--引入美国地图数据库-->
+		<!--script type="text/javascript" src="js/jquery-jvectormap-us-aea.js"></script-->
+		<!--引入世界地图数据库-->
+		<!--script type="text/javascript" src="js/jquery-jvectormap-world-mill.js"></script-->
+	</head>
+<body>
+	<!--background-color: 地图背景颜色-->
+	<div id="map" style="background-color: rgba(255,255,255,0);"> </div>
+	<script>
+		$('#map').vectorMap({
+
+			// 此处更改地图
+			map: 'cn_merc_en',   // 中国地图
+			//map: 'us_aea',     // 美国地图
+			//map: 'world_mill', // 世界地图
+
+
+			backgroundColor: 'transparent',
+			zoomMin: 0.9, // 鼠标缩放时的最小比例
+			zoomMax: 2.4, // 鼠标缩放时的最大比例
+			focusOn: {
+				x: 0.55,
+				y: 2,
+				scale: 0.9
+			},
+			regionStyle: {
+				initial: {
+					fill: '#9F9DEC',   // 地图颜色
+					"fill-opacity": 1, // 省份（州）是否隐藏，鼠标滑动时显示; 1：显示，2：隐藏。
+					stroke: 'none',
+					"stroke-width": 0,
+					"stroke-opacity": 1
+				},
+				hover: {
+					fill: '#5755D9',  // 鼠标滑动至某省份的高亮颜色。
+					"fill-opacity": 0.8
+				},
+				selected: {
+					fill: 'yellow'
+				},
+				selectedHover: {}
+			},
+			markerStyle: {
+		        initial: {
+		            fill: '#5855D9', // 足迹位置的填充颜色
+		            stroke: '#fff'   // 足迹位置的描边颜色
+		        },
+				hover: {
+					fill: '#1E1C8D', // 鼠标滑动至足迹位置后的填充颜色
+					stroke: '#fff',  // 鼠标滑动至足迹位置后的描边颜色
+					"fill-opacity": 0.8
+				},
+		    },
+			markers: [ // 足迹位置
+
+				// {latLng: [纬度（保留两位小数）, 经度（保留两位小数）], name: '城市名称'},
+
+				//东北：黑吉辽
+		        {latLng: [43.89, 125.32], name: '长春'},
+		        {latLng: [41.80, 123.43], name: '沈阳'},
+		        {latLng: [38.91, 121.62], name: '大连'},
+				{latLng: [41.27, 123.24], name: '辽阳'},
+		        //华北：京津冀晋蒙
+		        {latLng: [39.90, 116.41], name: '北京'},
+		        {latLng: [38.05, 114.50], name: '石家庄'},
+		        {latLng: [36.61, 114.49], name: '邯郸'},
+				{latLng: [40.09, 113.30], name: '大同'},
+		        {latLng: [39.33, 112.43], name: '朔州'},
+		        {latLng: [38.42, 112.73], name: '忻州'},
+		        {latLng: [37.86, 112.55], name: '太原'},
+		        {latLng: [37.86, 113.58], name: '阳泉'},
+		        //华中：豫鄂湘赣
+		        {latLng: [36.10, 114.35], name: '安阳'},
+		        //西北：陕甘宁青新
+		        {latLng: [36.62, 101.78], name: '西宁'},
+		        {latLng: [36.50, 102.10], name: '海东'},
+		        //华东：鲁苏浙沪皖闽台
+		        {latLng: [36.68, 117.00], name: '济南'},
+		        {latLng: [36.09, 120.37], name: '青岛'},
+		        {latLng: [36.19, 117.13], name: '泰安'},
+		        {latLng: [31.86, 117.28], name: '合肥'},
+		        {latLng: [31.33, 118.38], name: '芜湖'},
+		        {latLng: [31.23, 121.47], name: '上海'},
+		        {latLng: [31.30, 120.62], name: '苏州'},
+		        {latLng: [31.57, 120.30], name: '无锡'},
+		        {latLng: [31.78, 119.95], name: '常州'},
+		        //华南：粤桂琼港澳
+		        {latLng: [23.13, 113.28], name: '广州'},
+		        {latLng: [21.20, 110.41], name: '湛江'},
+		        {latLng: [20.03, 110.33], name: '海口'},
+		        {latLng: [18.80, 110.39], name: '万宁'},
+		        {latLng: [19.26, 110.47], name: '琼海'},
+		        {latLng: [18.25, 109.51], name: '三亚'}
+		        //西南：云贵川渝藏
+		    ]
+		});
+	</script>
+</html>
