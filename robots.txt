@@ -11,5 +11,5 @@ Disallow: /tags/
 Disallow: /categories/ 
 Disallow: /friends/
 Disallow: /archives/
-Sitemap: https://hesifan.top/sitemap.xml 
-Sitemap: https://hesifan.top/baidusitemap.xml 
+Sitemap: /sitemap.xml 
+Sitemap: /baidusitemap.xml 
