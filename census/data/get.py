@@ -7,7 +7,7 @@ date         = datetime.datetime.now()
 # 结束统计的日期
 end_date     = str(date.year) + (str(date.month) if date.month > 9 else ('0' + str(date.month))) + (str(date.day) if date.day > 9 else ('0' + str(date.day)))
 # token和siteid
-access_token = '121.10f9bb3bedb66793cca6567199b5c8df.YHvHMyBo4-ASBN4vuKjZVAHugkCtW5VZvH5gKb5.VIjTTA'
+access_token = '121.79cfce1cc65431d136aea2e5b1f5dc56.YD_s1U9cC5nxETO98aJGDnALaLfC1YTVjhbDvEQ.GNaZbw'
 site_id      = '16019051'
 # 百度统计API
 dataUrl      = 'https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token=' + access_token + '&site_id=' + site_id

@@ -104,7 +104,7 @@ const friend_link_circle = new Vue({
     },
     mounted: function () {
 
-        fetch(requests_url).then(
+        fetch(requests_url+new Date()).then(
             data => data.json()
     ).then(
             data => {
