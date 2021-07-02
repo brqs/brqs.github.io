@@ -574,12 +574,16 @@
           
           <div class="article-tag">
             
-            <a href="/tags/github-actions/">
-              <span class="chip bg-color">github actions</span>
+            <a href="/tags/actions/">
+              <span class="chip bg-color">actions</span>
             </a>
             
             <a href="/tags/hexo/">
               <span class="chip bg-color">hexo</span>
+            </a>
+            
+            <a href="/tags/github/">
+              <span class="chip bg-color">github</span>
             </a>
             
           </div>
@@ -590,7 +594,7 @@
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/%E7%BD%91%E7%AB%99/" class="post-category"> 网站 </a>
+            <a href="/categories/%E6%8A%98%E8%85%BE/" class="post-category"> 折腾 </a>
             
           </div>
           
@@ -623,6 +627,7 @@
 <p>hexo作为一款优秀的静态博客生成器有着一些显著的优点如免费快速简洁轻量，但也存在一些明显的缺点例如更换电脑不便需要重新安装环境，无法在线写文章（修改文章），随着文章和插件的增加hexo三连的速度会越来越慢，使用github actions集成化部署再配合<a target="_blank" rel="noopener" href="https://hexoplusplus.js.org/">hexoplusplus</a>可以在很大程度上改善hexo的使用体验。</p>
 </blockquote>
 <p>个人服务器是自建了 git 库，利用 <code>hook</code> 钩子发布到网站根目录。所以这篇教程最终是利用 <code>hexo deploy</code> 进行上传到服务器操作。具体可以查阅往期教程：<a href="https://hesifan.top/2020/102417267.html">点击这里</a></p>
+<p>关于本文内容有了新的拓展参见<a href="https://hesifan.top/2021/070311877.html">此文</a></p>
 <h3 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h3><p>获取token是为了保证上传到GitHub公开的网站仓库（编译后的静态页面存放的仓库）有足够的权限可以上传，如果你只是要部署到服务器不同步到GitHub page可以忽略这一步。</p>
 <p>登录GitHub点击<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">该链接</a>再点击<code>generate new token</code>，创建token名称可以随意填写，但是必须勾选全部的repo，其他权限不用勾选。</p>
 <p><img src="../npmimgbed/image-20210524101951927.png" alt="必须勾选全部的repo"></p>
@@ -821,12 +826,16 @@ fi</code></pre>
           
           <div class="article-tag">
             
-            <a href="/tags/github-actions/">
-              <span class="chip bg-color">github actions</span>
+            <a href="/tags/actions/">
+              <span class="chip bg-color">actions</span>
             </a>
             
             <a href="/tags/hexo/">
               <span class="chip bg-color">hexo</span>
+            </a>
+            
+            <a href="/tags/github/">
+              <span class="chip bg-color">github</span>
             </a>
             
           </div>
@@ -1470,7 +1479,7 @@ fi</code></pre>
       <a href="/about" target="_blank">不染轻裳</a>
       |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
       <br />
-       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">83.9k</span>&nbsp;字      
+       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">85.1k</span>&nbsp;字      
       <span id="busuanzi_container_site_pv"> |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次 </span>
        
       <span id="busuanzi_container_site_uv"> |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人 </span>
