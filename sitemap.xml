@@ -37,20 +37,6 @@
   </url>
   
   <url>
-    <loc>https://hesifan.top/census/index.html</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hesifan.top/contact/index.html</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hesifan.top/friendcircle/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
@@ -72,6 +58,13 @@
   </url>
   
   <url>
+    <loc>https://hesifan.top/journal/index.html</loc>
+    
+    <lastmod>2021-07-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hesifan.top/lists/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
@@ -86,14 +79,21 @@
   </url>
   
   <url>
-    <loc>https://hesifan.top/journal/index.html</loc>
+    <loc>https://hesifan.top/friendcircle/api/api.json</loc>
     
     <lastmod>2021-07-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hesifan.top/friendcircle/api/api.json</loc>
+    <loc>https://hesifan.top/census/index.html</loc>
+    
+    <lastmod>2021-07-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hesifan.top/contact/index.html</loc>
     
     <lastmod>2021-07-04</lastmod>
     
