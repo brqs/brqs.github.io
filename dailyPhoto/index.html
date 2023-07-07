@@ -375,7 +375,7 @@ queueMicrotask(() => {
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'http://124.221.41.25:8888/',
+      envId: 'https://tw.itsbrqs.com/',
       region: '',
       onCommentLoaded: function () {
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -387,7 +387,7 @@ queueMicrotask(() => {
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'http://124.221.41.25:8888/',
+      envId: 'https://tw.itsbrqs.com/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
@@ -436,7 +436,7 @@ queueMicrotask(() => {
   const getComment = () => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
-        envId: 'http://124.221.41.25:8888/',
+        envId: 'https://tw.itsbrqs.com/',
         region: '',
         pageSize: 6,
         includeReply: true
